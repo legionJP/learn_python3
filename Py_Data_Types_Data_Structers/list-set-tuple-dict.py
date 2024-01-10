@@ -46,7 +46,7 @@ my_tuple1=1,'tuple',6.45,'name',True
 print(type(my_tuple))
 print(type(my_tuple1))
 
-#concting the tuple
+#concating the tuple
 concat_tuple= (my_tuple1 + my_tuple)
 print(concat_tuple)
 print(my_tuple.count('tuple'))

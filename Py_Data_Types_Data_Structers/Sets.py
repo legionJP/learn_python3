@@ -9,20 +9,23 @@ set_1.discard(3)
 set_a={1,2,3,4,5,6,7,'rtst'}
 set_b={2,3,4,5,6,7,8}
 print(set_a.union(set_b))
-#print(set_a | (set_b))u8
+#print(set_a | (set_b))
 print(set_a.intersection(set_b))
 print(set_a & set_b) # also for getting the intersection
 #getting the difference from the sets
-print(set_a.difference(set_b))  #this will get the differnece of the element which is only in the set a and not present in set b
+print(set_a.difference(set_b)) 
+ #this will get the differnece of the element which is only in the set a and not present in set b
 print(set_a - set_b)
 #getting the symmetrical difference 
 print(set_a.symmetric_difference(set_b))
 print(set_a ^ set_b) #also by the carret operator
- #the symmetric difference shows that all that elements that are present in the set a and set b but not a common elements
+ #the symmetric difference shows that all that elements that are present in the set a and
+# set b but not a common elements
 
 # Set is not ordered
 print(set[0])
-# generate the type error and says that set are not in sequnce it doesn't contains the all ordered index of all elements
+# generate the type error and says that set are not in sequnce 
+#it doesn't contains the all ordered index of all elements
 
 #Dictionary: Dictionary acceess the value on the base of the key and not on the index position of the value, so they are faster and more flexible 
 #key: value
