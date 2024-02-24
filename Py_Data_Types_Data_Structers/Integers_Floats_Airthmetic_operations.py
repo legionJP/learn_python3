@@ -22,7 +22,7 @@ print(round(4.567,2)) #round to the two digit
 # Comparison Operator 
 
 num1 = 2
-num2 = 3
+num2 = 3 
 print(num1 == num2)
 print(num1!=num2)
 print(num1<num2)

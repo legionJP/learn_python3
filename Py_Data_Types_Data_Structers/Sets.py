@@ -27,7 +27,11 @@ print(set[0])
 # generate the type error and says that set are not in sequnce 
 #it doesn't contains the all ordered index of all elements
 
-#Dictionary: Dictionary acceess the value on the base of the key and not on the index position of the value, so they are faster and more flexible 
+#############################################################################################################################################
+#Dictionary:
+# \ Dictionary acceess the value on the base of the key and not on the index position of the value, 
+#so they are faster and more flexible 
+
 #key: value
 dict1 = {1:'coffe',2:1, 3:'tea'}
 print(dict1[1])
