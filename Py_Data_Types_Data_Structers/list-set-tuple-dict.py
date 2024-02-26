@@ -157,7 +157,7 @@ print(my_dict['value'])
 print(my_dict)
 
 #Updating the the dictionary 
-dict1.update({1:'Tea','name': 'JP','phone':567890})
+#dict1.update({1:'Tea','name': 'JP','phone':567890})
 print(dict1)
 
 del dict1[3]
