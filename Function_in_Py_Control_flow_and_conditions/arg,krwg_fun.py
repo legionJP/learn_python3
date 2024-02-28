@@ -1,6 +1,6 @@
 #use of the args: 
-#1).with args you can pass any amount of the non-keyword varriablels 
-#2). With kwargs you can pass any amount of keyword arguments
+#1).with args you can pass any amount of the non-keyword varriablels, like tuples 
+#2). With kwargs you can pass any amount of keyword(var in key.) arguments, like dictionary
 
 def sum_of1(a,b):
     return a+b
@@ -14,8 +14,9 @@ def sum_of(*args):
     return sum  # need to use the return in the line of the loop
 print(sum_of(4,5,6,7))
 
+#--------------------------------------------------------------
+ # Use of the kwargs
 
- #Use of the kwargs
 list= {'Tea':2, 'coffe':35}
 def sum_of2(**kwargs):
     sum=0
@@ -32,3 +33,13 @@ def sum1(**kwargs):
 print(sum1(tea=2,coffe=5)) 
 
 
+# Use of the both fun 
+
+def student_info(*args, **kwargs):
+    print(args)
+    print(kwargs)
+courses ={'Math', 'Art', 'science'}
+info = {'name': 'john', 'age':23}
+
+student_info(courses,info)
+student_info(*courses,**info) #Adding the * for the unpacking the these dictionries values of this function
