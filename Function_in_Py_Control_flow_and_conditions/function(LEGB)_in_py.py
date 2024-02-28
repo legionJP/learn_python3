@@ -50,18 +50,37 @@ def outer():
         c=3           #Accessible in: only Local Scope 
 
    #4. Global Scope: function declared outside of a function , can be accessed from anywherer  
+        #Examples:
+
+def outer_1():
+    x='outer x1'
+    def inner_1():
+       # x= 'inner x'
+        inner_1()
+        print(x) #printing the enclosed  scope value x1 
+outer()        
+
+#-----------------------------------------------------------------------
+
 my_global=10
+x='global v'
 def fun1():
+    global v #now we can print this within fun as global scope
     local_v =5
-    print('Access to global',my_global)
+    print('Access to/print global',my_global)
     def fun2():
         local_v2=local_v*2
-        print(my_global)
-        print(local_v)
+        print(my_global) #GLOBAL
+        print(local_v2) #Enclosed
+        print(local_v) #local
     fun2()
-    return local_v
+    #print(local_v) , mae error when !!
+    return local_v  #What is this return doing?
+ 
+   #return my_global
 fun1()
-#return my_global
+print(x)
+
 
 
   # Here callingg the  function outside of the fun.  which have the globle print the varriable
@@ -70,14 +89,30 @@ fun1()
 
 #2.) Loacal Scope: it can be only used inside the declaredd function , 
 #3). Enclosing Scope: It is the varriable which can be used inside the another function or with the nested function
-#4).Built in Scope: these are the reserved keywords that python uses for built in function : print , def ,for etc.
 
-my_global=10
-def fun11():
+#-------------------------------------------------------------------------------------------------------------
+#4).Built in Scope: these are the reserved keywords that python uses for built in function : print , def ,for etc.
+'''
+def min():
+    pass '''
+
+m = min([1,3,5,6,7,89,]) #builtin varriable
+print(m)
+import builtins
+print(dir(builtins))
+
+
+#------------------------------------------------------------------------------------------------------------------
+
+#my_global=10
+def fun_1():
     enclosed_v=12
+    #print(z)
     def fun21():
-        local_v =5
-        print('Access to global',local_v)
+        local_v2 =5
+        print('Access to global',local_v2)
         print('this is the enclosed var',enclosed_v)
+        
         fun21()
-fun11()     
+fun_1()
+    
