@@ -21,10 +21,10 @@ print("the new working directory is ", changedir)
 
 
 #Creating a directory
-os.mkdir()  # used to create a directory named path with the specified numeric mode. This method raises
+#os.mkdir('../')    # used to create a directory named path with the specified numeric mode. This method raises
 #FileExistsError if the directory to be created already exists.
 directory ='jppal' #to be created
-parent_dir='C:/Py_projects/'
+parent_dir='/home/..'
 path = os.path.join(parent_dir,directory)
 os.mkdir(path)
 print("directory '%s' created " % directory)
@@ -56,7 +56,7 @@ OS stat module  :
 os.stat()
 lstat, fstat
 '''
-os.makedirs()
+os.makedirs(path)
 os.listdir()
 
 #os.listdir
@@ -65,8 +65,8 @@ dir_list = os.listdir(path)
 print("files and direcotries in ' ", path,"' :")
 print(dir_list)
 
-os.remove()
-os.rmdir() #to remove the empty directory
+os.remove('/')
+os.rmdir('/') #to remove the empty directory
 os.remove(path)
 os.rmdir(path)
 
@@ -97,4 +97,5 @@ os.path.getsize('file_name') #prints in the bytes
 result = os.path.exists("file_name") #giving the name of the file as a parameter.
   
 print(result) #true or false 
+
 
