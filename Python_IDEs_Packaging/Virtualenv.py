@@ -37,3 +37,8 @@ virtualenv -p /usr/bin/python3.10 project2_env
 
 
 '''
+# creating the conda environment in the conda 
+
+# conda create --name my_app flask sqlalchemy
+
+#conda create --name my_app27 python=2.7 flask sqlalchemy
