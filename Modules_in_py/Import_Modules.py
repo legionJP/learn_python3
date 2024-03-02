@@ -14,4 +14,5 @@ print(sys.path) #finding the path of the file and modules
 import sys
 sys.path.append('/Users/jp/Desktop/Import_Modules.py')
 
-#2. by the python environment changes
+#2. by the python environment changes , adding the python file path as a enironment
+
