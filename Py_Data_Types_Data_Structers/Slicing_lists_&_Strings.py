@@ -25,4 +25,4 @@ sample_url = 'https://jppal.com'
 print(sample_url)
 print(sample_url[::-1])
 print((sample_url[-4:1]))
-prnt((sample_url[7:1]))
+print((sample_url[7:1]))

@@ -7,9 +7,8 @@ def find_in_map(country):
 
         return country
     
-map_country=map(find_in_map,menu) # first argu ment is function itself then the iterable item and here functions is not calling but using to give argument not 
-print(map_country)
-
+map_country=map(find_in_map,menu) # first argu ment is function itself then the iterable item/     
+print(map_country)                             #and here functions is not calling but using to give argument not 
 for x in map_country:
     print(x)
 
