@@ -3,4 +3,5 @@
 
 #2.) User Definbned Data Strcutures in Python
 # Stak , Tree ,Graph , Queue,Linked List and Hash Map   
-#Each data structure can be designed to solve a particular problem or optimize a current solution to make it much more performant. 
+#Each data structure can be designed to solve a particular problem or optimize a
+# current solution to make it much more performant. 

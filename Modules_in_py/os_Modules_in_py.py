@@ -6,18 +6,23 @@ specify the absolute path depending upon the operating system
 the code can run on any os but we need to change the path exactly. 
 If you try to 
 remove a file that does not exist you will get FileNotFoundError'''
+
 import os
+print(dir(os))
 cwd=os.getcwd()
+print(os.getcwd())
 print("current working directory is",cwd)
 
 
 #Chnage the curent working directory 
 
-def current_path():
-    print("current working directory  before is",cwd)
-changedir=os.chdir('../')
-current_path()
+print("current working directory  before is",cwd)
+changedir=os.chdir('C:/Users/jjpsi/Py_Notes/')
+
 print("the new working directory is ", changedir)
+print(os.getcwd())
+
+print(os.listdir()) # geeting the list of directiories in the current path
 
 
 #Creating a directory
@@ -26,11 +31,11 @@ print("the new working directory is ", changedir)
 directory ='jppal' #to be created
 parent_dir='/home/..'
 path = os.path.join(parent_dir,directory)
-os.mkdir(path)
+#os.mkdir(path)
 print("directory '%s' created " % directory)
 
 
-os.makedirs(path)  #Super-mkdir; create a leaf directory and 
+#os.makedirs(path)  #Super-mkdir; create a leaf directory and 
 '''all intermediate ones. Works like mkdir, except that
 any intermediate path segment (not just the rightmost) will be created 
 if it does not exist. If the target directory already exists, 
@@ -56,7 +61,7 @@ OS stat module  :
 os.stat()
 lstat, fstat
 '''
-os.makedirs(path)
+#os.makedirs(path)
 os.listdir()
 
 #os.listdir
@@ -65,10 +70,10 @@ dir_list = os.listdir(path)
 print("files and direcotries in ' ", path,"' :")
 print(dir_list)
 
-os.remove('/')
+'''os.remove('/')
 os.rmdir('/') #to remove the empty directory
 os.remove(path)
-os.rmdir(path)
+os.rmdir(path)'''
 
 os.name
 print(os.name)
@@ -83,7 +88,7 @@ file = os.popen('fd', 'w')
 file.write("Hello")
 os.close
 
-os.remove('filename')
+#os.remove('filename')
 
 file = os.popen('fd,' 'w')
 file.write("Hello")
