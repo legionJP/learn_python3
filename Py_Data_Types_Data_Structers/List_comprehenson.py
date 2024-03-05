@@ -1,3 +1,6 @@
+# Already Describes in detailed in the Functional Programming
+
+
 Nums= [1,2,3,4,5,6,7,8,9,10,11,12]
 
 #If you wan t'n' for each 'n' in nums 
