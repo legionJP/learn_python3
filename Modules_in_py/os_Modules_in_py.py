@@ -66,7 +66,9 @@ raise an OSError if exist_ok is False.
 Otherwise no exception is raised. This is recursive
 
 print("directory '%s' created " % directory)
+
 '''
+
 
 # Using the genrator OS.WALK()
 
@@ -77,6 +79,9 @@ for dirpath, dirnames ,filenames in os.walk('/home/jp/Downloads/learn_python3'):
     print('Direcotries:', dirnames)
     print('Files:',filenames)
     print()
+
+
+
 
 
 '''
@@ -121,7 +126,7 @@ print(os.name)
 #This function gives the name of the operating system dependent module imported. 
 #The following names have currently been registered:
 #‘posix’, ‘nt’, ‘os2’, ‘ce’, ‘java’ and ‘riscos’
-os. error
+os.error
 #IO error
 
 #Opening  and closing the file
@@ -153,3 +158,25 @@ result = os.path.exists("file_name") #giving the name of the file as a parameter
 print(result) #true or false 
 
 '''
+
+#Checking the environment 
+print(os.environ.get('Home/jp/Downloads/learn_python3'))
+
+'''
+#joining the file path 
+file_path= os.path.join(os.environ.get('Home'),'text.txt')
+print(file_path)
+
+'''
+
+# file manupulation with the os.path 
+
+print(os.path.basename('/Home/text.txt')) #it wil print thr base name i ffile exits or not 
+print(os.path.dirname('/Home/text.txt'))
+print(os.path.split('/Home/text.txt'))
+print(os.path.splitext('/Home/text.txt')) # spiting the text with the file text and extension
+print(os.path.exists('/Home/text.txt'))
+print(os.path.isdir('/Home/jp/'))
+print(os.path.isfile('/Home/text.txt'))
+
+print(dir(os.path))
