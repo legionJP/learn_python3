@@ -42,14 +42,22 @@ One more way to open the file and no need to close the file
 Note: for binary format in every mode add the 'b' in the last 
 
 '''
-file=open('text1.text',mode='r')  # it opens the file from the current directory 
+'''
+file=open('text1.txt',mode='r')  # it opens the file from the current directory 
 data=file.readline()
 print(data)
 file.close()
+print(file.mode)
+'''
+#------------------------------------------------------------------------------------
 
-with open('text1.text',mode='r') as file:
+#using of the with open 
+
+with open('text1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
     data= file.readline()
     print(data)
+print(file.closed) #returns true
+#----------------------------------------------------------------------------------
 
 from pathlib import Path
 file_path= Path(r"d:\\JP Data E\\Notes_BIA_Course\\note_Information_Tech.txt")
