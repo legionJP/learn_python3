@@ -42,23 +42,43 @@ One more way to open the file and no need to close the file
 Note: for binary format in every mode add the 'b' in the last 
 
 '''
-'''
+
 file=open('text1.txt',mode='r')  # it opens the file from the current directory 
 data=file.readline()
-print(data)
+#data =file.read(120) #it will be read the 120 charcter than returns empty string
+print(data,end='')
 file.close()
 print(file.mode)
-'''
+
 #------------------------------------------------------------------------------------
 
 #using of the with open 
 
 with open('text1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
-    data= file.readline()
+    data= file.readline() 
+      # everytime it generate new line at the end
     print(data)
+#print(data,end='')
 print(file.closed) #returns true
 #----------------------------------------------------------------------------------
+for line in file:
+    print(line,end='')
 
+#using the while loop
+    
+size_to_readd =20
+f_data=file.read(size_to_readd)
+while  len(f_data)>20:
+    print(f_data,end='')
+    f_data=file.read(size_to_readd)
+
+#-------------------------------------------------
+
+#USING the tell() or seek method
+    
+
+
+#------------------------------------------------------
 from pathlib import Path
 file_path= Path(r"d:\\JP Data E\\Notes_BIA_Course\\note_Information_Tech.txt")
 try:
