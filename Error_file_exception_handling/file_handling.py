@@ -56,29 +56,58 @@ print(file.mode)
 
 with open('text1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
     data= file.readline() 
+    data1 =file.read()
+    file.seek(0)
       # everytime it generate new line at the end
     print(data)
 #print(data,end='')
 print(file.closed) #returns true
 #----------------------------------------------------------------------------------
+'''
 for line in file:
     print(line,end='')
+
 
 #using the while loop
     
 size_to_readd =20
 f_data=file.read(size_to_readd)
+
 while  len(f_data)>20:
     print(f_data,end='')
     f_data=file.read(size_to_readd)
 
+'''
 #-------------------------------------------------
-
-#USING the tell() or seek method
-    
-
+#Writing the file
+with open('text2.txt','w') as f:
+    #pass
+    f.write('Test')
+    f.seek(0) # It will overwrite the first operation 
+    f.write('T')
 
 #------------------------------------------------------
+    
+with open ('text1.txt','r') as read_file:
+    with open('text_copy','w') as write_file:
+     for line in read_file:
+        write_file.write(line)
+        # also can be copy images as a 'rb' mode and 'wb'
+
+# Example
+
+with open ('image.png','rb') as rf:
+   with open ('copy_image.png','wb') as wf:
+      file_size = 15173
+      rf_file_size =rf.read(file_size)
+      while len(rf_file_size) > 0:
+         wf.write(rf_file_size)
+         rf_file_size =rf.read(file_size)
+
+
+#---------------------------------------------------
+#Opening th file from the given path 
+
 from pathlib import Path
 file_path= Path(r"d:\\JP Data E\\Notes_BIA_Course\\note_Information_Tech.txt")
 try:
@@ -88,16 +117,25 @@ try:
 except Exception : NotADirectoryError 
 print("file not found")  # how to read and write the file from the other  dirctories 
 
+#---------------------------------------------------------
+
+#'w' 'r' , 'a' operation on the file
+
+
 with open('text1.text', mode= 'w') as write_file:
     write_file.write("Hello, This is Me ")
+
 with open('text1.text', mode='r') as read_file:
     data=read_file.readline()
     print(data)  
+
 with open('text1.text', mode='a') as append_file:
     append_file.write(' and who are you')
+
 with open('text1.text',mode='r') as read_file:
     print(read_file.read())         
 
+#---------------------------------------------------------------------------
 
 #without the with open file functions:
 file=open('text1.text',mode='r')
