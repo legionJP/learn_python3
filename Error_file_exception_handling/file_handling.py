@@ -53,7 +53,7 @@ print(file.mode)
 
 #using of the with open 
 
-with open('text1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
+with open('file1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
     data= file.readline()
     print(data)
 print(file.closed) #returns true
