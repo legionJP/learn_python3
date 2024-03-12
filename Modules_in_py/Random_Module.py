@@ -45,3 +45,17 @@ fake_cities = ['Metropolis', 'Eerie', "King's Landing", 'Sunnydale', 'Bedrock', 
 states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 
 
+for num in range(100):
+    first =random.choice(first_names)
+    last =random.choice(last_names)
+    phone = f'{random.randint(100,999)}-{random.randint(111,999)}-{random.randint(1000,9999)}'
+
+    street_num= random.randint(100,999)
+    street = random.choice(street_names)
+    state= random.choice(states)
+    city = random.choice(fake_cities)
+    zip_code = random.randint(10000,99999)
+    address = f'{street_num} {street} street., {city} {zip_code}'
+    email = first.lower() + last.lower() + '@randmgmail.com'
+
+    print(f'{first} {last} \n{phone}\n{address}\n{email}\n{state}')
