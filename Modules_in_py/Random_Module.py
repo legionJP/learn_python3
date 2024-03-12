@@ -58,4 +58,4 @@ for num in range(100):
     address = f'{street_num} {street} street., {city} {zip_code}'
     email = first.lower() + last.lower() + '@randmgmail.com'
 
-    print(f'{first} {last} \n{phone}\n{address}\n{email}\n{state}')
+    print(f'{first} {last} \n{phone}\n{address}\n{email}\n{state}\n')
