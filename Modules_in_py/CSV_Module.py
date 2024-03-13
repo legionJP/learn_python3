@@ -43,3 +43,35 @@ with open ('names.csv','r') as csv_file2:
             #del line['email']
             csv_writer.writerow(line)   
             print(line)    
+
+ # Parsing the CSV File from the web
+            
+html_output = ''
+names =[]
+with open('patrons.csv', 'r')as data_file:
+    csv_data = csv.reader(data_file)
+    '''csv_data = csv.DictReader(data_file)  
+
+    for items in csv_data:
+       print(items)
+'''
+    next(csv_data)
+    next(csv_data)            # for skipping the headeers and first line of the data 
+    #print(list(csv_data))
+    for line in csv_data: 
+        #print(line)
+     if line[0] =='No Reward':
+      break 
+     names.append(f'{line[0]} {line[1]}')
+    
+#or name in names:
+#   print(name)    
+
+html_output += f'<p>There are currently {len(names)} public contributers. Thanks !</p>'
+print(html_output)
+
+html_output += '\n<ul>'
+for name in names:
+   html_output += f'\n\t<li>{name}</li>'
+html_output += '\n</ul>'
+print(html_output) 
