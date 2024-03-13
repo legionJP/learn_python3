@@ -8,6 +8,7 @@ BCDEFGHIJKLMNOPQRSTUVWXYZ
 Ha Yeah Yeah 
 
 MetaCharcters (Need to be escaped):
+
 . ^ $ * + { } [ ] \ | ( )
 
 legion.com
@@ -28,7 +29,8 @@ sentence = 'Start a debat and bring it on the conclusion'
 #compile Method
 
 pattern = re.compile(r'abc') #Compile a regular expression pattern, returning a Pattern object.
-#pattern = re.compile(r'\.')
+#pattern = re.compile(r'\.') #literal search
+#pattern = re.compile(r'legion\.com')
 matches = pattern.finditer(text_to_search) #(method) def finditer(strin)
 
 for match in matches:
