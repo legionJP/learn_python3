@@ -1,8 +1,12 @@
 import re
 
+# .finditer   it returns extra options with all functionality
+# .findall() it just returns the matches as a list of string
+
+
 text_to_search = ''' abcdefghijklmnopqrstuvxyz
 
-BCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 1234567890
 
 Ha Yeah YeahYeah
@@ -28,9 +32,11 @@ Ms Dubi
 Mrs. Xinp
 Mr Thei
 
+
+###################################################################
 # Character matches in compile regex
 
-. - Any Character except New line ()'\')
+. - Any Character except New line ()'\')  (. - period sign )
 \d -Digit (0-9)
 \D - Not a digit (0-9)
 \w Word Charcter (a-z, A-Z, 0-9, _)
@@ -38,6 +44,7 @@ Mr Thei
 \s - White space (space, tab ,newline)
 \S - Not white space(space, tab ,newline)
 
+(Note: \. called the literal )
 # Anchers
 
 \b - Word boundary 
@@ -51,7 +58,7 @@ $ - Enof string
 |  -Either or 
 ( ) -Group
 
-Quantifiers:
+# Quantifiers:
 
 * - match 0 or more
 + - 1 0r more
@@ -67,8 +74,9 @@ Sat
 bat 
 Mat
 
-
 '''
+
+
 #Row string
 
 print('\tTab')
@@ -90,22 +98,37 @@ pattern = re.compile(r'[89]00[-.]\d\d\d[-.]\d\d\d\d')
 but in the between file it will specify the range'''
 
 pattern = re.compile(r'[a-zA-Z]') # or just [a-z]
+
 pattern = re.compile(r'[^b]at') # not a b with the at character
 
 pattern = re.compile(r'\d{3}.\d{3}.\d{4}') # Matching the exact numbers
 
 pattern = re.compile(r'Mr\.')
 pattern = re.compile(r'Mr\.?\s[A-z]') #Question  Mark for matching of 0 or 1 either
+
 pattern = re.compile(r'Mr\.?\s[A-z]\w*') # word character
+
+pattern = re.compile(r'(Mr|Mrs|Ms)\.?\s[A-z]\w*') # Usinga group  pattern within 
+
+pattern = re.compile(r'\d{3}.\d{3}.\d{4}') # for printing the .findall()
 #pattern = re.compile(r'\.') #literal search
 #pattern = re.compile(r'legion\.com')
 
 
+matches = pattern.findall(text_to_search) 
 matches = pattern.finditer(text_to_search) #(method) def finditer(strin)
-#matches = pattern.finditer(sentence)
 
-for match in matches:
-    print(match)
+
+'''
+pattern = re.compile(r'Start')
+matches = pattern.match(sentence) 
+matches = pattern.search(sentence) # returns all the matches at any plaace in string
+
+print(sentence)
+'''
+
+for match2 in matches:
+    print(match2)
 
 #print(text_to_search[1:4])
 
@@ -116,5 +139,6 @@ with open ('text2.txt','r') as f:
     contents =f.read()
     matches1= pattern.finditer(contents)
 
-    for match in matches1:
-        print(match)
+
+    for match1 in matches1:
+        print(match1)
