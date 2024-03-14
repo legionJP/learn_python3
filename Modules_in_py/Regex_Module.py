@@ -23,9 +23,10 @@ legion.com
 
 321*123*1235
 
-MR JSP
-Mr You 
-Mr They
+Mr. Jps
+Ms Dubi
+Mrs. Xinp
+Mr Thei
 
 # Character matches in compile regex
 
@@ -91,7 +92,11 @@ but in the between file it will specify the range'''
 pattern = re.compile(r'[a-zA-Z]') # or just [a-z]
 pattern = re.compile(r'[^b]at') # not a b with the at character
 
-pattern = re.compile(r'\d{3}.\d\d\d.\d\d\d\d') 
+pattern = re.compile(r'\d{3}.\d{3}.\d{4}') # Matching the exact numbers
+
+pattern = re.compile(r'Mr\.')
+pattern = re.compile(r'Mr\.?\s[A-z]') #Question  Mark for matching of 0 or 1 either
+pattern = re.compile(r'Mr\.?\s[A-z]\w*') # word character
 #pattern = re.compile(r'\.') #literal search
 #pattern = re.compile(r'legion\.com')
 
