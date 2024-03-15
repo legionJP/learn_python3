@@ -18,10 +18,16 @@ def divide_fun(a,b):
 try:
     ans= divide_fun(40,0)
 
-except Exception as e:          #using the base class exception inside the except , it is used for the all exceptions in the python
-    print("something went the wrong! " + " ",e)   # you can give the e after the exceptions ,  so E vaariable acts as a alias for the exceptions
+except Exception as e:
+    print("something went the wrong! " + " ",e)
+    print(e.__class__)  #common base class for non exit exceptions 
+
+    #using the base class exception inside the except , 
+    #it is used for the all exceptions in the python.
+    # you can give the e after the exceptions ,  
+    #so E vaariable acts as a alias for the exceptions
     #means e can print hte content of the error message
-    print(e.__class__)
+
 
 #or
 def divide_by(a,b):
@@ -32,12 +38,10 @@ except ZeroDivisionError as e:
     print(e, "we cant divide by the zero")
 except Exception as e: 
     print(e,"something went worng") 
+    
 # handle more than one exception by chaining the except statement by adding another except statement. 
 #zero divison error
-
-
-
-
+    
 # Starter code
 try:
     with open('file_does_not_exist.txt', 'r') as file:
@@ -77,3 +81,19 @@ try:
     print(item)
 except Exception as e:
     print("Item does not exist in the list", e)
+
+####################################################
+
+try:
+   f = open('file1.txt')
+   #if f.name =='file1.txt':
+    #   raise Exception               #Raisning exception manually
+except FileNotFoundError  as e:
+    print(e)
+except Exception as e:  # place general excpetion in the last for  printing if it is  in expect or custum error 
+    print('Error')            
+else:                    # it runs when there is no exception
+    print(f.read())
+    f.close()
+finally:
+    print("Excecuting the finally to see the process")
