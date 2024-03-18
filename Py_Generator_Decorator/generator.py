@@ -42,3 +42,57 @@ print(next(my_nums))
 for square in my_nums:
     print(square)
 
+#------------------------------------------------------------------------------------------------
+    
+#Example of generator use
+
+import mem_profile
+import random 
+import time 
+
+names = ['John', 'Carry', 'Adam', 'Gill' ,'Rohit', 'Ashwin']
+majors = ['math','WK' , 'CompSci', 'Batting', 'Pullshot', 'Carromball']
+
+print('Memory (Before): {}Mb'.format(mem_profile.memory_usage_resource()))
+
+
+def people_list(num_people):
+    result = []
+    for i in range(num_people):
+        person = { 
+                    'id': 1, 
+                    'name': random.choice(names),
+                    'majors': random.choices(majors)
+             
+                  }
+        result.append(person)
+    return result
+
+def people_generaotr(num_people):
+    for i in range(num_people):
+        person ={
+                  'id': 1,
+                  'name': random.choice(names),
+                  'majors': random.choices(majors)
+
+        }         
+        yield person
+
+'''
+t1 = time.process_time()
+people = people_list(1000000)
+t2 = time.process_time()
+
+print('Memory (After): {}Mb'.format(mem_profile.memory_usage_resource()))
+print('Took {} Seconds'.format(t2-t)
+'''
+t1 = time.process_time()
+people = people_generaotr(1000000)
+#people = list(people_generaotr(1000000))
+
+t2 = time.process_time()
+
+print('Memory (After): {}Mb'.format(mem_profile.memory_usage_resource()))
+print('Took {} Seconds'.format(t2-t1))  # it didnt take any extra memory
+
+#-------------------------------------------------------------------------
