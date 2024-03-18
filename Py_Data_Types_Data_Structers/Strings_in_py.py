@@ -1,12 +1,17 @@
-message ="Hello Jp's World"
-print(message)
+#String Operations
 
+message ="Hello my World"
+print(message)
 print(len(message))
 print(message[2])
 print(message[0:6]) 
 print(message.count('l'))
 print(message.count('World')) # counting the string chracter
+
+#---------------------------------------------------------------------------------------
+
 #Find the string character 
+
 print(message.find('Jp'))  #the ouput is 6 because the word is strating from the index 6
 print(message.find('y'))
 
@@ -15,6 +20,7 @@ print(message.find('y'))
 message=message.replace('Hello' , 'Welcome')
 print(message)
 
+#--------------------------------------------------------------------------------------
 #Cocatinatong the string
 
 greeting = "hello"
@@ -26,8 +32,10 @@ print(message)
 message= '{}, {} welcome'.format(greeting,name)
 print(message)
 
+#---------------------------------------------------------------------------------------
 
-#fstring fromating
+# fstring fromating
+
 message= f'{greeting}, {name.upper()}.Welcome!'
 print(message)
 
@@ -37,23 +45,23 @@ print(message)
 print(help(str))
 '''
 #---------------------------------------------------------------------------------------------------
+
 person ={'name': 'jenn', 'age': 23}
-sentence = 'My name is '+ person['name'] + ' and I am ' + str(person['age']) + ' years old '
+sentence = "'My name is '+ person['name'] + ' and I am ' + str(person['age']) + ' years old' "
 print(sentence)
 
-# by using the formatting
+# by using the  String formatting
 
-sentence= 'My name is  {0} and I am {1} years old '.format(person['name'],person['age'])
+sentence= "My name is  {0} and I am {1} years old '.format(person['name'],person['age'])"
 sentence2= 'My name is  {0[name]} and I am {1[age]} years old '.format(person,person)
 sentence3= 'My name is  {0[name]} and I am {0[age]} years old '.format(person) # in the case o fthe list we can also provide the index no like 0 , 1 in the place of the name , age
-
-
 
 print(sentence)
 print(sentence2)
 print(sentence3)
 
-#2.
+#-----------------------------------------------------------------------------------------
+#2. Using the string formatin 
 
 tag ='H1'
 name ='text type H1'
@@ -65,17 +73,24 @@ class person():
         self.name =name
         self.age= age
 p1= person('Jack','83') #p1 is the instance of the class
-sentence4='My name is {0.name} and I am {0.age} years old '.format(p1) #using the . attribute
+sentence4='My name is {0.name} and I am {0.age} years old '.format(p1)
+# 4. using the attribute
 # by paasing the keywoord value
-sentence5='My name is {name} and I am {age} years old '.format(name='John', age='30') #using the . attribute
+sentence5="My name is {name} and I am {age} years old '.format(name='John', age='30')"
+ 
 print(sentence5)
 print(sentence4)
+
+
+#----------------------------------------------------------------------------------------------
 
 # String formating using the list unpacking
 
 person1= {'name': 'Jenn','age': 23}
-sentence ='My name is {name} and I am {age} years old'.format(**person1)
+sentence ='My name is {name} and I am {age} years old'.format(**person1) # **kwargs
 print(sentence)
+
+#-------------------------------------------------------------------------------------------
 
 # Numbers formatiing by using the place holders {}
 
@@ -92,6 +107,8 @@ print(pie_value)
 sentence6='1 MB i sequal to {:,.2f} bytes'.format(1000**2)
 print(sentence6)
 
+#---------------------------------------------------------------------------------------------
+
 #Fromating the Date and time
 
 import datetime
@@ -105,3 +122,6 @@ print(sentence6) #%B is for the Month , and %d for the date , and %Y for the yea
 
 sentecne7= '{0:%B %d , %Y } fell on {0:%A} and was the {0:%j} day of the year'.format(mY_date)
 print(sentecne7)
+
+#---------------------------------------------------------------------------------------------
+
