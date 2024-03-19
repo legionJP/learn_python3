@@ -64,16 +64,34 @@ squares = my_map(cube, [1,2,3,4, 5])
 
 print(squares)
 
-#Logger Function
+# Example: 1. as a Logger Function
 
 def logger(msg):
      
      def log_message():
          print('Log:', msg)
-     return log_message()                                                               
+     return log_message                                                              
 
 log_hi = logger('Hi') # this log_hi can be called as a functions 
-# this log hi is equal to log_message function which logger func is returning 
-log_hi()       
+# this log hi is equal to log_message function which logger func is returning
+ 
+log_hi() # callinas a function
 
                     
+#Example 2:
+
+def html_tag(tag):
+    def wrap_text(msg):
+        print('<{0}>{1}</{0}>'.format(tag,msg))
+
+    return wrap_text
+
+print_h1 = html_tag('h1') #it is a function now 
+
+print_h1('Tag headline 1')  # html_tag() func is returning the wrap_text fun which ahve the msg argument
+print_h1('tag Headline 2')
+
+#Use of above first class func anywhere
+
+para_tag =html_tag('p')
+para_tag('Para contents lien 1 , starts from here')
