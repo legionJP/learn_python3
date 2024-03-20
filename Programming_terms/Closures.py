@@ -8,7 +8,7 @@
 An environment is a mapping associating each free varriable of the function with the value 
 or storage location to which the name was bound when the closure was created . A closure , 
 unlike a plain func , allows the func to access those captured variables through the closure's 
-refrence to them , even when the function is invoked outdsid etheir sope 
+refrence to them , even when the function is invoked outdside their sope.
 
 '''
 
@@ -52,7 +52,6 @@ my_functon2()
 
 print(my_functon1) #inner function adress 
 
-
 #---------------------------------------------------------------------------
 #Examples : 3 # Logging 
 
@@ -65,19 +64,19 @@ def logger2(func):
         logging.info(
             'Running "{}" with arguments {}'.format(func.__name__, args))
         print(func(*args))
-    return logger2
+    return log_func
 
 def add(x ,y):
     return x+y
 def subtract(x,y):
     return x-y
 
-add_logger = logger2(add)
+add_logger = logger2(add) 
 sub_logger = logger2(subtract)
 
-add_logger(3, 3)
-add_logger(4, 5)
+add_logger(3,6)   #logged every operation in example.log
+add_logger(4,8)
 
-sub_logger(12,5)
+sub_logger(45,30)
 
 
