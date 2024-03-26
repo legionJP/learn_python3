@@ -1,6 +1,5 @@
 from typing import Any
 
-
 def outer_fun(msg):
    # message = msg
 
@@ -30,7 +29,7 @@ def decorater_fun(original_function):
 
 # def display():
 #     print("Display func ran")
-# decorater_display = decorater_fun(display)
+# decorater_display = decorater_fun(display)   #The decorator defination
 # decorater_display() #Equal to the wrapper function 
 
 #=-----------------------------------------------------------------------------------
@@ -63,7 +62,7 @@ def decorater_fun1(original_function1):
         #print(message)
     return wrapper_function1
 
-class decorator_class(object):
+class decorator_class(object):               #The base class of the class hierarchy,When called, it accepts no arguments and returns a new featureless instance that has no instance attributes and cannot be given any.
     def __init__(self,original_function1):   #passing the original fun in class
         self.original_function1 = original_function1
          
@@ -82,28 +81,42 @@ def display1_info(name,age):
     print('Display 1 info ran with the arguments ({},{})'.format(name,age))
 
 display1_info('Josh', 19)
-
 display1()
+
  
 #-------------------------------------------------------------------------------------------------------
 #Examples of the Decoraotr
 #------------------------------------------------------------------------------------
 
-#Logging function
+#  Logging function
+#-------------------------------
+from functools import wraps  # for using the decorator inside of decorator
 
 def my_logger(original_function2):
     import logging
     logging.basicConfig(filename='{}.log'.format(original_function2.__name__), level=logging.INFO)
-
+    
+    @wraps(original_function2)
     def wrapper(*args,**kwargs):
         logging.info(
             'Ran with args: {}, and kwargs: {}'.format(args,kwargs))
         return original_function2(*args,**kwargs)
     return wrapper
 
+@my_logger
+def display_info1(name,age):
+    print('Display info ran with the argumetns ({}, {})'.format(name,age))
+
+display_info1('Ash',32)
+
+#--------------------------------------------------------------------------------------
+#   Timmer Function
+#---------------------------------------------------------------------------------------
+
 def my_timer(original_function2):
     import time
-
+     
+    @wraps(original_function2)
     def wrapper(*args, **kwargs):
         t1 = time.time()
         result = original_function2(*args, **kwargs)
@@ -111,4 +124,37 @@ def my_timer(original_function2):
         print('{} ran in the :{}sec'.format(original_function2.__name__,t2))
 
         return result
-    return wrapper
+    return wrapper  #this allows to added the functionality to original_func2
+
+import time
+@my_timer
+def display_info2(name,age):
+    time.sleep(2)
+    print('display_info2 ran with the arguments ({}, {})'.format(name,age))
+
+display_info2('AK',23)  
+
+#------------------------------
+#Using the both function 
+#---------------------------
+
+@my_logger
+@my_timer
+def display_info(name,age):
+    time.sleep(1)
+    print('display info ran with the argument ({}, {})'.format(name,age))
+
+#display_info =my_logger(my_timer(display_info)) #here we passing my_wrapper fun to logger and the originl_fun is not equal to this functon but equal to this wrap fun in timer thats why retruning the wrap log 
+#display_info= my_timer(display_info)
+print(display_info.__name__)
+
+display_info('Mark',29)    
+
+
+
+#################################################################################
+# Preserving the information of the original function whenever using the decorator
+
+# Using the functool module and wrap decorator
+
+#from functools import wraps # at the top
