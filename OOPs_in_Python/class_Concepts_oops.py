@@ -37,7 +37,7 @@ class employee(position, emp_status):
 #Object Creating OR Creating the instances of the class 
 emp1 = employee("shift_lead", "ft")  
 
-3. Methods : 
+3. Methods :  (It is function that is associate with class )
 methods are the functions that are defined inside the class and determine the behviour of the object instances 
 
 emp1.postion()   #method 
@@ -148,5 +148,47 @@ class ClassName(ABC):
  #The __init__ method gets called after memory for the object is allocated:
 
    # x = Point(1,2)   #here self._x , self._y sets the member of the object Point .    
+
+'''
+
+
+#-------------------------------------------
+
+#Instances of the classes
+#--------------------------------------
+class Employee:  #class is the blueprint for creating the instances
+   
+   def __init__(self,first,last,pay): #first instance is self
+        self.first =first                                  # this method called intialize and in other language  it called as constructer
+        self.last = last
+        self.epay =pay
+        self.email = first + '.' + last + '@email.com'
+
+
+emp1= Employee('jp','pal',50000)
+emp2 = Employee('name1','last',20000)
+# print(emp1)
+# print(emp2)
+print(emp1.email)
+print(emp2.email)
+
+
+
+'''
+
+#Instance varriable contains data that is unique to each instances
+
+emp1.first ='JP'
+emp1.last = 'PAL'
+emp1.email ='email.com'
+emp1.pay = 600000
+
+emp2.first ='JP'
+emp2.last = 'PAL'
+emp2.email ='email.com'
+emp2.pay = 600000
+
+print(emp1.email)
+print(emp2.email)
 
 '''
