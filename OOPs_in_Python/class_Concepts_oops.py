@@ -152,18 +152,22 @@ class ClassName(ABC):
 '''
 
 
+#_____________________________________________________________________________________
+# "OOPS Concepts"
 #-------------------------------------------
 
-#Instances of the classes
+# 1. Instances of the classes
 #--------------------------------------
 class Employee:  #class is the blueprint for creating the instances
    
    def __init__(self,first,last,pay): #first instance is self
-        self.first =first                                  # this method called intialize and in other language  it called as constructer
+        self.first =first      # this method called intialize and in other language  it called as constructer
         self.last = last
         self.epay =pay
         self.email = first + '.' + last + '@email.com'
-
+        
+   def fullname(self):
+        return '{} {}'.format(self.first,self.last)
 
 emp1= Employee('jp','pal',50000)
 emp2 = Employee('name1','last',20000)
@@ -172,12 +176,27 @@ emp2 = Employee('name1','last',20000)
 print(emp1.email)
 print(emp2.email)
 
+#running the methods 
+
+print('{} {}'.format(emp1.first,emp1.last))
+# or
+print(emp1.fullname()) #emp1 instance is getting passed on 
+print(emp2.fullname())
+
+emp1.fullname() #calling the method, no need to pass on self
+
+#class Method 
+print(Employee.fullname(emp1)) #in this we have to manually pass on the instance emp1
+
+
+
+
 
 
 '''
+  Expalantion to above method of code
 
-#Instance varriable contains data that is unique to each instances
-
+  #Instance varriable contains data that is unique to each instances
 emp1.first ='JP'
 emp1.last = 'PAL'
 emp1.email ='email.com'
