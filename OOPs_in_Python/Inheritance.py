@@ -20,6 +20,9 @@ class types:
 2. Modify inherited properties in child class
 
 '''
+#______________________________________
+# Inheritence class Example: 1.
+#---------------------------------------
 
 class employee():
     def __init__(self,name,last) -> None:
@@ -47,8 +50,73 @@ print(Jatav.leave_request(4))
 print(puneetS.position)
 print(Satav.name)
 
+#------------------------
+#Example 2.
+#---------------------
+class Employee:  #class is the blueprint for creating the instances
+   
+   raise_amt = 1.04
+   def __init__(self,first,last,pay): #first instance is self
+        self.first =first      # this method called intialize and in other language  it called as constructer
+        self.last = last
+        self.pay =pay
+        self.email = first + '.' + last + '@email.com'
+        
+   def fullname(self):
+        return '{} {}'.format(self.first,self.last)
+   
+   def apply_raise(self):
+       self.pay = int(self.pay * self.raise_amt)
 
+class Developer(Employee):
+    raise_amt =10
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        #Employrr.__init__(self,first,last,pay)
+        self.prog_lang =prog_lang
+
+class Manager(Employee):
+    def __init__(self, first, last, pay,employees =None): #None because we dont want to pass mutable data types list or dict as a argument
+        super().__init__(first, last, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees    
+
+    def add_emp(self,emp):  #adding employee
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def remove_emp(self,emp):  #removing employee
+        if emp not in self.employees:
+            self.employees.remove(emp)        
+    
+    def print_emp(self):
+        for emp in self.employees:
+            print('--->',emp.fullname())
+
+
+
+
+#print(help(Developer))  #It will show the inheriting method of the class
+
+dev_emp1= Developer('jp','pal',50000,'Python')
+dev_emp2 = Developer('name1','last',20000,'C++')
+# print(dev_emp1)
+
+print(dev_emp1.email)
+print(dev_emp1.prog_lang)
+
+
+print(dev_emp1.pay)
+dev_emp1.apply_raise()
+print(dev_emp1.pay)
+
+
+
+#----------------------------------------------------------------------
 #Multiple Inheritance 
+#---------------------------------------------------------------------
 
 #Single Inheritence 
 
@@ -57,8 +125,7 @@ class A():
 class B(A):
     pass
 
-
-#Multiple Inheritence 
+#_________Multiple Inheritence ______________
 
 class A():
    a = 1
@@ -76,7 +143,8 @@ print(c.a, c.b)
 #  A new class C is then defined and classes A and B are passed to it. 
 #  This is how multiple inheritance is done in Python.
 
-# Multi Level Inheritance
+#---------------------------------------------------------
+#________________ Multi Level Inheritance_______________
 
 class A():
     a=1
@@ -92,8 +160,9 @@ print(isinstance(c,A))
 # Above example of multi-level inheritance where the derived class C inherits from base class B.
  #The class B is in turn a derived class of base class C. Class B here is an intermediary derived class. 
 
-
+#----------------------------------------------------
 #Built in Functions 
+#-----------------------------------------------------
 
 #There are two built-in functions that can come in handy when trying to find 
 #  the relationship between different classes and objects: issubclass() and isinstance().
