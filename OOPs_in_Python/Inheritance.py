@@ -1,7 +1,8 @@
 '''' 
 object(__builtins__)  #The base class of the class hierarchy.
 # objects(built -in class)
-#every class in py inherits from built in base class called objcts , which is found in built-ins dot objects
+#every class in py inherits from built in base class called objcts ,
+ which is found in built-ins dot objects
 
 #like
 class Aclass()
@@ -13,7 +14,7 @@ class types:
 
 2. child/sub/derived class
 
-# Child class extend the behaviour  and attributes of the parents class which allows to
+# Child class extend the behaviour  and attributes of the parents class which allows to:
 1. Add more properties to child class
 
 2. Modify inherited properties in child class
