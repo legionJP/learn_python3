@@ -19,8 +19,8 @@ class recpie():
      def __new__(cls) -> Self:   #CLS is not a keyword but it is a convention act as a palceholder for passing the class as its first arguments 
           pass
 
-     def __init__(self) -> None:   # self keyword  is also the convetion that , 
-                                  #it has no function istself but server as palceholder for self refernece by instance object 
+     def __init__(self) -> None:   # self keyword  is also the convetion that , it is instance we passing as argument
+                                  #it has no function istself but serve as palceholder for self refernece by instance object 
           pass
      
 #class recpie():
@@ -51,6 +51,7 @@ print(Poha.items)
 
 print(Pizza.contents())
 
+#_____________________________________________________________________________________________________________________________________
 
 #_------------------------------------------------------------------------------
 # 2. Class Varriables
@@ -100,14 +101,92 @@ print(Employee.num_of_emolyee)
 print(emp1.__dict__)
 print(Employee.__dict__) #class contian the raise_amount attribute so the instance access this from class
 
+#-------------------------------------------------------------------------------------
+# REGULAR Methods: automatically takes its first argument as instance self
+# Class Methods : in this it automatically takes class as a first argument (cls), by adding @classmethod as decoraotrs
+# Static Method:
+
+#---------------------------
+# 1. Class Methods
+#------------------------------------------------------------------------------
+class Emp:
+     num_of_emps =0
+     raise_amount =1.04
+
+     def __init__(self,first,last,pay):
+          self.first =first
+          self.last = last
+          self.email = first + '.' + last + '@email.com'
+          self.pay = pay
+
+          Emp.num_of_emps +=1
+
+     def fullname(self):
+          return '{} {}.'.format(self.first, self.last)
+
+     def apply_raise(self):
+          self.pay = int(self.pay * self.raise_amount)
+
+     @classmethod
+     def set_raise_amt(cls,amount):  # here class is first argument instead of the instance var. self, and we can't use class as a variable name 
+          cls.raise_amount =amount  #it will set the new amount of raise
+
+#Using the Alternative constructer that aloows to passing the any employee string 
+     @classmethod
+     def from_String(cls,emp_str):
+          first ,last,pay =emp_str.split('-')
+          return  cls(first,last,pay) #this is creting the new employee
 
 
 
+Emp.set_raise_amt(1.05)
+#emp_1.set_raise_amt(1.05)
+
+emp_1 =Emp('JP','Pal',909090)
+emp_2 = Emp('NA','Last', 100000)
+
+print(Emp.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
 
 
+# Use case of class Method  for parsing a string (refer @classmethod method)
+#____________________________________________________________________________
+emp_str_1 = 'Johan-Dew-80909'
+emp_str_2 = 'Steve-Kam-99090'
 
+#first ,last,pay =emp_str_1.split('-')
+#new_emp1 = Emp(first,last,pay)
 
+#Use of the alternative constructer method 
 
+new_emp1=Emp.from_String(emp_str_1)
+print(new_emp1.email)
+print(new_emp1.pay)
+
+#--------------------------------------------------------------
+#Example: 
+# class method with date time Module :
+#----------------------------------------------------------
+
+#################################################################################
+
+#2. Static method of Class:
+#------------------------------
+# this class behave like a function , and this method doesn't operate on instance or class
+# and don't pass anything as a argument like self or cls
+#-------------------------
+
+class holiday:
+     @staticmethod
+     def is_workday(day):#passing the work argument only
+       if day.weekday() ==5 or day.weekday() ==6:
+          return False
+       return True
+import datetime
+my_date =datetime.date(2024,4,1)
+
+print(holiday.is_workday(my_date))
 
 
 
