@@ -72,7 +72,7 @@ class Developer(Employee):
     raise_amt =10
     def __init__(self, first, last, pay, prog_lang):
         super().__init__(first, last, pay)
-        #Employrr.__init__(self,first,last,pay)
+        #Employer.__init__(self,first,last,pay)
         self.prog_lang =prog_lang
 
 class Manager(Employee):
@@ -88,15 +88,12 @@ class Manager(Employee):
             self.employees.append(emp)
 
     def remove_emp(self,emp):  #removing employee
-        if emp not in self.employees:
+        if emp  in self.employees:
             self.employees.remove(emp)        
     
     def print_emp(self):
         for emp in self.employees:
             print('--->',emp.fullname())
-
-
-
 
 #print(help(Developer))  #It will show the inheriting method of the class
 
