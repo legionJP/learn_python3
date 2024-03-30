@@ -130,7 +130,6 @@ print(isinstance(manager_1,Employee))
 print(isinstance(manager_1,Developer))
 print(issubclass(Manager,Employee))
       
-
 #-----------------------------------------------------------------
 
 
