@@ -1,3 +1,4 @@
+#Inheritence IN Py
 '''' 
 object(__builtins__)  #The base class of the class hierarchy.
 # objects(built -in class)
@@ -50,9 +51,11 @@ print(Jatav.leave_request(4))
 print(puneetS.position)
 print(Satav.name)
 
+
+
 #------------------------
 #Example 2.
-#---------------------
+#--------------------------
 class Employee:  #class is the blueprint for creating the instances
    
    raise_amt = 1.04
@@ -95,34 +98,54 @@ class Manager(Employee):
         for emp in self.employees:
             print('--->',emp.fullname())
 
+#---------------------------------------
+#Developer Class Use
+
 #print(help(Developer))  #It will show the inheriting method of the class
 
 dev_emp1= Developer('jp','pal',50000,'Python')
-dev_emp2 = Developer('name1','last',20000,'C++')
+dev_emp2 = Developer('AK','last',20000,'C++')
 # print(dev_emp1)
 
 print(dev_emp1.email)
 print(dev_emp1.prog_lang)
 
-
 print(dev_emp1.pay)
 dev_emp1.apply_raise()
 print(dev_emp1.pay)
 
+#---------------------------------------------------------------
+#Manager Class use
+
+manager_1 =Manager('Devin', 'robo', 90000,[dev_emp1]) #supervising the dev_emp1
+print(manager_1.email)
+
+manager_1.add_emp(dev_emp2)
+manager_1.remove_emp(dev_emp1)
+
+manager_1.print_emp()  #printing the full name which is spervised
+
+#builtin functions
+print(isinstance(manager_1,Employee))
+print(isinstance(manager_1,Developer))
+print(issubclass(Manager,Employee))
+      
+
+#-----------------------------------------------------------------
 
 
 #----------------------------------------------------------------------
 #Multiple Inheritance 
 #---------------------------------------------------------------------
 
-#Single Inheritence 
+#1.____Single Inheritence________
 
 class A():
     pass
 class B(A):
     pass
 
-#_________Multiple Inheritence ______________
+#2._________Multiple Inheritence ______________
 
 class A():
    a = 1
@@ -141,7 +164,7 @@ print(c.a, c.b)
 #  This is how multiple inheritance is done in Python.
 
 #---------------------------------------------------------
-#________________ Multi Level Inheritance_______________
+#3._______________ Multi Level Inheritance_______________
 
 class A():
     a=1
@@ -153,24 +176,26 @@ c = C()
 print(c.a)    
 print(isinstance(c,A))
 
-#there are three level of inheritance 
+# there are three level of inheritance 
 # Above example of multi-level inheritance where the derived class C inherits from base class B.
- #The class B is in turn a derived class of base class C. Class B here is an intermediary derived class. 
+# The class B is in turn a derived class of base class C. Class B here is an intermediary derived class. 
+#_________________________________________________________________________________________________________
 
 #----------------------------------------------------
-#Built in Functions 
+# Built in Functions 
 #-----------------------------------------------------
 
 #There are two built-in functions that can come in handy when trying to find 
-#  the relationship between different classes and objects: issubclass() and isinstance().
+# the relationship between different classes and objects: issubclass() and isinstance().
 
 issubclass(A,B)
 print(issubclass(A,B)) # is A  subclass of B 
 print(issubclass(C,A)) # is C subclass of A 
  
 
- #Super() function.
-
+#------------------------------------------
+# Super() function.
+#---------------------------------------p
  #The super() function is a built-in function that can be called inside the derived class and gives access to the methods and 
 #variables of the parent classes or sibling classes.
  
