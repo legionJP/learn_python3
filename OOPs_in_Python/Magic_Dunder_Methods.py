@@ -38,9 +38,21 @@ class Employee:  #class is the blueprint for creating the instances
       
    def __str__(self) -> str:  # METHOD 3 
      return '{} -{}'.format(self.fullname ,self.email)
+   
+   # for combining the pay of the employee
+   def __add__(self,other):
+       return self.pay +other.pay
+   
+   # Function to check the length of the string like __len__ function
+   def __len__(self):
+       return len(self.fullname())
+   
 
 emp1 = Employee('Karan','Aluja',90000)
-emp2= Employee('Saran', 'Kaur', 90909)       
+emp2= Employee('Saran', 'Kaur', 90909)  
+
+print(emp1 + emp2)
+print(len(emp1))
 
 print(emp1) #this will print the employee object as a string
 
@@ -55,4 +67,18 @@ print(emp1.__str__())
 # these two methods are same allows us to change how our object will display 
 #--------------------------------------------------------------------------------
 
-#Specials Methods for Airthmetics 
+# Specials Methods for Airthmetics
+
+print(1+2) #this method uses __add__ method
+
+print(int.__add__(1,2))
+
+#string dundder method
+print(str.__add__('a','b'))
+
+
+# Function to check the length of the string 
+
+print(len('Simple'))
+#or
+print('test'.__len__())
