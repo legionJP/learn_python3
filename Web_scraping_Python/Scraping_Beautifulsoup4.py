@@ -25,7 +25,8 @@ match2 = soup.title.text
 # print(match1)
 # print(match2)
 
-####################################################################################
+#-----------------------------------------------------------
+#Scraping  the headline and the summary from example.html 
 
 article= soup.find('div', class_ ='article') #class_ bcz , in py class is special keyword
 print(article)
@@ -49,37 +50,41 @@ for article in soup.find_all('div',class_ ='article'):
 #---------------------------------------------------------------------------------
 # Scrapping the website
 
+#--------------------------------------------------------
+    
+
 from bs4 import BeautifulSoup
 import requests
 
-source = requests.get('https://www.webscraper.io/test-sites/e-commerce/allinone').text
+source = requests.get('https://www.patreon.com/coreyms').text
 soup = BeautifulSoup(source,'lxml')
 
 print(soup.prettify())
 print()
 
-content= soup.find('div', class_ ='jumbotron')
-#print(content.prettify())
-
-summary =content.find(class_ = 'lead')
-
-
-print(summary)
 
 #---------------------------------------------------------------------------------------
 # scraping the youtube video and id
-for article in soup.find_all('article'):
-headline = article.h2.atext
-print(headline)
-vid_src = article.find('iframe', class_ ='youtube-player')['src']
-print(vid_src) #link of video 
+#------------------------------------
+article = soup.find('div', class_ = 'sc-bdvvtL lhrfPG') #.p.txt
+print(article.prettify())
 
-vid_id = vid_src.split('/')[4]
-vid_id =vid_id.split('?'[0]) # id on the 0 index of the string
-print(vid_id) # SPLIT THE ID Of the video after 4 spilit
 
-yt_link = f'https://youtube.com/watch?v ={vid_id}'
-print(yt_link)
+
+vid_src = article.find('iframe', class_ = 'youtube-player')['src'] #iframe as a attribute for the src  attribute of that tag
+print(vid_src)    
+
+#spiliting the id string 
+
+vid_id = vid_src.spilit('/')
+print(vid_id)
+ # as a list the item is hown with the index value 
+#link at the 4 index
+
+vid_id = vid_id.split('/')[4]
+vid_id = vid_id.spilit('?')[0]
+print(vid_id)
+
 
 
 
