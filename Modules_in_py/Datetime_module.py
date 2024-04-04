@@ -10,8 +10,9 @@ print(t_day.weekday()) #where monday ==0 , sunday==6
 print(t_day.isoweekday()) #monday ==1 , sunday =6 )
 print(t_day.isocalendar())
 
+#---------------------------------------------------------
 # finding the date from today to nextdays and vice versa
-
+#-------------------------------------------------------
 tdelta = datetime.timedelta(days=30)
 print(t_day+tdelta)
 print(t_day-tdelta)
@@ -22,7 +23,10 @@ print(till_bday)
 print(till_bday.days)
 print(till_bday.total_seconds())
 
+#--------------------------------
 # Working with the time
+#--------------------------------
+
 T = datetime.time(10,30,30,1000)
 T== datetime.datetime(2023,12,24,10,30,30,10000)
 print(T)
@@ -59,8 +63,9 @@ tm_now=my_tmz.localize(my_tmz)
 tm_kolkata=my_tmz.astimezone(pytz.timezone('Aisa/Kolkata'))
 
 '''
-
+#-----------------------
 #format code of datetime
+#------------------------
 dt__kolkata= datetime.datetime.now(tz=pytz.timezone('Asia/Kolkata')) 
 print(dt__kolkata.strftime('%B %d , %Y'))   #datetime to string
 dt_str =' March 7 ,2016 '
