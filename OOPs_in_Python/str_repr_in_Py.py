@@ -1,14 +1,15 @@
 
 # difference between str() and repr()
-a = [1,2,3,4]
-b = 'sample string'
+a1 = [1,2,3,4]
+b1 = 'sample string'
 
-print(str(a))
-print(repr(a))
+print(str(a1))
+print(repr(a1))
 
-print(str(b))
-print(repr(b))
+print(str(b1))
+print(repr(b1))
 
+#-------------------------------------------------------------------------------------------------
 # class str(object = '') the goal of the str is readable
 
 # repr(object) , the goal of the repr is anambigious 
@@ -16,16 +17,18 @@ print(repr(b))
 import datetime
 import pytz
 
-at= datetime.datetime.now(datetime).replace(tzinfo=.UTC)
+timezone = pytz.timezone('Asia/Kolkata')
+
+a= datetime.datetime.now(timezone)
 b = str(a)
 
-print('str(a){}'.format(str(a)))
+print('str(a){}'.format(str(a)))  #this is more readable 
 print('str(b){}'.format(str(b)))
 
-print
+print()
 
-print('repr(a):{}'.format(repr(a)))
+print('repr(a):{}'.format(repr(a)))  # this is unambigious , usefull for the developers, if it is string or
 
 print('repr(b):{}'.format(repr(b)))
 
-print
+print()
