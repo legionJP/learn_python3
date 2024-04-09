@@ -1,0 +1,31 @@
+DEBUG:root:Add: 10 + 5= 15
+WARNING:root:Add: 10 + 5= 15
+DEBUG:root:Subtracr: 10 - 5= 5
+DEBUG:root:Multiply: 10 * 5= 50
+DEBUG:root:divide: 10 / 5= 2.0
+DEBUG:root:Add: 12 + 11= 23
+WARNING:root:Add: 12 + 11= 23
+DEBUG:root:Subtracr: 12 - 11= 1
+DEBUG:root:Multiply: 12 * 11= 132
+DEBUG:root:divide: 12 / 11= 1.0909090909090908
+2024-04-10 02:10:56,132:DEBUG:Add: 12 + 11= 23
+2024-04-10 02:10:56,132:WARNING:Add: 12 + 11= 23
+2024-04-10 02:10:56,132:DEBUG:Subtracr: 12 - 11= 1
+2024-04-10 02:10:56,132:DEBUG:Multiply: 12 * 11= 132
+2024-04-10 02:10:56,132:DEBUG:divide: 12 / 11= 1.0909090909090908
+2024-04-10 02:27:45,478:DEBUG:Add: 12 + 11= 23
+2024-04-10 02:27:45,479:WARNING:Add: 12 + 11= 23
+2024-04-10 02:27:45,479:DEBUG:Subtracr: 12 - 11= 1
+2024-04-10 02:27:45,481:DEBUG:Multiply: 12 * 11= 132
+2024-04-10 02:27:45,481:DEBUG:divide: 12 / 11= 1.0909090909090908
+2024-04-10 02:27:45,481:INFO:Created Employe jp pal- jp.pal@email.com
+2024-04-10 02:27:45,481:INFO:Created Employe ak kat- ak.kat@email.com
+2024-04-10 02:27:45,481:INFO:Created Employe sk nat- sk.nat@email.com
+2024-04-10 02:31:44,644:DEBUG:Add: 12 + 11= 23
+2024-04-10 02:31:44,644:WARNING:Add: 12 + 11= 23
+2024-04-10 02:31:44,644:DEBUG:Subtracr: 12 - 11= 1
+2024-04-10 02:31:44,644:DEBUG:Multiply: 12 * 11= 132
+2024-04-10 02:31:44,644:DEBUG:divide: 12 / 11= 1.0909090909090908
+2024-04-10 02:31:44,644:INFO:Created Employe jp pal- jp.pal@email.com
+2024-04-10 02:31:44,644:INFO:Created Employe ak kat- ak.kat@email.com
+2024-04-10 02:31:44,644:INFO:Created Employe sk nat- sk.nat@email.com
