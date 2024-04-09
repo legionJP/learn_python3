@@ -23,7 +23,7 @@ c= db_conn.cursor()   #creating the cursor for excexuting sql command
 c.execute("SELECT * FROM employees where last ='Kumar'")
 c.fetchone() #only returne one
 
-# c.fetchmany(5) #number of  rows as a list
+# c.fetchmany(5) #number of  rows as a lis
 # c.fetchmany() 
 
 db_conn.commit() #commiting the changes
