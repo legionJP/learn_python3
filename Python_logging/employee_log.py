@@ -1,6 +1,23 @@
 import logging
+import logging.handlers
+
+#adding the fromat to handler 
+formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
+
+#creating the logger variable
+ #for convettion __name__ =__main__ method , when the code is executed by import it name will be equal to module name
+ 
+logger =logging.getLogger(__name__)  
+
+logger.setLevel(logging.INFO)
+
+file_handler = logging.FileHandler('employee.log')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
 logging.basicConfig(filename='employee.log',level=logging.INFO,
-                    format='%(levelname)s:%(message)s')
+                    format='%(levelname)s:%(message)s')     
 
 class Employee:   
    
@@ -8,7 +25,7 @@ class Employee:
         self.first =first      
         self.last = last
         
-        logging.info('Created Employe {}- {}'.format(self.fullname, self.email))
+        logger.info('Created Employe {}- {}'.format(self.fullname, self.email))
 
    @property    
    def fullname(self):
