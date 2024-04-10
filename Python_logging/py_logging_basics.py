@@ -40,7 +40,7 @@ logging.debug('Add: {} + {}= {}'.format(num1,num2,add_result)) #its not logging 
 logging.warning('Add: {} + {}= {}'.format(num1,num2,add_result))
 
 sub_result = subtract(num1,num2)
-#print('Subtracr: {} - {}= {}'.format(num1,num2,sub_result))
+#print('Subtract: {} - {}= {}'.format(num1,num2,sub_result))
 logging.debug('Subtracr: {} - {}= {}'.format(num1,num2,sub_result))
 
 multi_result = multiply(num1,num2)
@@ -62,7 +62,7 @@ logging.basicConfig(filename='employee.log',level=logging.INFO,
 class Employee:  #class is the blueprint for creating the instances
    
    def __init__(self,first,last): #first instance is self
-        self.first =first      # this method called intialize and in other language  it called as constructer
+        self.first =first      
         self.last = last
         
         logging.info('Created Employe {}- {}'.format(self.fullname, self.email))

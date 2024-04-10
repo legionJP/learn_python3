@@ -90,3 +90,6 @@ Traceback (most recent call last):
     result =x/y
             ~^~
 ZeroDivisionError: division by zero
+INFO:__main__:Created Employe jp pal- jp.pal@email.com
+INFO:__main__:Created Employe ak kat- ak.kat@email.com
+INFO:__main__:Created Employe sk nat- sk.nat@email.com
