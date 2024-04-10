@@ -44,3 +44,49 @@ INFO:Add: 12 + 11= 23
 INFO:Subtract: 12 - 11= 1
 INFO:Multiply: 12 * 11= 132
 INFO:divide: 12 / 11= 1.0909090909090908
+INFO:employee_log:Created Employe jp pal- jp.pal@email.com
+INFO:Created Employe jp pal- jp.pal@email.com
+INFO:employee_log:Created Employe ak kat- ak.kat@email.com
+INFO:Created Employe ak kat- ak.kat@email.com
+INFO:employee_log:Created Employe sk nat- sk.nat@email.com
+INFO:Created Employe sk nat- sk.nat@email.com
+DEBUG:Add: 12 + 11= 23
+DEBUG:Subtract: 12 - 11= 1
+DEBUG:Multiply: 12 * 11= 132
+DEBUG:divide: 12 / 11= 1.0909090909090908
+INFO:employee_log:Created Employe jp pal- jp.pal@email.com
+INFO:Created Employe jp pal- jp.pal@email.com
+INFO:employee_log:Created Employe ak kat- ak.kat@email.com
+INFO:Created Employe ak kat- ak.kat@email.com
+INFO:employee_log:Created Employe sk nat- sk.nat@email.com
+INFO:Created Employe sk nat- sk.nat@email.com
+ERROR:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 51, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero
+INFO:employee_log:Created Employe jp pal- jp.pal@email.com
+INFO:Created Employe jp pal- jp.pal@email.com
+INFO:employee_log:Created Employe ak kat- ak.kat@email.com
+INFO:Created Employe ak kat- ak.kat@email.com
+INFO:employee_log:Created Employe sk nat- sk.nat@email.com
+INFO:Created Employe sk nat- sk.nat@email.com
+ERROR:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 56, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero
+INFO:employee_log:Created Employe jp pal- jp.pal@email.com
+INFO:Created Employe jp pal- jp.pal@email.com
+INFO:employee_log:Created Employe ak kat- ak.kat@email.com
+INFO:Created Employe ak kat- ak.kat@email.com
+INFO:employee_log:Created Employe sk nat- sk.nat@email.com
+INFO:Created Employe sk nat- sk.nat@email.com
+ERROR:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 57, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero

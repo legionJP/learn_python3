@@ -6,3 +6,25 @@
 2024-04-10 12:26:00,195:INFO:__main__:Subtract: 12 - 11= 1
 2024-04-10 12:26:00,195:INFO:__main__:Multiply: 12 * 11= 132
 2024-04-10 12:26:00,195:INFO:__main__:divide: 12 / 11= 1.0909090909090908
+2024-04-10 12:43:45,424:DEBUG:__main__:Add: 12 + 11= 23
+2024-04-10 12:43:45,424:DEBUG:__main__:Subtract: 12 - 11= 1
+2024-04-10 12:43:45,424:DEBUG:__main__:Multiply: 12 * 11= 132
+2024-04-10 12:43:45,424:DEBUG:__main__:divide: 12 / 11= 1.0909090909090908
+2024-04-10 12:47:15,179:ERROR:__main__:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 51, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero
+2024-04-10 12:50:06,027:ERROR:__main__:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 56, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero
+2024-04-10 12:51:40,662:ERROR:__main__:tried to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\jjpsi\Py_Notes\learn_python3\Python_logging\Py_logging_advance.py", line 57, in divide
+    result =x/y
+            ~^~
+ZeroDivisionError: division by zero
