@@ -1,0 +1,103 @@
+#----------
+#PIPENV 
+#-------------
+
+# we use pip to handle package management and ' virtula env' to handle virtual env BUt,
+#by pipenv these can be handle by one tool  so it simplifies the process
+
+#-----------
+#step 1.
+#-----------
+# pip install pipenv
+
+#-----------------
+#2. installing the packages fro project
+#-------------------
+
+# pipenv install requests
+
+# To activate this project's virtualenv, run pipenv shell.
+# Alternatively, run a command inside the virtualenv with pipenv run.
+#pipenv cretaes the toml file of profile and pip.lock
+
+#---------------------
+#Activate Environment 
+#-------------------
+#pipenv shell
+
+#check path
+import sys
+sys.executable 
+# 'C:\\Users\\jjpsi\\.virtualenvs\\projectdir-ifSe_8Ih\\Scripts\\python.exe'
+ 
+#Deactivate environment just type :
+exit
+#note : deactivate command  doesn't cxompletly deactivate the environment so use exit
+
+#-------------
+# Using the pipenv run (command)
+#-------------
+
+#pipenv run python 
+import sys
+sys.executable
+
+'C:\\Users\\jjpsi\\.virtualenvs\\projectdir-ifSe_8Ih\\Scripts\\python.EXE'
+
+# to run  a script in virtualenvs 
+
+# pipenv run python script.py
+
+#---------------------------------
+# pipenv install -r requirement.txt
+#--------------------------------
+
+#see the packages 
+#pipenv  lock -r 
+
+#install a package which are not necessary for the production but for developement 
+
+#pipenv install pytest --dev
+
+#pipenv unistall requests
+
+#------------------------------------
+#Using the deferent version of python
+#---------------------------------- 
+#change the version of python in profile 
+
+#pipenv --python 3.10
+
+#Making the pipenv from scratch for new version of python 
+
+#pipenv --rm 
+#pipenv install 
+
+#check the path 
+#pipenv --venv
+
+#--------------------
+#check for the security 
+#-------------------
+#pienv check
+
+#see all the dependencies and requirements 
+#pipenv graph 
+
+#-------=============
+#Using the same version of libraray and dependencies which have passed the tests so 
+#-------------------
+
+#pipenv lock 
+#pipenv install  --ignore-pipfile
+
+#--------------------------------------
+# Hide the secret information in .env profile by creating .env and putting secret key
+#-------------------------------------- 
+
+#pipenv run python 
+#it will load .env varriables 
+
+#See the key 
+import os 
+os.environ['SECRECT_kEY']
