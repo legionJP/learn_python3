@@ -28,11 +28,15 @@ class TestClac(unittest.TestCase): # inheriting from unittest module the Testcas
         self.assertEqual(Unit_testing.divide(-1,1),-1) 
         self.assertEqual(Unit_testing.divide(-1,-1),1) 
         self.assertEqual(Unit_testing.divide(5,2),2.5)  
-        #must add this case so that the case will give error if it is floor division
+         #must add this case so that the case will give error if it is floor division
+    
+        self.assertRaises(ValueError, Unit_testing.divide,10 ,0) #to test the zero division error
+    # Or using the context Manager for exceptions
+        with self.assertRaises(ValueError):
+            Unit_testing.divide(10,0)
+
 
 # '..F.' here dot indicates that the test case is passed and F indicates that it is failed
-
-
 
 #navigate module dir and in  cmd  run "pyhton -m unittest unit_calc.py"
 
