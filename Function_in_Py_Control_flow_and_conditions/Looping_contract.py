@@ -58,21 +58,46 @@ while count < len(favorites):
 #we also have to use the break, pass and continue...
 
 #If- else for the loop 
-#when we need a particular item in the list then use of the if condition and after founding the required item ,there is no need of continuing of the loop 
+#when we need a particular item in the list then use of the if condition and after founding the required item ,
+#there is no need of continuing of the loop 
+
 favorites1= ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
 for dessert in favorites1:
     if dessert=='Apple pie':
         print('fav dessert is',dessert)
         break 
-
 #if the required item is not found in the list than we have to handle the exception
     else:
         print('the dessert is not on my list ')
 
-
 #if the required item is in the list then we have to use the break to handle the else part
-#          
+
+my_list = [1,2,3,4,5]
+for i in my_list:
+    print(i)
+
+    #if i ==3:
+    if i ==6:
+        break  #if no break then hits the else statement
+else :
+    print('Hit the else statement ')    
+
+
+def find_index(to_search,target):
+    for i, value in enumerate(to_search):
+        if value == target:
+            break
+        else:
+            return -1
+        return i 
+my_slist= ['JP','AK','VJ']
+index_location = find_index(my_slist,'VJ')
+print(' Location of target is index: {}'.format(index_location)) #NOT SHOWING THE OUTPUT
+    
+
+#------------------         
 #continue
+#-----------------
 #use of the continue is the similar to control the iteration of the loop 
 #,by using the continue it skip the that section of the loop and
 #continue with the rest.
@@ -83,8 +108,12 @@ for desseret in favorites:
         continue 
         print('fav desssert is ',desseret)
 
- #Pass condition is used and allow us to completely ignore that if condition is satisfied or not
+ #---------------
+ #Pass
+ #-------------
+ #the pass condition is used and allow us to completely ignore that if condition is satisfied or not
  #Starter Code
+
 favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
 
 for dessert in favorites:
