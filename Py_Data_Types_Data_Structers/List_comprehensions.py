@@ -3,7 +3,7 @@
 
 Nums= [1,2,3,4,5,6,7,8,9,10,11,12]
 
-#If you wan t'n' for each 'n' in nums 
+#If you want 'n' for each 'n' in nums 
 Num_list =[]
 for n in Nums:
     Num_list.append(n)
@@ -13,24 +13,19 @@ print(Num_list)
 Num_list = [n for n in Nums]
 print(Num_list)
 
-
-# for n*n for each 'n ' in Nums:
 '''
-Num_list =[]
-for n in Nums:
-    Num_list.append(n*n)
-print(Num_list)
-
+map(): The map() function applies a given function to each item of an iterable 
+(such as a list or tuple) and returns a list of the results. 
+ example, you can use map() to square all numbers in a list.
 '''
-#By using th elist Comprehension
-Num_list =[n*n for n in Nums]
-print(Num_list)
-
 
 #Using the Lambda + Map function
 
 Num_list1 =map(lambda n: n*n, Nums)
-print (Num_list1)
+print(Num_list1)
+Num_list1=list(Num_list1)
+print("the num list is",Num_list1)
+
 
 # for 'n' for each n in nums i fn is even
 
@@ -40,16 +35,24 @@ for n in Nums:
         Num_list.append(n)
 print(Num_list)
 
+
+'''
+ The filter() function constructs a list from elements of an iterable for which a function returns true.
+In simple words,it filters the given iterable with the help of a function that 
+tests each element in the iterable to be true or not.
+'''
+
 #By Using the Filter and Lambda function
 Num= [1,2,3,4,5,6,7,8,10]
 Num_list1=filter(lambda n: n%2 == 0, Num) 
-print(Num_list1)#printing the location o f filter object !
+#print(Num_list1)      #printing the location o f filter object !
+Num_list1 = print(list(Num_list1))
 
 #By using the list COmprehension
 Num_list1=[n for n in Num if n%2 ==0]
 print(Num_list1)
 
-# if  wewan ta (letter, num ) pair fo each letter in 'abcd ' and each number in '0123'
+# if  we want a (letter, num ) pair fo each letter in 'abcd ' and each number in '0123'
 Num_list =[]
 for letter in 'abcd':
     for num in range(4):Num_list.append((letter,num))
@@ -69,12 +72,13 @@ for names , Department in zip(names, Department):
     my_dict[names]=Department #here names is the key and Department is value
 print(my_dict)
 
-my_dict1={name: Dept for name, Dept in zip(names,Department)}  #not working!
+my_dict1={name: Dept for name, Dept in zip(names,Department)}   
 print(my_dict1)
 
 
 #Set Comprehensions
-nums =[1,1,2,1,3,4,3,4,5,5,6,7,8,7,9,9]
+nums ={1,1,2,1,3,4,3,4,5,5,6,7,8,7,9,9}
+print(type(nums))
 my_set=set()
 for n in nums:
     my_set.add(n)
