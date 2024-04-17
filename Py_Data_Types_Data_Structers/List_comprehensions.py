@@ -23,7 +23,7 @@ map(): The map() function applies a given function to each item of an iterable
 (such as a list or tuple) and returns a list of the results. 
  example, you can use map() to square all numbers in a list.
 '''
-
+Nums= [1,2,3,4,5,6,7,8,9,10,11,12]
 Num_list1 =map(lambda n: n*n, Nums)
 print(Num_list1)
 Num_list1=list(Num_list1)
@@ -117,7 +117,7 @@ nums=[1,2,3,4,5,6,7,8,9,10]
 def gen_fun(nums):
     for n in nums:
         yield n*n
-        
+
 my_gen =gen_fun(nums)
 print("values",list(my_gen))  
  
@@ -133,7 +133,5 @@ for i in my_gen:
 # z = int(input())
 # n = int(input())
 
-# elements=[(x, y , z) for i in range(x+1) for j  in range(y+1) for k in range(z+1) if i+j+k!=n]
+# elements=[(x, y , z) for i in range(0,x+1) for j  in range(0, y+1) for k in range(0,z+1) if i+j+k!=n]
 # print(elements)
-        
- 
