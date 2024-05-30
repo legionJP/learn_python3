@@ -11,7 +11,6 @@ List = [10, 20, 14]
  
 '''
 #List--
-
 List = [10, 20, 14]
 print(type(List))
 mylist = ["Geeks", "For", "Geeks"]
