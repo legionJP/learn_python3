@@ -98,7 +98,8 @@ print(my_tuple[1])
 print(type(my_tuple))
 
 print(my_tuple.count('tuple'))
-print(my_tuple.index('6.45'))
+#print(my_tuple.index('6.45'))
+
 for x in my_tuple:
     print(x)
 
@@ -162,6 +163,6 @@ print("I like {0} more than the {1}".format("orange","mango"))
 #2.) Input / Output formating 
 str1=input("please inter your first name ")
 str2=input("please enter your last name ")
-print("hello" + str1+ ' '+str2)
+print("hello" +" "+ str1+ ' '+str2)
 
 #=====================================================================================================#
