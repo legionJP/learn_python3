@@ -81,7 +81,7 @@ list.extend([7,8,9,10]) # another function for addding the multiples itemm
 #-------------------
 #  Tuples: 
 #-------------------
-#An ordered collection of n values of any type ( where n >= 0)
+#An ordered collection of n values of any type ( where n >= 0, means tuple can hold 0 or more than 0 values )
 
 #1.) values inside the tuple can't be modified or changed : 
 tuple1=(1,'hello',8.9,"A")
