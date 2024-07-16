@@ -70,16 +70,18 @@ for i in range(0,10):
  #------------
  # By recursion
  #---------
-n= int(input("Type your terms for fibonaci: "))
+n= int(input("Type your num terms for fibonaci: "))
 def fib(n):
     if n<=1:
         return n
     return fib(n-1) + fib(n-2) 
 print(f"fibonaci numbers total at position {n}: is {fib(n)}") 
 
+
 print("fibonaci Seqence :")
 for i in range(n):
     print(fib(i))
+
 
 
 #------------------------------------------------------------
