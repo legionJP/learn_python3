@@ -83,5 +83,76 @@ algorithm swap(a,b)
 
 ```
 
-# Frequency Count Method:
+# Frequency Count Method 1.:
+
+```
+A = [8,2,4,1,5];
+Algorithm sum(A, n)
+{
+    S = 0;                          ________________(1)
+    for(i=o , i<n, i++):           __________________(n+1)
+    {
+        S = S+A[i];                 _________________(n)
+
+    }
+    return s;                      __________________(1)
+}
+
+***Time Complexity: ***
+
+1. for S=0 it will run 1 time
+# if n=5 than here i wil run for 1 time, and i<n  will be n+1 and , i++ will be n
+like : i =0 , 1, 2, 3, 4, at 5 it wil stop and the condtion was checkd for n+1 = 6 times
+
+2. so the loop executes for n +1 times
+
+3. Inside the loop it executes of the n times
+
+4. and the return fun for 1 time So, 
+time fun = f(n) = 2n+3
+
+> so order of 'n'(degree of the polynomial) is  : O(n)
+
+***Space Complexity: ***
+1. here Size of the A will be n so: A---------n (words)
+                                    n---------1 
+                                    s---------1
+                                    i---------1
+  so s(n) = n+3 , 
+  so degree is O(n)                                 
+
+```
+
+# Method 2: 
+
+*** Frequency count for the n*n metrics ***
+
+```
+Algorithm Add(A,B,n)
+{
+    for(i=0;i<n;i++) -------------------------(n+1)
+    {
+        for(j=0;j<n;j++)----------------------n(n+1)
+        {
+            c[i,j]=A[i,j]+B[i,j]; ------------(n*n)
+        }
+    }  
+}
+```
+```
+______________________________________________________
+#Time complexity:
+#Time function of this program is:       f(n)= 2n^2n+1
+# and time complexity will be:          O(n^2)
+
+# Space Complxity:
+A------------------------------------------ - n^2  (bcz they are matrices of n*m)
+B-------------------------------------------- n^2 
+C-------------------------------------------- n^2
+n, i , j ------------------------------------- 1 (3 scalable variables)
+so,                                  S(n) = 3n^2+3
+ and degree of the ploynomial =     O(n^2)
+_______________________________________________________
+```
+# Qusetion #: 
 
