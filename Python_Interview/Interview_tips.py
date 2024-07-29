@@ -174,3 +174,7 @@ for item in fib(num):
 # 8. Learn basics of Object Oriented Programming.
 # 9. Prepare some question for the interviewer.
 # 10. Know some other fundamental technologies like git etc.
+
+#=+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# [4,3,2,7,8,2,3,1]
+# 1<= x<=8 , N= 8
