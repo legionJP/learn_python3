@@ -131,8 +131,9 @@ time fun = f(n) = 2n+3
 Algorithm Add(A,B,n)
 {
     for(i=0;i<n;i++) -------------------------(n+1)
+    #whatever for this loop inside will execute for n time and 
     {
-        for(j=0;j<n;j++)----------------------n(n+1)
+        for(j=0;j<n;j++)----------------------n(n+1)   
         {
             c[i,j]=A[i,j]+B[i,j]; ------------(n*n)
         }
@@ -146,13 +147,53 @@ ______________________________________________________
 # and time complexity will be:          O(n^2)
 
 # Space Complxity:
-A------------------------------------------ - n^2  (bcz they are matrices of n*m)
+A------------------------------------------ - n^2  (bcz they are matrices of n*2 , 2D)
 B-------------------------------------------- n^2 
 C-------------------------------------------- n^2
 n, i , j ------------------------------------- 1 (3 scalable variables)
-so,                                  S(n) = 3n^2+3
- and degree of the ploynomial =     O(n^2)
+so,         time complexity =                         S(n) = 3n^2+3
+and degree of the ploynomial or space complexity=     O(n^2)
 _______________________________________________________
 ```
 # Qusetion #: 
+```
+ 
+Algorithm Add(A,B,n)
+{
+    for(i=0;i<n;i++)                        -------------------------(n+1)
+    #whatever for this loop inside will execute for n time and 
+    {
+        for(j=0;j<n;j++)                       ----------------------n((n+1))   
+        {
+            c[i,j]=0;                                -----------------(n*n)
+            for(k=0,k<n,k++)                        ----------------- (n+1)(n*n)
+            {
+                c[i,j]=c[i,j]+A[i,k]*B[k,j] ---------------------------(n*n*n)
+            }            
+        }
+    }  
+}
+}_______________________________________________________________________________________
+ #                               SO the time complexity is: 2n^3+3n^2+2n+1
+                                so time complexity is :   O(n^3)
+#  and Space complexity: A, B , C =   A---n^2
+                                      B----> n^2
+                                      c__-> n^2
+ and for the moduke i, j , k =    1.
+ and systejmcytl                                     
+# So the space or time complexity v:3n^2+3
+
+
+
+
+
+```                           
+
+
+
+
+
+
+
+
 
