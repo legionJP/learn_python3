@@ -98,9 +98,9 @@ print(my_tuple[1])
 print(type(my_tuple))
 
 print(my_tuple.count('tuple'))
-print(my_tuple.index('6.45'))
-for x in my_tuple:
-    print(x)
+#print(my_tuple.index('6.45'))
+# for x in my_tuple:
+#     print(x)
 
 #assigninng the vale to the tuple:
 
@@ -165,3 +165,13 @@ str2=input("please enter your last name ")
 print("hello" + str1+ ' '+str2)
 
 #=====================================================================================================#
+
+print([[i+j for i in "abc"] for j in "def"])
+
+ 
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+     
