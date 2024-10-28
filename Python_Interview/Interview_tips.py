@@ -70,16 +70,18 @@ for i in range(0,10):
  #------------
  # By recursion
  #---------
-n= int(input("Type your terms for fibonaci: "))
+n= int(input("Type your num terms for fibonaci: "))
 def fib(n):
     if n<=1:
         return n
     return fib(n-1) + fib(n-2) 
 print(f"fibonaci numbers total at position {n}: is {fib(n)}") 
 
+
 print("fibonaci Seqence :")
 for i in range(n):
     print(fib(i))
+
 
 
 #------------------------------------------------------------
@@ -172,3 +174,7 @@ for item in fib(num):
 # 8. Learn basics of Object Oriented Programming.
 # 9. Prepare some question for the interviewer.
 # 10. Know some other fundamental technologies like git etc.
+
+#=+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# [4,3,2,7,8,2,3,1]
+# 1<= x<=8 , N= 8
