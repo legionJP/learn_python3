@@ -51,9 +51,9 @@ print('Tuple\t',sorted_tup)
 #---------------------------------------------------------------------------------------------#
 
 s = {12 ,13, 24, 25, 26}
-# set never follow the sequence , if we print we get the random sequence
+# set never follow the sequence or order, if we print we get the random sequence
 print(s)
-# print(s[2])    -- Set object does not suppoert the indexing 
+# print(s[2])    -- Set object does not suppoert the indexing bcz it is unordered
 
 #--------------------------------------------------------------------------------------------------#
     #                               Dictionary
