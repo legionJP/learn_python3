@@ -1,8 +1,8 @@
 ## learn_python Programming in structured way 
 
 ### Find Out the every topic of python3 below
-- [Python Data Types and  Data Structures ](/Py_Data_Types_Data_Structers)
-- [ File handlings in Python ](/file_handlings_py)
+- [Python Data Types and  Data Structures ](/Python3/Py_Data_Types_Data_Structers)
+- [ File handlings in Python ](/Pytyhon3/file_handlings_Py)
 
 
 
