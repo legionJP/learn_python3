@@ -9,7 +9,7 @@ list_list = [num_list,values_List] #put the list inside list
 
 # Inserting and Appending
 num_list.append(1) # append in the end
-num_list.insert(29) # insert in between
+num_list.insert(1,15) # insert in between
 num_list.remove(15)
 
 num_list.pop(1) # using the pop for the index numbers to remove the element
@@ -18,12 +18,12 @@ num_list.pop()  # By using the Stack concept it Remove and return item at index 
 del num_list[2:]
 
 # Extend
-num_list.extend(29,12,0,23,4,12,15)
+num_list.extend([29,12,0,23,4,12,15])
 min(num_list)
 max(num_list)
 sum(num_list)
 
-# Sort and Sorted
+# List Sort and Sorted
 
 sorted_list=sorted(num_list) #sort(num_list) will retrun the nun value
 print(sorted_list) # it will be the new sorted list but not the original one
@@ -32,18 +32,32 @@ print(sorted_list) # it will be the new sorted list but not the original one
 num_list.sort()
 
 num_list.sort(reverse=True)
-print('Origina sorted list:\t', num_list)
+print('Original sorted list:\t', num_list)
 
-#--------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------------#
 #                                Tuple
 #------------------------------------------------------------------------------------------#
 #SORTING THE TUPLE
 
-tup =(2,36,4,15,62,74,28,19,11)
+tup =(2,36,4,15,62,74,28,19,11) # be use the round bracket 
+print(tup[1])
+# tup[1] = 23 # tupledoes not support the item assignment so , so iteration is faster than the list
+
 sorted_tup =sorted(tup)  #in a case of the tuple we can't use the .sort() bcz its unmutable
 print('Tuple\t',sorted_tup)
 
-#SORTING THE Dict
+#------------------------------------------------------------------------------------------------------#
+#                   SET
+#---------------------------------------------------------------------------------------------#
+
+s = {12 ,13, 24, 25, 26}
+# set never follow the sequence , if we print we get the random sequence
+print(s)
+# print(s[2])    -- Set object does not suppoert the indexing 
+
+#--------------------------------------------------------------------------------------------------#
+    #                               Dictionary
+#--------------------------------------------------------------------------------------------------#
 
 di ={'name': 'jp', 'job': 'programming', 'age': None, 'os': 'Linux'}
 sorted_dict=sorted(di)
