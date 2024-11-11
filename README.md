@@ -1,6 +1,6 @@
 ## learn_python Programming in structured way 
 - FInd Out the every topic of python3 below
-- [Python Data Types and  Data Structures ](/learn_python3/Py_Data_Types_Data_Structers)
+- [Python Data Types and  Data Structures ](/Py_Data_Types_Data_Structers)
 
 ## Other Programming Language Resources
 
