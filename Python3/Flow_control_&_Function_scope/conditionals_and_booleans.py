@@ -1,11 +1,11 @@
-#about the conditionals and boolean statement
+#-------------------------------------------------
+#  About the conditionals and boolean statement
+#----------------------------------------------
 
 if True:
-    print('coditon was true')
+    print('codition was true')
 if False:
-    print('condtion was false')
-
-
+    print('condition was false')
 
 #comparisons Statement in Py
 
