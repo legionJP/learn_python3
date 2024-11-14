@@ -20,7 +20,7 @@ that is being called .
 be resuable , and save a lot of development time. 
 
 
-Note: :: slice function that is used to include wthe list item after the index value or before the index Value
+Note: :: slice function that is used to include the list item after the index value or before the index Value
 like ::-1 and :: 1
 
 '''
@@ -72,7 +72,7 @@ my_list1 = [1,2,3,4,5]
 
 def add_list(lst,item):
     new_list= lst.copy # new list creating the copy 
-    new_list.append(item)
+    #new_list.append(item)
     return new_list
 
 new_list =add_list(my_list1,6)

@@ -20,6 +20,18 @@ for i in range(4):
 #             4                 A B C D
 
 #--------------------------------------------------------------------------------#
+# Prime Number or Not: a number if divisible by 1 or itself is prime number
+p_num = 15
+for i in range(2,p_num):
+    if p_num%i== 0:
+        print("Not a prime number ")
+        break
+else:
+    print("prime Number")    
+
+# Make it efficient 
+
+#-------------------------------------------------------------------------------------#
 #nested For Loop
   #1. Outer loop
 

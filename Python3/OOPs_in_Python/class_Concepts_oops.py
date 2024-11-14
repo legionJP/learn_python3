@@ -1,4 +1,7 @@
-#Programming paradigm are the strtagey for reducing the code complexity and determine the flow of the code 
+
+#--------------------------------------------------------------------------------------------#
+#Programming paradigm-
+# Are the strtagey for reducing the code complexity and determine the flow of the code 
 
 '''type of the paradigm like 
 
@@ -6,15 +9,15 @@
 
 In pyhton Paradigm follows , Object Oriented , Procedural and functional
 
+#--------------------------------------------------------------------------------------------#
 
 #Object Oriented Programming 
-
-oop is 
-Resuable , Abstracrtion , Move between projects 
+#--------------------------------------------------------------------------------------------#
+oop is  Resuable , Abstracrtion , Move between projects 
 
 
 #Key Components of the OOPS 
-
+#------------------------------------#
 1. Classes  :
 
 Class is a logical code blocks , it contains : 
@@ -23,7 +26,7 @@ Class is a logical code blocks , it contains :
                 Behaviour : behiour can be a function 
 
  We can create the instances of the classes called the object or class provide a blueprint for creating a object. 
-
+#--------------------------------------------------------------------------------
 2. Object :  
 An attributes and Behaviour of the class define the state of the Object :
  example : Creating the object emp1 
@@ -36,19 +39,21 @@ class employee(position, emp_status):
     
 #Object Creating OR Creating the instances of the class 
 emp1 = employee("shift_lead", "ft")  
-
+#-----------------------------------------------------------------------------------------#
 3. Methods :  (It is function that is associate with class )
 methods are the functions that are defined inside the class and determine the behviour of the object instances 
 
 emp1.postion()   #method 
 
 '''
+#---------------------------------------------------------------------------------------------#
+#                                       OOPS Concepts
+#---------------------------------------------------------------------------------------------#
+#    1. Inheritenace : 
+#----------------------------------------
 
-#OOPS Concepts
-
-#1. Inheritenace : 
-
-# It is a creating a new class which is the dreivative of the existing class means from parent classa to sub or child class.
+# It is a creating a new class which is the dreivative of the existing class
+#  means from parent classa to sub or child class.
 
 '''
 class Parent:
@@ -61,9 +66,8 @@ class Child(Parent):
 python uses Method Resolution Order (MRO) that determines the flow of execution. 
 MRO is a set of rules, or an algorithm, that Python uses to implement monotonicity, 
 which refers to the order or sequence in which the interpreter will look for the variables and functions to implement. 
-
 '''
-
+#--------------------------------------------------------------------------------------------#
 #__________________________
 #2. Polymorphism :
 #__________________________
@@ -89,10 +93,9 @@ print(len(sequence))
 
 #The len() function is able to take variable inputs. In the example above it is a string and a list that provides the output in integer format.
 
-
-
-
-#3. Encapsulation: 
+#--------------------------------------------------------------------------------------------#
+#                               3. Encapsulation: 
+#--------------------------------------------------------------------------------------------#
 
 # it limits the access to the method and varriables by encasing  them in a single unit of scope like class 
 #it helps to prevent the unwanted modification and reduces the error occurence 
@@ -119,11 +122,11 @@ class Alpha:
  # these private and protected members can still be accessed from outside of the class by using public methods to access them 
  # or by a practice known as name mangling, mangling is the use of two leading underscores and one trailing underscore, 
  #_class__identifier  # identifier is the data member that u want to access
-
+#--------------------------------------------------------------------------------------------#
 #_____________________
-
-#4. Abstraction : 
+#                                    4. Abstraction : 
 #__________________________
+#--------------------------------------------------------------------------------------------#
 
 # It hides the implementations details for the data security 
 # python does not support the abstraction directly and uses the inheritance to achive it .
@@ -150,14 +153,11 @@ class ClassName(ABC):
    # x = Point(1,2)   #here self._x , self._y sets the member of the object Point .    
 
 '''
-
-
-#_____________________________________________________________________________________
-# "OOPS Concepts"
-#-------------------------------------------
-
-# 1. Instances of the classes
-#--------------------------------------
+#--------------------------------------------------------------------------------------------#
+#                                      CLASS CONCEPT
+#--------------------------------------------------------------------------------------------#
+#                            1. Instances of the classes
+#---------------------------------------------------------------------------------------------#
 class Employee:  #class is the blueprint for creating the instances
    
    def __init__(self,first,last,pay): #first instance is self
@@ -175,9 +175,9 @@ emp2 = Employee('name1','last',20000)
 # print(emp2)
 print(emp1.email)
 print(emp2.email)
-
-#running the methods 
-
+#-------------------------------------------------------------------
+#                         running the methods 
+#----------------------------------------------------------
 print('{} {}'.format(emp1.first,emp1.last))
 # or
 print(emp1.fullname()) #emp1 instance is getting passed on 
@@ -187,10 +187,6 @@ emp1.fullname() #calling the method, no need to pass on self
 
 #class Method 
 print(Employee.fullname(emp1)) #in this we have to manually pass on the instance emp1
-
-
-
-
 
 
 ''''
