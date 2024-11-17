@@ -6,7 +6,7 @@
 - [ Operators in Python3](/python3/Operators_in_py)
 - [ User Input and Math Module](/python3/Math_&_User_Input)
 - [ Flow Control and Function Scope in Py ](/python3/Flow_control_&_Function_scope)
-
+- [ Array in Python](/Python3/Arrays_&_Numpy/)
 - [ File handlings in Python ](/Python3/file_handlings_Py)
 
 
