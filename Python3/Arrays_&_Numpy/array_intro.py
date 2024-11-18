@@ -3,6 +3,12 @@
 #-----------------------------------------------------------------------------------------#
 #-->
 # similar to list but need to have the value of the same type , Like int array , str array 
+# Type of Array:
+'''
+1. Single Dimension Array 
+2. Multi Dimesion Array
+'''
+
 #Use of Array: --- 
 '''
 10 students in class than need to create the  10 different vars. for the marks like m1, m2,
