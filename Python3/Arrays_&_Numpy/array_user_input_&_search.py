@@ -13,7 +13,9 @@ for i in range(n):
 
 print(arr)
 
+#------------------------------------------------------------------------------------#
 # Search in the array
+#------------------------------------------------------------------------------------#
 
 s_val = int(input("Enter the value for search in the array: "))
 k=0
@@ -23,6 +25,7 @@ for  e in arr:
         break
     k+=1
 
+#-------------------------------------unicode array-----------------------------------#
 my_arr = array('u',[])
 l = int(input("Enter the length for the array: "))
 for i in range(l):
@@ -30,6 +33,9 @@ for i in range(l):
     my_arr.append(x)
 
 print(my_arr)
+# Print the array using repr() to show individual elements
+print(f"array('u', {', '.join(map(repr, my_arr))})")
+
 
 u_val = str(input("enter the unicode value to search in array: "))
 v=0
@@ -39,3 +45,6 @@ for e in my_arr:
         break
     v+=1
 
+#---------------------------------------------------------------------------------#
+# Questions: 
+# cre
