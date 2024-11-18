@@ -47,4 +47,10 @@ for e in my_arr:
 
 #---------------------------------------------------------------------------------#
 # Questions: 
-# cre
+'''
+Assignment Question:
+
+1. Create an array with 5 values and delete the value at index number 2 without using in-built function.
+
+2. Write a code to reverse an array without using in-built function.
+'''
