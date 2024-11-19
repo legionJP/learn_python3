@@ -7,7 +7,9 @@
 - [ User Input and Math Module](/python3/Math_&_User_Input)
 - [ Flow Control and Function Scope in Py ](/python3/Flow_control_&_Function_scope)
 - [ Array in Python](/Python3/Arrays_&_Numpy/)
+- [ Functions and Functional Programming in Py](/Python3/Functional_Programming/)
 - [ File handlings in Python ](/Python3/file_handlings_Py)
+
 
 
 
