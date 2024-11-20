@@ -62,10 +62,9 @@ print(list)
 my_list = [1,2,3,4]
 def  add_list(item):
     return my_list.append(item)
-
 add_list(5)
-
 print(my_list) # data is manipulated at the global stage
+
 #----------------------------------------------------------------------------------------#
 #2.
 my_list = [1,2,3,4]
@@ -98,7 +97,7 @@ print("this is appended list", append_list)
 print(my_list1) #here pure fucntion doesn't change the original list at global scope
 
 #----------------------------------------------------------------------------------------#
-#         Calling the function differnt types
+#         Calling the function By differnt ways
 #----------------------------------------------------------------------------------------#
 def add_sub(a,b):     # takes arguments or param
     c =a+b
@@ -110,3 +109,4 @@ add_sub(5,4)
 r1,r2 = add_sub(9,2)
 result = add_sub(6,4)  # when using the object the function Expecting someting to return
 
+#-----------------------------------------------------------------------------------------#
