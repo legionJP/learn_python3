@@ -67,4 +67,4 @@ def hanoi(disks,source,helper, destination):
         print("disk {} moves from tower {} to tower {}" .format(disks,source,destination))
         hanoi(disks-1, helper, source,destination)
         return hanoi
- 
+hanoi()
