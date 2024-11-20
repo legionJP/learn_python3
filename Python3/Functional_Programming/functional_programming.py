@@ -16,16 +16,16 @@
 -> functional programming is differntiate by design comapare to object oriented.
 -> does not change the data outside the scope of the function ,
  its only returned the function result
-that is being called .
+that is being passed .
 
 > the function is being considered as a standalone and independet .
 
 -> Many object oriented programming langauges has aided  the functional programming.
--> In python functions are called first class citizen ,
+-> In python functions are passed first class citizen ,
 Means they have same level of functions , strings and Numbers 
 
 -> fun.can be assign to varriable  passed as an argument 
- and returned can returned as its caller.
+ and returned can returned as its passer.
 
 -> In function programming the logic  for certain tasks is already built in and function can 
 be resuable , and save a lot of development time. 
@@ -97,7 +97,7 @@ print("this is appended list", append_list)
 print(my_list1) #here pure fucntion doesn't change the original list at global scope
 
 #----------------------------------------------------------------------------------------#
-#         Calling the function By differnt ways
+#         passing the function By differnt ways
 #----------------------------------------------------------------------------------------#
 def add_sub(a,b):     # takes arguments or param
     c =a+b
