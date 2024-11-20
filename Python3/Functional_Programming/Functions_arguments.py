@@ -52,3 +52,8 @@ in func the x will use the diff address and a=10 will use different
 means if your passing the address of the a
 
 '''
+
+#-----------------------------------------------------------------------------------------#
+#                      Types of Arguments
+#-----------------------------------------------------------------------------------------#
+
