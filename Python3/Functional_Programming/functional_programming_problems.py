@@ -28,14 +28,32 @@ fib(n)
 
 # Find the factorial 5 = 1*2*3*4*5 =120 --> (n*n-1)
 
+# Looping solution to find factorial
+
 x = int(input("Enter num to find the fact: "))
 
 def fact(x):
-    f =1
-    for i in range(1,x+1):       
-        f=f*i
-    return f    
+    if x<=0:
+        return 0
+    else:
+        f =1
+        for i in range(1,x+1):       
+            f=f*i
+        return f    
 
 result = fact(x)
 print(result)
+
+#-----------------------------------------------------------------------------------------#
+#   Recursive solution to find the fact
+#-----------------------------------------------------------------------------------------#
+
+n= int(input("Enter the number for fact. "))
+def find_factorial_recursive(n):
+    if n==1:                  # Base condition
+        return 1
+    else:
+        return n*find_factorial_recursive(n-1) 
+# here retrun is keeping the reference of implemented value and calling again and again 
+print(find_factorial_recursive(n))  
 
