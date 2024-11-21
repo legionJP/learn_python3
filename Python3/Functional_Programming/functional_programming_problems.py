@@ -50,7 +50,7 @@ print(result)
 
 n= int(input("Enter the number for fact. "))
 def find_factorial_recursive(n):
-    if n==1:                  # Base condition
+    if n==0:                  # Base condition
         return 1
     else:
         return n*find_factorial_recursive(n-1) 
