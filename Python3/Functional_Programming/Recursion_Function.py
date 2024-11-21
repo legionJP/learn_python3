@@ -12,18 +12,19 @@ import sys
 if don't it will spin into infinte loop and crash the system
 '''
 #Recursion
+#The goal in the recursion of function to find the base case condtion if it finds it terminated
 #----------------------------------------------------------------------------------------#
 sys.setrecursionlimit(2000) # set the default limit to 2000 from 1000
 print(sys.getrecursionlimit())
 i=0
 def greet():
     global i
-    if i<=2000:    # Base to not get the warring for the limit    
+    if i>=1998:    # Base case to not get the warring for the limit    
+        print("limit is reached for the recursion at ",i) 
+    else:  
       i+=1
       print("hello",i)
-      greet()    # Calling the function itself and max range is 1000 to cppe with recursion
-    else:
-        print("limit is reached for the recurion ")  
+      greet()    # Calling the function itself and max range is 1000 to cppe with recursion    
 greet()
 
 #2
@@ -80,7 +81,7 @@ Debugging : hard to debug
 disks=int(input('Number of disks to be placed: '))
 source=str(input('Name of the source tower '))
 helper=str(input('Name of the  Helper '))
-destination= str(input('Name of the destination '))    
+destination= str(input('Name of the destination tower '))    
 
 def hanoi(disks,source,helper, destination):
     
@@ -95,4 +96,4 @@ def hanoi(disks,source,helper, destination):
         print("disk {} moves from tower {} to tower {}" .format(disks,source,destination))
         hanoi(disks-1, helper, source,destination)
         return hanoi
-hanoi()
+hanoi(disks,source,helper,destination)
