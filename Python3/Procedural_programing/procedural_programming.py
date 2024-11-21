@@ -51,8 +51,9 @@ It is the series of the task to solve a problem pr task of a given problem
 '''
 # program to check the palnidrome word
 
+
 def ispalindrom(str):
- 
+ str= str.lower()
  startIndex = 0
  endindex = len(str)-1
  for i in str:
@@ -60,7 +61,7 @@ def ispalindrom(str):
    return False
   else:
    return True
-print(ispalindrom('racecar'))  
+print(ispalindrom('Racecar'))  
 
  
 
