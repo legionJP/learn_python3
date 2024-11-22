@@ -45,7 +45,10 @@ def decorater_fun(original_function):
         print('Wrapper is  excecuting before the  {}'.format(original_function.__name__))
         return original_function(*args,**kwargs)   #This is decorator 
         #print(message)
-    return wrapper_function
+    return wrapper_function 
+
+# main function should always return something to work as the decorator 
+
 
 # def display():
 #     print("Display func ran")
@@ -75,7 +78,7 @@ display()
 
 
 #---------------------------------------------------------------------------------------------#
-#        Using the Classes as a Decorator
+#          Using the Classes as a Decorator
 #---------------------------------------------------------------------------------------------#
 
 def decorater_fun1(original_function1):
@@ -93,7 +96,10 @@ class decorator_class(object):               #The base class of the class hierar
         
     def __call__(self, *args, **kwargs): 
         print('Call method executed this before the  {}'.format(self.original_function1.__name__))
-        re#-----------------------------------------------------------------------------------------------------#turn self.original_function1(*args,**kwargs)  # WE are using the instance method here   
+
+#turn self.original_function1(*args,**kwargs)  # WE are using the instance method here           
+#-----------------------------------------------------------------------------------------------------
+        
 
 @decorator_class
 def display1():
