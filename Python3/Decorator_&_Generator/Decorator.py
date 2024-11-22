@@ -1,24 +1,44 @@
-from typing import Any
-
-def outer_fun(msg):
-   # message = msg
-
-    def inner_function():
-        print(msg)
-    return inner_function
-
-#my_func=outer_fun() 
-func1 = outer_fun('First')
-func2 = outer_fun('Second')
-
-func1()
-func2()
-
-#Decorator 
+#=-------------------------------------------------------------------------------------#
+#                             Decorator 
+#----------------------------------------------------------------------------------------#
 '''
-It is just a function that takes another function as a argument and 
-add some kind of functionality and then return other function without altering the source code 
+It is just a function that takes another function as a argument and add some kind of 
+functionality in func and then return other function without altering the source code or the function
 '''
+#decorator expression type 
+
+def super_secret_function(f):
+    return f
+
+@super_secret_function
+def my_function():    # here the my_function is arg for the super_secret_func and super return the arg func
+    print("This is my function")
+
+# Herer The @-notation is syntactic sugar that is equivalent to the following:
+my_function = super_secret_function(my_function)
+
+#---------------------------------------------------------------------------------------------#
+
+# Example: 1. 
+
+def div(a,b):
+    print(a/b)  # want function to always divide  greater number
+
+#div(2,4)
+
+def smart_dev(func):
+    def inner(a,b):
+        if a<b:
+            a,b=b,a
+        return func(a,b)
+    return inner    
+
+div1 = smart_dev(div)
+print(div1(3,9))
+
+#---------------------------------------------------------------------------------------------#
+# Examples- 2.
+#-----------------------------------------------------------------------------------#
 
 def decorater_fun(original_function):
     def wrapper_function(*args,**kwargs):
@@ -32,12 +52,14 @@ def decorater_fun(original_function):
 # decorater_display = decorater_fun(display)   #The decorator defination
 # decorater_display() #Equal to the wrapper function 
 
-#=-----------------------------------------------------------------------------------
-#decorator expression type = " @decorater_fun = decorator_display = decorator_fun(display) are the same"
-#------------------------------------------------------------------------------------
+'''Note
+@decorater_fun = decorator_display = decorator_fun(display) are the same"
 
-# or Using the Function as a Decorator with multiple func 
-
+'''
+#---------------------------------------------------------------------------------------------#
+# Examples- 2. 
+#  Using the Function as a Decorator with multiple func 
+#----------------------------------------------------------------------------------------------#
 
 @decorater_fun
 def display():
@@ -50,10 +72,11 @@ def display_info(name ,age):
 display_info('Jay',23) 
 
 display()
- 
-#-----------------------------------------------------------------------------------
- #Using the Classes as a Decorator
 
+
+#---------------------------------------------------------------------------------------------#
+#        Using the Classes as a Decorator
+#---------------------------------------------------------------------------------------------#
 
 def decorater_fun1(original_function1):
     def wrapper_function1(*args,**kwargs):
@@ -70,7 +93,7 @@ class decorator_class(object):               #The base class of the class hierar
         
     def __call__(self, *args, **kwargs): 
         print('Call method executed this before the  {}'.format(self.original_function1.__name__))
-        return self.original_function1(*args,**kwargs)  # WE are using the instance method here   
+        re#-----------------------------------------------------------------------------------------------------#turn self.original_function1(*args,**kwargs)  # WE are using the instance method here   
 
 @decorator_class
 def display1():
@@ -85,10 +108,11 @@ display1()
 
  
 #-------------------------------------------------------------------------------------------------------
-#Examples of the Decoraotr
-#------------------------------------------------------------------------------------
+#                                   Examples of the Decoraotr
+#------------------------------------------------------------------------------------------------------#
 
-#  Logging function
+
+#1.  Logging function
 #-------------------------------
 from functools import wraps  # for using the decorator inside of decorator
 
@@ -110,7 +134,7 @@ def display_info1(name,age):
 display_info1('Ash',32)
 
 #--------------------------------------------------------------------------------------
-#   Timmer Function
+#                           2. Timmer Function
 #---------------------------------------------------------------------------------------
 
 def my_timer(original_function2):
@@ -134,9 +158,9 @@ def display_info2(name,age):
 
 display_info2('AK',23)  
 
-#------------------------------
-#Using the both function 
-#---------------------------
+#-------------------------------------------------------------------------------------------------------------------------#-
+#                          3. Using the both function 
+#-----------------------------------------------------------------------------------------------------#
 
 @my_logger
 @my_timer
@@ -150,11 +174,13 @@ print(display_info.__name__)
 
 display_info('Mark',29)    
 
+#-----------------------------------------------------------------------------------------------------#
+'''
+Note:
 
-
-#################################################################################
-# Preserving the information of the original function whenever using the decorator
-
-# Using the functool module and wrap decorator
-
+#Preserving the information of the original function whenever using the decorator
+#Using the functool module and wrap decorator
 #from functools import wraps # at the top
+'''
+
+
