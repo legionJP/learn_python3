@@ -1,12 +1,16 @@
-#-------------------------------------------------------
-# Calculate Number of Days , Weeks or Months to Reach Specific goals 
-#-----------------------------------------------------
 
+
+#----------------------------------------------------------------------------------------------#
+#          Calculate Number of Days , Weeks or Months to Reach Specific goals 
+#           Using the Datetime Modules
+#----------------------------------------------------------------------------------------------#
 
 import datetime
 import calendar
 
-#making the pay off the credit card bill
+#----------------------------------------------------------------------------------------------#
+#                    Making the pay off the credit card bill
+#----------------------------------------------------------------------------------------------#
 
 balance = 6000
 interset_rate =13 *.01

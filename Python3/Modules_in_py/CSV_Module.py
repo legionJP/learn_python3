@@ -1,32 +1,42 @@
-import csv
+#----------------------------------------------------------------------------------------------#
+#                                           CSV Modules
+#----------------------------------------------------------------------------------------------#
 
-# # Reading the CSV file 
-'''
+import csv
+#----------------------------------------------------------------------------------------------#
+ # Reading the CSV file 
+#----------------------------------------------------------------------------------------------#
 with open('names.csv','r') as csv_file:
     csv_reader = csv.reader(csv_file)
     #next(csv_reader)      #by using the generator for next item iteration
      
-# for line in csv_reader:
-#       #print(line)
-#        print(line[2])
+for line in csv_reader:
+      #print(line)
+       print(line[2])
 
+#----------------------------------------------------------------------------------------------#
 # Writing the new csv file from previous one with delimiter
-
-    with open('new_names.csv','w') as new_file:
+#----------------------------------------------------------------------------------------------#
+with open('new_names.csv','w') as new_file:
         csv_writer = csv.writer(new_file,delimiter='-')
     
         for line in csv_reader:
             csv_writer.writerow(line)
-'''
-'''
+
+#----------------------------------------------------------------------------------------------#
+#                               CSV Dict Reader
+#----------------------------------------------------------------------------------------------#
+
 with open('names.csv', 'r') as csv_file1:
     csv_reader1 =csv.DictReader(csv_file1) # it prints/read the csv in key value pair 
 
     for line  in csv_reader1:
         #print(line)
         print(line['email']) # csn print the value by key 
-'''
-# DictWriter Method
+        
+#----------------------------------------------------------------------------------------------#
+#                                  DictWriter Method
+#----------------------------------------------------------------------------------------------#
 
 with open ('names.csv','r') as csv_file2:
     csv_reader2 = csv.DictReader(csv_file2)
@@ -44,7 +54,11 @@ with open ('names.csv','r') as csv_file2:
             csv_writer.writerow(line)   
             print(line)    
 
- # Parsing the CSV File from the web
+
+#----------------------------------------------------------------------------------------------#
+#                 Parsing the CSV File from the web
+#----------------------------------------------------------------------------------------------#
+
             
 html_output = ''
 names =[]
@@ -75,3 +89,4 @@ for name in names:
    html_output += f'\n\t<li>{name}</li>'
 html_output += '\n</ul>'
 print(html_output) 
+#----------------------------------------------------------------------------------------------#
