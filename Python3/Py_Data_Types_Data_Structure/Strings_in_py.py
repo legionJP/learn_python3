@@ -61,7 +61,8 @@ print(sentence2)
 print(sentence3)
 
 #-----------------------------------------------------------------------------------------
-#2. Using the string formatin 
+#2. Using the string formation
+##-------------------------------------------------------------------------------------#
 
 tag ='H1'
 name ='text type H1'
@@ -104,7 +105,7 @@ pi=3.1459265
 pie_value='the pi value to 2 digit is {:.2f}'.format(pi)
 print(pie_value)
 
-sentence6='1 MB i sequal to {:,.2f} bytes'.format(1000**2)
+sentence6='1 MB is equal to {:,.2f} bytes'.format(1000**2)
 print(sentence6)
 
 #---------------------------------------------------------------------------------------------
@@ -112,15 +113,15 @@ print(sentence6)
 #Fromating the Date and time
 
 import datetime
-mY_date =datetime.datetime(2016,9,24,12,30,12)
-print(mY_date)
+my_date =datetime.datetime(2016,9,24,12,30,12)
+print(my_date)
 
-sentence6 = '{:%B %d, %Y}'.format(mY_date)
+sentence6 = '{:%B %d, %Y}'.format(my_date)
 print(sentence6) #%B is for the Month , and %d for the date , and %Y for the year
 
 #for ' March -1 , 2016 fell on a tuesday and was the 61 day of the year'
 
-sentecne7= '{0:%B %d , %Y } fell on {0:%A} and was the {0:%j} day of the year'.format(mY_date)
+sentecne7= '{0:%B %d , %Y } fell on {0:%A} and was the {0:%j} day of the year'.format(my_date)
 print(sentecne7)
 
 #---------------------------------------------------------------------------------------------

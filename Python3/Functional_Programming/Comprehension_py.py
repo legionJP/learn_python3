@@ -1,12 +1,12 @@
-'''There are four main types of comprehensions in Python: 
+#-------------------------------------------------------------------------------------#
+#                   Comprehension In python 
+#-------------------------------------------------------------------------------------#
 
-List comprehension 
+#There are four main types of comprehensions in Python: 
 
-Dictionary comprehension 
-
-Set comprehension 
-
-Generator comprehension'''
+'''
+1. List comprehension 2. Dictionary comprehension 3.Set comprehension 4.Generator comprehension
+'''
 
 # List Compression: 
 
