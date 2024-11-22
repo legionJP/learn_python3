@@ -31,18 +31,22 @@ Class is a logical code blocks, it contains :  1. Attributes, 2. Behaviour:
 > Like class is the design and object is the it's stuff or instance.
 
 '''
-#----------------------------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------------------------#
 #                                  2. Object : 
-#--------------------------------------------------------------------------------------------# 
+#-----------------------------------------------------------------------------------------------# 
 '''
 Every object have the its attribute and behaviour
 An attributes and Behaviour of the class define the state of the Object  :
 
-(Object has something where you can store data(variables) and it will have some behaviour(like methods or functions))
+>> (Object has something where you can store data(variables) and
+it will have some behaviour(like methods or functions)). 
+
+>> so if something need to store in object
+we need to define a variales. and if want to define a behaviour we need to use a methods.
 '''
-#-----------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------#
 # 3. Methods :  (It is function that is associate with class )
-#------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------#
 '''
 Methods are the functions that are defined inside the class 
 and determine the behviour of the object instances 
@@ -50,17 +54,19 @@ emp1.postion()   #calling the method
 
 --> special method is : __init__
 --> special Variables is : __name__
-
 '''
-#-----------------------------------------------------------------------
-#examples : Creating the object emp1  by calling the class employee()
-#-----------------------------------------------------------------------#
-#1.
-class Computer:             #put the attribute (variable) and behavour(method/functions) in the class
-  def config(self):           #Methood
+
+#examples : 
+#----------------------------------------------------------------------------------------------------------#
+#                1.  Creating the object emp1  by calling the class employee()
+#-----------------------------------------------------------------------------------------------------------#
+
+
+class Computer:             # Put the attribute (variable) and behavour(method/functions) in the class
+  def config(self):         # Methood
     print("i5, 8gb,1tb")
 
-comp1 = Computer()   # object   of computer
+comp1 = Computer()   # comp1 object   of computer
 print(type(comp1))
 
 #Computer.config() # have to call the object of the class
@@ -68,23 +74,25 @@ Computer.config(comp1) # we are passing object as  parameter or argument
 
 comp1.config()  # using the object itself to call the method/func. ,config take the comp1 as a argument
 
-#-------------------------------------------------------------------------------------#
-#2. Class With Special Method
+#--------------------------------------------------------------------------------------------------------------#
+#                                2. Class With Special Method: __init__
+#--------------------------------------------------------------------------------------------------------------#
 class Computer1:
    def __init__(self,cpu,ram):   # use the init to initialize the variables but  this also called constructor
       #pass
-      self.cpu =cpu
+      self.cpu =cpu               # self.var =parameter
       self.ram = ram
-      print("init") # for every object it get called one time 
+      print("init")               # for every object it the init  get called one time 
 
-   def config1(self):       # here self is object itself, cpu and ram parameter is passed    
+   def config1(self):                     # here self is object itself, cpu and ram parameter is passed    
     print("config is ", self.cpu,self.ram)   # Here One Method have it's own varibale 
 
 comp2= Computer1('i5','8GB')
 comp3=Computer1('r5','16GB')
 # comp2.config1('i5','4gb')
 # comp3.config1('i9','16 gb')
-#----------------------------------------------------------------------------------#
+
+#--------------------------------------------------------------------------------------------------------------#
 # 3.
 class employee:
     def position(self,position,emp_status):         
@@ -93,11 +101,16 @@ class employee:
 #Object Creating OR Creating the instances of the class 
 emp1 = employee()  
 emp1.position("programmer ","active")
-#-------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
 
-#---------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------#
 #                                       Constructor and self
-#---------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
+
+'''
+SO Constructor will assign/calculate or alloacte the size of the object, 
+constructor call the init method internally
+'''
 
 class Computer3:
     def __init__(self) -> None:
@@ -110,28 +123,27 @@ class Computer3:
        else:
           return False
        
-
 c1= Computer3() #object inside the heap memory and take some space
 c1.age=30
-c2 = Computer3() # size of the obj. depends onn the number of vars. passed , SO
-# COnstructor will assign/calculate or alloacte the size of the object, constructor call the init method internally
+c2 = Computer3() # size of the obj. depends onn the number of vars. passed ,
 
-# if c1.compare(c2):
-#    print("it's same")
-# else:
-#    print("they are same") 
-#   
+if c1.compare(c2):
+   print("it's same")
+else:
+   print("they are same")   
 print(id(c1)) # it will take every time the reference spaces
 print(id(c2))
 c2.name='JP'
 print(c1.name)
 print(c2.name)
+#-------------------------------------------------------------------------------------------------------------#
 
-#--------------------------------------------------------------------------------------------#
+
+#---------------------------------------------------------------------------------------------------------------#
 #                                      CLASS CONCEPT
-#--------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 #                            1. Instances of the classes
-#---------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 class Employee:  #class is the blueprint for creating the instances
    
    def __init__(self,first,last,pay): #first instance is self
@@ -149,12 +161,13 @@ emp2 = Employee('name1','last',20000)
 # print(emp2)
 print(emp1.email)
 print(emp2.email)
+
 #--------------------------------------------------------------------------------------------#
 #                   Types of Variables: 1. Instance Variable 2. Class(static) variable
 #---------------------------------------------------------------------- -----------------------#
 
 class car:
-  wheels =4    # common to every obj
+  wheels =4    # common to every obj these are static or class variable
   def __init__(self):
      self.mil =110
      self.com ="BMW" # Theses are instance var. bcz it changes
@@ -165,11 +178,14 @@ class car:
 
 c1=car()
 c2=car()
-c1.mil=8 # c1 instance var. value for c1 changes
+c1.mil=8          # c1 instance var. value for c1 changes
 print(c1.com,c1.mil) 
 print(c2.com,c2.mil,c2.wheels) # calling class var. using it by object name
 
-# NameSpace:
+#----------------------------------------------------------------------------------------------#
+#                                           NameSpace :
+#-----------------------------------------------------------------------------------------------#
+
 '''
 namspace is place where you create and store object/variable
 1. Class namspace
@@ -177,58 +193,109 @@ namspace is place where you create and store object/variable
 '''
 car.wheels =5 # so it is changed and affect all the objects/instance 
 
+
 #-----------------------------------------------------------------------------------------#
-# 3.           Types of Methods :  (It is function that is associate with class )
+#           Types of Methods :  (It is function that is associate with class )
 #------------------------------------------------------------------------------------------#
-# 1. Instnace Method 2. Class Methods
+# 1. Instance Method 2. Class Methods
+#------------------------------------------------------------------------------------------#
+
 class Students:
-  school= 'BIT'    # class var.
+  school= 'ITI'    # class var.
   def __init__(self,m1,m2,m3):
      self.m1 =m1
      self.m2 =m2
      self.m3 = m3   #m1,m2,m3 are instance vars.
 
+# '''
+#   Here the avg is instance method , bcz we are passing self and it belongs to object
+#   Types of Instance Method:
+#    1. Accessor method(To fetch the value of instnace)
+#    2. Mutator Method(to modify the value)
+# ''' 
   def avg(self):
-    return (self.m1+self.m2+self.m3)/3 # the avg is instance method , bcz we are passing self and it belongs to object
-    # Types of Instance Method: 1. Accessor method(To fetch the value of instnace) 2.Mutator Method(to modify the value) 
-
-  def get_m1(self):   # Getter
+    return (self.m1+self.m2+self.m3)/3 
+  
+  def get_m1(self):   # Getter or Accessor
     return self.m1
 
-  def set_m1(self,value): # Setter
+  def set_m1(self,value): # Setter or mutator
     self.m1 = value    
+
 #---------------------------------------------------------------------------------------------#
 # Class Method
+#---------------------------------------------------------------------------------------------#
+
   @classmethod          # to covnvert func as class method- decorator
   def get_school(cls):  # Class Method
-    return cls.school     
+    return cls.school  
+     
 #---------------------------------------------------------------------------------------------#
 # Static Method :  not concern about the instance var or class var.
+#---------------------------------------------------------------------------------------------#
+
   @staticmethod
   def info():
     print("This is student class static method") 
+
 #---------------------------------------------------------------------------------------------#
+# Example class method
+
 s1 = Students(23,34,21)
 s2= Students(12,43,23)
 print(s1.avg())
 print(Students.get_school()) # class method work with class variables.
-Students.info()
+Students.info() # using the static method doing some extra with class
 
-#---------------------------------------------------------------------------------------------#
+
+#--------------------------------------------------------------------------------------------------------------#
 #                                   Inner Class
-#---------------------------------------------------------------------------------------------#
+#--------------------------------------------------------------------------------------------------------------#
+
+class Students:
+  def __init__(self, name, rollno) -> None:
+    self.name =name
+    self.rollno = rollno
+    self.lap= self.Laptop() # You can create the object of inner class inside the outer class
+
+  def show(self):
+    print(self.name, self.rollno)
+    self.lap.show() 
+
+  class Laptop:                 # here laptop only will be used by the Students
+     def __init__(self): 
+        self.brand = 'HP'
+        self.cpu = 'i5'
+        self.ram = 8
+
+     def show(self):
+        print(self.brand,self.cpu,self.ram)   
+                     
+s1 = Students("Aryan",23)
+s2 = Students("Saryan",22)
+
+# print(s1.name, s1.rollno) #or
+
+s1.show()
+
+lap1 = s1.lap  
+lap1 =Students.Laptop() 
+
+# can create object of inner class outside the outer class provided you but 
+# use outer class name to call it 
 
 
-
-#---------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 #                                       OOPS Concepts
-#---------------------------------------------------------------------------------------------#
-#    1. Inheritenace : 
-#----------------------------------------
+#---------------------------------------------------------------------------------------------------------------#
+
+#---------------------------------------------------------------------------------------------------------------#
+#                                       1. Inheritance : 
+#---------------------------------------------------------------------------------------------------------------#
 
 # It is a creating a new class which is the dreivative of the existing class
-#  means from parent classa to sub or child class.
-# 
+# Means from parent classa to sub or child class.
+ 
 '''
 class Parent:
     Members of the parent class
@@ -237,10 +304,15 @@ class Child(Parent):
     Inherited members from parent class
     Additional members of the child class
 
+# Note:
 python uses Method Resolution Order (MRO) that determines the flow of execution. 
 MRO is a set of rules, or an algorithm, that Python uses to implement monotonicity, 
-which refers to the order or sequence in which the interpreter will look for the variables and functions to implement. 
+which refers to the order or sequence in which the interpreter will look for 
+the variables and functions to implement. 
+'''
 
+
+#---------------------------------------------------------------------------------------------------------------#
 #--------------------------------------------------------------------------------------------#
 #__________________________
 #2. Polymorphism :
@@ -341,7 +413,7 @@ print(Employee.fullname(emp1)) #in this we have to manually pass on the instance
 
 
 
-  Expalantion to above method of code
+#Expalantion to above method of code
 
   #Instance varriable contains data that is unique to each instances
 emp1.first ='JP'
@@ -356,5 +428,3 @@ emp2.pay = 600000
 
 print(emp1.email)
 print(emp2.email)
-
-'''
