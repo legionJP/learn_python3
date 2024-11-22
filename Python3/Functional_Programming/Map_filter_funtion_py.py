@@ -1,6 +1,34 @@
 #---------------------------------------------------------------------------------------------------#
+#                         Map , Filter , Reduce using  with the lambda
+#---------------------------------------------------------------------------------------------------#
+from functools import reduce
+
+#1. Filter
+#--------------------------------------
+nums = [3,2,5,7,8,3,7,8,9]
+
+def is_even(n):
+    return n%2 ==0
+    
+evens = list(filter(is_even,nums)) 
+print(evens)
+# it will take the sequence will give the sequence ,
+# here filter using the is_even function will iterate the nums list than print the evens
+
+# Using the lambda 
+evens =list(filter(lambda n: n%2==0,nums))
+print(evens)
+
+doubles = list(map(lambda n: n*2 ,evens))
+print(doubles)
+
+sum = reduce(lambda a,b :a+b, doubles )                      # import from functools
+print(sum)
+
+#---------------------------------------------------------------------------------------------------#
 #                         Using the map function
 #---------------------------------------------------------------------------------------------------#
+
 country=['India', 'USA','Rusia','Africa','Bharat']
 
 def find_in_map(country_name):
@@ -48,4 +76,4 @@ def count(lst):
 even , odd= count(lst)    # as func return the even and odd so we are using the two object to call  
 print(even)   
 print(odd) 
-print("even count is {} and odd is {} ".format(even,odd))     
+print("even count is {} and odd is {} ".format(even,odd))
