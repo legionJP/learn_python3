@@ -33,6 +33,23 @@ def main():
     print("Welcome User",end="")
 
 #main()
-if __name__ == "__main__":
+if __name__ == "__main__":  # Thi means if this is the file we are running then __name__ will hold main
     main()
+#----------------------------------------------------------------------------------------------#
+'''
+# Example 2
+from calc import add
+def fun():
+    add()
+    print("fuunc1")
+def fun1():
+    print("func2")
+
+def main():
+    fun()
+    fun1()
+main()        
+'''
+
+#----------------------------------------------------------------------------------------------#
 
