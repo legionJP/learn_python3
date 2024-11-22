@@ -1,3 +1,7 @@
+#----------------------------------------------------------------------------------------------#
+#      File Parsing in Py
+#----------------------------------------------------------------------------------------------#
+
 import  os
 os.chdir('/home/jp/Downloads/learn_python3/Videos')
 print(os.getcwd())
@@ -8,8 +12,11 @@ for file in os.listdir():
 # retriving the file name and extension separately
     f_name , f_exte = os.path.splitext(file)  
     #print(f_name,f_exte)    
+    
+#----------------------------------------------------------------------------------------------#
+# here you can aslo spilit the f_name oe f_extention
+#----------------------------------------------------------------------------------------------#
 
-# here you can aslo spilit thw f_name oe f_extention
 for file in os.listdir():
     f_name , f_exte = os.path.splitext(file) 
     f_title, f_course , f_chapter =f_name.split('-')

@@ -1,5 +1,6 @@
 
-from Import_fun import find_index as f_i , test
+from Python3.Modules_in_py.Modules_Intro.Import_fun import find_index as f_i , test
+
 Course_list=['Economy','History','Plity','Science']
 index=f_i(Course_list,'History')
 print(index)
