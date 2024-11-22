@@ -310,13 +310,51 @@ MRO is a set of rules, or an algorithm, that Python uses to implement monotonici
 which refers to the order or sequence in which the interpreter will look for 
 the variables and functions to implement. 
 '''
+class A:
+   def func1(self):
+      print("func1 is working")
+   def func2(self):
+      print("func 2 is working")
 
+class B(A):  # B is ineriting feature of A means B is sub class and A is super or parent class
+   def func3(self):
+      print("func 3 is working")
+   def func4(self):
+      print("func 4 is working")
+
+class C(B):  # C is ineriting feature of A, B so it is multilevel inherit.
+   def func5(self):
+      print("func 5 is working")
+
+class D(A):  # D is ineriting feature of A
+      def func6(self):
+        print("func 6 is working")
+
+class E(B,D): # Have to create this class for multilevel to avoid the MRO conflicts
+   print(" Func 7 is working from class E as multilevel and avoid the MRO")
+
+a1 =A()
+b1= B()
+c11= C()
+d1 = D()
+e1 =E()
+
+a1.func1()
+a1.func2() 
+b1.func1() # inerited from A, Single level inheritance
+b1.func3()     
+c11.func1() 
+c11.func5()
+d1.func1()
+e1.func4() # Multilevel inheritance
 
 #---------------------------------------------------------------------------------------------------------------#
-#--------------------------------------------------------------------------------------------#
-#__________________________
-#2. Polymorphism :
-#__________________________
+
+
+#-----------------------------------------------------------------------------------------------------------------#
+#                      2. Polymorphism :
+#------------------------------------------------------------------------------------------------------------------#
+
 
 #Ability of a function to change it's behaviour when it's called by differnet objects 
 #example : built in "+" operator perform the additon for the integer data tuple and concation for the string data type 
