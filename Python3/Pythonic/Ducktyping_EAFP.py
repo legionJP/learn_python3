@@ -51,6 +51,30 @@ lap1.code(ide1)
 #------------------------------------------------------------------------------------------------------------------#
 #    Example 2.
 #------------------------------------------------------------------------------------------------------------------#
+'''
+Python follows the "duck typing" principle, which means that 
+the type or class of an object is less important than the methods it defines. This 
+allows you to create flexible functions and classes without explicitly defining templates.
+'''
+
+class Duck:
+    def quack(self):
+        print("Quack!")
+
+class Person:
+    def quack(self):
+        print("I'm quacking like a duck!")
+
+def make_it_quack(duck_like):
+    duck_like.quack()
+
+duck = Duck()
+person = Person()
+
+make_it_quack(duck)    # Quack!
+make_it_quack(person)  # I'm quacking like a duck!
+
+#------------------------------------------------------------------------------------------------------------------#
 
 class Duck:
     def quack(self):
@@ -150,9 +174,10 @@ except IndexError:
 
 
 # when we try to access the object multiple times , then have to acess the objet multiple times 
-#    in pythonic accessing the object one time 
+#  in pythonic accessing the object one time 
 
- #########################################################################################################
+
+#------------------------------------------------------------------------------------------------------------------#
 
 import os 
 
@@ -178,3 +203,4 @@ else:
         print(f.read())
 
 
+#------------------------------------------------------------------------------------------------------------------#

@@ -147,12 +147,12 @@ class Students:
         return "{} {}".format(self.m1,self.m2)     # return the str value
 
         
-
 s1 = Students(59,95)
 s2 = Students(67,95)   
 
 s3 = s1+s2  
 #TypeError: unsupported operand type(s) for +: 'Students' and 'Students'
+
 # here the method doesn't have the add method , so you have to overload  or define the method in students class
 # But also students class don't know the plus method so we have to call the add method but don't have the add method
 #so we have to define the add method here
@@ -179,5 +179,60 @@ print(s1.__str__())  # to avoid to print the object address and print the addres
 # Note comment out step 2, 3, 4 when learning 1 by 1
 
 #------------------------------------------------------------------------------------------------------------------#
+#                                2. Method  Overloading
+#------------------------------------------------------------------------------------------------------------------#
 
+class Students:
+    def __init__(self,m1,m2) -> None:
+        self.m1 = m1
+        self.m2 =m2
+
+    #def sum(self,a,b):
+    def sum(self, a=None,b=None,c=None):
+        s=0
+        if a!=None and b!=None and c!=None:
+            s= a+b+c
+        elif a!=None and b!=None: 
+            s=a+b
+        else:
+            s =a
+        return s
+    
+    
+s1 = Students(67,34)
+print(s1.sum(67))    
+
+'''
+Here we defined a single sum method in the Students class, but with optional parameters. 
+This allows the method to handle different numbers of arguments,
+mimicking method overloading because the python does not support the overloading directly
+
+'''        
+
+
+#------------------------------------------------------------------------------------------------------------------#
+#                                2. Method   Overriding
+#------------------------------------------------------------------------------------------------------------------#
+
+class A:
+    def show(self):
+        print("a show method ")
+
+# class B(A):
+#     pass        
+
+class B(A):
+    def show(self):
+        print("B's show method")
+        # return super().show()
+
+a1=B()
+a1.show()    
+
+'''
+1. When we don't have the method show in the class B and class B is inheriting A than the 
+B is inheriting the A's show method ,
+2.But when the B has it's own show method than it overrides 
+the A's method 
+'''
 #------------------------------------------------------------------------------------------------------------------#
