@@ -1,6 +1,57 @@
-# Duck typing and Easier to ask forgiveness than permission(EAFP)
-# Duck typing means object walk like duck and quacks like duck means what types of object it is it should what is ask to do 
+#------------------------------------------------------------------------------------------------------------------#
+#                                   Duck Typing
+#------------------------------------------------------------------------------------------------------------------#
 
+'''
+Duck typing and Easier to ask forgiveness than permission(EAFP)
+Duck typing means object walk like duck and quacks like duck 
+means what types of object it is it should _do__ what is ask to do 
+'''
+
+#Dynamic typing = mention or assign later
+x= 'myname' # Type of myname of x is str
+# In Python, self refers to the instance calling the method. 
+# When you define a method in a class, the instance (object) 
+# calling the method is automatically passed as the first argument, 
+# which is conventionally named self.
+
+#------------------------------------------------------------------------------------------------------------------#
+# Example 1:
+#------------------------------------------------------------------------------------------------------------------#
+
+class VimEdtior:
+    def execute(self):
+        print("It is better than every other")
+        print("Can compile!")
+        print("can run code !")
+
+class Vscode:
+    def execute(self):
+        print("compiling")
+        print("Running")
+
+class Laptop:
+    def code(self,ide): # take the arg of ide and func for the ide is Vscode
+        ide.execute() # ide will be dynamic where the object have the execute method
+
+# Here the ide is the object whicj have the ,method execute and it is behaving like a duck so it is called 
+#the Duck Typing
+
+
+ide1 = VimEdtior() 
+ # above is creating the instance of class ide1, means the ide1 is object and has the 
+# acess to the methods inside the class
+
+ide2 = Vscode 
+ # ide2 is assigning the class to the ide2 
+
+lap1= Laptop() 
+lap1.code(ide1) 
+# lap1.code(ide2)
+
+#------------------------------------------------------------------------------------------------------------------#
+#    Example 2.
+#------------------------------------------------------------------------------------------------------------------#
 
 class Duck:
     def quack(self):
@@ -15,9 +66,9 @@ class Person:
 
     def fly(self):
         print('I\'m Flapping my Arms!')     
+#------------------------------------------------------------------------------------------------------------------#
+#1. Pythonic (#EAFP)
 
-#Pythonic (#EAFP)
-        
 def quack_and_fly(thing):
     try:
         thing.quack()
@@ -28,8 +79,8 @@ def quack_and_fly(thing):
 
     print()
 
-'''
-  #Not duck type Non pythonic
+#------------------------------------------------------------------------------------------------------------------#
+# 2. Not duck type Non pythonic:
 
 def quack_and_fly(thing):
     #if isinstance(thing, Duck):
@@ -38,10 +89,12 @@ def quack_and_fly(thing):
    # else: 
        # print('This has to be duck!')
         print()
-'''
+
+#------------------------------------------------------------------------------------------------------------------#
 
  #LBYL Non pythonic 
-'''
+#------------------------------------------------------------------------------------------------------------------#
+
 def quack_and_fly(thing):
     if hasattr(thing,'quack'):
         if callable(thing.quack):
@@ -51,7 +104,7 @@ def quack_and_fly(thing):
         if callable(thing.fly):
             thing.fly() #run the method, asking in eveey method to do that
     print()  
-'''
+
     
 d = Duck()
 quack_and_fly(d)
@@ -59,9 +112,9 @@ quack_and_fly(d)
 p= Person()
 quack_and_fly(p)
 
-
-
-# Examples
+#------------------------------------------------------------------------------------------------------------------#
+#                      Examples:
+#------------------------------------------------------------------------------------------------------------------#
 
 #person = {'name': 'Jay', 'age': 22 , 'job': 'Devloper'}
 person = {'name': 'Jay', 'age': 22}
@@ -72,8 +125,9 @@ if 'name' in person and 'age' in person and 'job' in person:
 else:
     print("Missing some words")
 
-
-#EAFP Pythonic
+#------------------------------------------------------------------------------------------------------------------#
+#                                   EAFP Pythonic:
+#------------------------------------------------------------------------------------------------------------------#
     
 try:
     print("I'm {name}. I'am  {age} years old and I am a {job}".format(**person))

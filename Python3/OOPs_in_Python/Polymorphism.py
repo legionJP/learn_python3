@@ -2,6 +2,15 @@
 #                      2. Polymorphism :
 #------------------------------------------------------------------------------------------------------------------#
 
+# In this the object  can have or can be in the multiple forms .
+# usages
+# Loose coupling # 2. Dependency injection  # Interfaces 
+
+#------------------------------------------------------------------------------------------------------------------#
+#                Types of the Polymorphism:
+#------------------------------------------------------------------------------------------------------------------#
+# 1. Duck Typing  #2. Operator Overloading  #3. Method Over Loading  #4. Method Overriding
+
 '''
 Ability of a function to change it's behaviour when it's called by differnet objects 
 example : built in "+" operator perform the additon
