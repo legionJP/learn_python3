@@ -136,7 +136,7 @@ print(id(c2))
 c2.name='JP'
 print(c1.name)
 print(c2.name)
-#-------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 
 #---------------------------------------------------------------------------------------------------------------#
@@ -162,9 +162,9 @@ emp2 = Employee('name1','last',20000)
 print(emp1.email)
 print(emp2.email)
 
-#--------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 #                   Types of Variables: 1. Instance Variable 2. Class(static) variable
-#---------------------------------------------------------------------- -----------------------#
+#---------------------------------------------------------------------- ----------------------------------------#
 
 class car:
   wheels =4    # common to every obj these are static or class variable
@@ -182,9 +182,9 @@ c1.mil=8          # c1 instance var. value for c1 changes
 print(c1.com,c1.mil) 
 print(c2.com,c2.mil,c2.wheels) # calling class var. using it by object name
 
-#----------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 #                                           NameSpace :
-#-----------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 '''
 namspace is place where you create and store object/variable
@@ -194,11 +194,11 @@ namspace is place where you create and store object/variable
 car.wheels =5 # so it is changed and affect all the objects/instance 
 
 
-#-----------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 #           Types of Methods :  (It is function that is associate with class )
-#------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 # 1. Instance Method 2. Class Methods
-#------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 class Students:
   school= 'ITI'    # class var.
@@ -311,12 +311,21 @@ which refers to the order or sequence in which the interpreter will look for
 the variables and functions to implement. 
 '''
 class A:
+   def __init__(self) -> None:
+      print("it is init in A ")
+
    def func1(self):
-      print("func1 is working")
+      print("func1 is working in A")
    def func2(self):
       print("func 2 is working")
 
 class B(A):  # B is ineriting feature of A means B is sub class and A is super or parent class
+
+   def __init__(self) -> None:
+    #  super().__init__() # It will access the all the features of the parent class , so init of A and init of B s called
+      print("it is init of B")
+   def func1(self):
+      print("func1 is in B") # same method in A and B class so the method in the left will be priotize in the order
    def func3(self):
       print("func 3 is working")
    def func4(self):
@@ -332,12 +341,19 @@ class D(A):  # D is ineriting feature of A
 
 class E(B,D): # Have to create this class for multilevel to avoid the MRO conflicts
    print(" Func 7 is working from class E as multilevel and avoid the MRO")
+   def __init__(self) -> None: # 1st init of itself than the inti of the super is called
+      super().__init__()
+      # In the multilevel inherit the method is always preferd from the left to right like it will call from B first not D
+   def feat(self):
+      super.func1() # Method of super class
+
 
 a1 =A()
 b1= B()
 c11= C()
 d1 = D()
 e1 =E()
+a1=E()
 
 a1.func1()
 a1.func2() 
@@ -347,6 +363,15 @@ c11.func1()
 c11.func5()
 d1.func1()
 e1.func4() # Multilevel inheritance
+
+#---------------------------------------------------------------------------------------------------------------#
+#             Constructor in inheritance : How constructor behave in inherit.
+#---------------------------------------------------------------------------------------------------------------#
+a1 =B() 
+# the constructor is called for every function call in the class A
+# When we don't have the init in the B then due to inheritance it will go to A if the relative method is called
+
+
 
 #---------------------------------------------------------------------------------------------------------------#
 

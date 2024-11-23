@@ -1,3 +1,92 @@
+
+#---------------------------------------------------------------------------------------------------------------#
+#                                       1. Inheritance : 
+#---------------------------------------------------------------------------------------------------------------#
+
+# It is a creating a new class which is the dreivative of the existing class
+# Means from parent classa to sub or child class.
+ 
+'''
+class Parent:
+    Members of the parent class
+
+class Child(Parent):
+    Inherited members from parent class
+    Additional members of the child class
+
+# Note:
+python uses Method Resolution Order (MRO) that determines the flow of execution. 
+MRO is a set of rules, or an algorithm, that Python uses to implement monotonicity, 
+which refers to the order or sequence in which the interpreter will look for 
+the variables and functions to implement. 
+'''
+class A:
+   def __init__(self) -> None:
+      print("it is init in A ")
+
+   def func1(self):
+      print("func1 is working in A")
+   def func2(self):
+      print("func 2 is working")
+
+class B(A):  # B is ineriting feature of A means B is sub class and A is super or parent class
+
+   def __init__(self) -> None:
+    #  super().__init__() # It will access the all the features of the parent class , so init of A and init of B s called
+      print("it is init of B")
+   def func1(self):
+      print("func1 is in B") # same method in A and B class so the method in the left will be priotize in the order
+   def func3(self):
+      print("func 3 is working")
+   def func4(self):
+      print("func 4 is working")
+
+class C(B):  # C is ineriting feature of A, B so it is multilevel inherit.
+   def func5(self):
+      print("func 5 is working")
+
+class D(A):  # D is ineriting feature of A
+      def func6(self):
+        print("func 6 is working")
+
+class E(B,D): # Have to create this class for multilevel to avoid the MRO conflicts
+   print(" Func 7 is working from class E as multilevel and avoid the MRO")
+   def __init__(self) -> None: # 1st init of itself than the inti of the super is called
+      super().__init__()
+      # In the multilevel inherit the method is always preferd from the left to right like it will call from B first not D
+   def feat(self):
+      super.func1() # Method of super class
+
+
+a1 =A()
+b1= B()
+c11= C()
+d1 = D()
+e1 =E()
+a1=E()
+
+a1.func1()
+a1.func2() 
+b1.func1() # inerited from A, Single level inheritance
+b1.func3()     
+c11.func1() 
+c11.func5()
+d1.func1()
+e1.func4() # Multilevel inheritance
+
+#---------------------------------------------------------------------------------------------------------------#
+#             Constructor in inheritance : How constructor behave in inherit.
+#---------------------------------------------------------------------------------------------------------------#
+a1 =B() 
+# the constructor is called for every function call in the class A
+# When we don't have the init in the B then due to inheritance it will go to A if the relative method is called
+
+
+
+
+
+# ----------------------------------------------Coursera Notes------------------------------------------#
+
 #Inheritence IN Py
 '''' 
 object(__builtins__)  #The base class of the class hierarchy.
