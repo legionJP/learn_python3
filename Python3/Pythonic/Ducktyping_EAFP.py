@@ -5,7 +5,7 @@
 '''
 Duck typing and Easier to ask forgiveness than permission(EAFP)
 Duck typing means object walk like duck and quacks like duck 
-means what types of object it is it should _do__ what is ask to do 
+>> Means what types of object it is doesn't matter, it should _do__ what is ask to do 
 '''
 
 #Dynamic typing = mention or assign later
@@ -31,24 +31,22 @@ class Vscode:
         print("Running")
 
 class Laptop:
-    def code(self,ide): # take the arg of ide and func for the ide is Vscode
-        ide.execute() # ide will be dynamic where the object have the execute method
+    def code(self,ide): #take the arg of ide and func for the ide is Vscode
+        ide.execute()  #ide will be dynamic where the object have the execute method
 
 # Here the ide is the object which have the method 'execute' and 
 # it is behaving like a duck  bcz it only need the execute method , class don't matter
-# so it is called  the Duck Typing
+# so it is called  the Duck Typing , because as a polymorphism the object is having multiple behaviour or 
 
-
-ide1 = VimEdtior() 
+lap1= Laptop() 
+ide1 = VimEdtior()
+lap1.code(ide1)
  # above is creating the instance of class ide1, means the ide1 is object and has the 
 # acess to the methods inside the class
 
-ide2 = Vscode 
- # ide2 is assigning the class to the ide2 
-
-lap1= Laptop() 
-lap1.code(ide1) 
-# lap1.code(ide2)
+ide1 = Vscode()
+ # ide1 is assigning the class to the ide1 if we put it like thos : ide1 = Vscode  
+lap1.code(ide1)
 
 #------------------------------------------------------------------------------------------------------------------#
 #    Example 2.
