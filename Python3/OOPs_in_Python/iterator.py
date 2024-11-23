@@ -109,7 +109,7 @@ for i in values:
 
 
 #--------------------------------------------------------#--------------------------------------------------------#
-#                                          Own Range Function
+#      2.                                    Own Range Function
 #--------------------------------------------------------#--------------------------------------------------------#
 # It is  function for behaving like the built-in class of range function 
 
@@ -127,69 +127,6 @@ class MyRange:
         current = self.value
         self.value += 1 
         return current
-
-#Creating generator function iterator  : 
-
-def myrange(start , end):  
-    current = start
-    while current < end : # While   True: 
-        yield current
-        current += 1 
-
-#------------------------------------------
-# use of generator fun and Range Class : 
-#------------------------------------------
-nums = myrange(1,10)
-
-# nums = MyRange(1,10)
-
-#Looping the gen fun or class
-for  num in nums :
-    print(num)#------------------------------------------------------------------------------------------------------------------#
-
-#or by next() method     
-# print(next(nums))
-# print(next(nums))
-# print(next(nums))
-# print(next(nums))
-
-
-
-#-----------------------------
-# Coding Problem : Creating own Iterators :
-#----------------------------
-
-class Sentence:
-    def __init__(self,sentence):
-        self.sentence  = sentence
-        self.index = 0 # adding the index attribute 
-        self.words = self.sentence.split()
-
-    #making class iterabale 
-
-    def __iter__(self):
-        return self 
-
-    def __next__(self): # for the iterating the object at a iteration state 
-        if self.index >= len(self.words):
-            raise StopIteration
-        index = self.index 
-        self.index += 1 
-        return self.words[index] #returns the words index by index 
-
-my_sentence = Sentence('This is a test')
-
-for word in my_sentence:
-    print(word)
-
-
-# By using the Generator : 
-
-def sentence(sentence):
-    for word in sentence.split():
-        yield word  #it will yield one by like the  __next __
-
-my_sentence1 = sentence('This is a test')
-
-for word in my_sentence1:
-    print(word)
+    
+#--------------------------------------------------------#--------------------------------------------------------#
+    
