@@ -34,8 +34,9 @@ class Laptop:
     def code(self,ide): # take the arg of ide and func for the ide is Vscode
         ide.execute() # ide will be dynamic where the object have the execute method
 
-# Here the ide is the object whicj have the ,method execute and it is behaving like a duck so it is called 
-#the Duck Typing
+# Here the ide is the object which have the method 'execute' and 
+# it is behaving like a duck  bcz it only need the execute method , class don't matter
+# so it is called  the Duck Typing
 
 
 ide1 = VimEdtior() 
