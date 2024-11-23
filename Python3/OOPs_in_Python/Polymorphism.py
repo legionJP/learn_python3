@@ -179,7 +179,7 @@ print(s1.__str__())  # to avoid to print the object address and print the addres
 # Note comment out step 2, 3, 4 when learning 1 by 1
 
 #------------------------------------------------------------------------------------------------------------------#
-#                                2. Method  Overloading
+#                                3. Method  Overloading
 #------------------------------------------------------------------------------------------------------------------#
 
 class Students:
@@ -211,7 +211,7 @@ mimicking method overloading because the python does not support the overloading
 
 
 #------------------------------------------------------------------------------------------------------------------#
-#                                2. Method   Overriding
+#                                4. Method   Overriding
 #------------------------------------------------------------------------------------------------------------------#
 
 class A:
