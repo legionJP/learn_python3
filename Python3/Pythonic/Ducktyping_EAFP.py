@@ -84,11 +84,11 @@ def quack_and_fly(thing):
 # 2. Not duck type Non pythonic:
 
 def quack_and_fly(thing):
-    #if isinstance(thing, Duck):
+    if isinstance(thing, Duck):
         thing.quack()
         thing.fly()
-   # else: 
-       # print('This has to be duck!')
+    else: 
+        print('This has to be duck!')
         print()
 
 #------------------------------------------------------------------------------------------------------------------#
