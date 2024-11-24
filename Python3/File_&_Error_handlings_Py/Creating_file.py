@@ -1,5 +1,12 @@
-''' To write multiple lines of content you use the writelines() function. You use the write() function 
-to add one line of content and the open() function to create, write or read a file.'''  
+#------------------------------------------------------------------------------------------------#
+#                  File Creating in py 
+#------------------------------------------------------------------------------------------------#
+
+''' 
+To write multiple lines of content you use the writelines() function.
+You use the write() function to add one line of content and the open() function 
+to create, write or read a file.
+'''  
 
 with open('newfile.txt', 'w') as write_file:
     data = write_file.write("New file strats from here")

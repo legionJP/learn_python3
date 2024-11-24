@@ -1,3 +1,5 @@
+
+
 '''1. Synatx erorr  : misspelling or typo
        Identation error 
 
