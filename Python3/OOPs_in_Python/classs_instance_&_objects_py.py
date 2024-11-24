@@ -1,4 +1,6 @@
 
+#--------------------------------------------------------------------------------------------------------------------#         
+
 
 # Attribute referred as a varriable that are declared  in class
 # Behaviour is associateds with methods in a class 
@@ -20,11 +22,13 @@ class Myclass:
     def hello_method1(self,num_method): 
         total_method= num_method*self.a   
         return total_method  
-         
+    
+#--------------------------------------------------------------------------------------------------------------------#         
 #Creating the method inside the class ,  
 # self is an instance method and facilitates the method to point to any instance of the hello_method()
 # It should be noted  that any number of parameters can be passed to these instance methods but
 # the first one is always the reference to the instance of that class.
+#--------------------------------------------------------------------------------------------------------------------#
          
 obj_myclass =Myclass()
 #Creating the object of the class  for declaring the instances 
@@ -37,7 +41,11 @@ print(obj_myclass.a)
 print(obj_myclass.hello_method())
 print(obj_myclass.hello_method1(3))
 
-'''Type of the object :
+#--------------------------------------------------------------------------------------------------------------------#         
+#                                               Type of the object :
+#--------------------------------------------------------------------------------------------------------------------#
+
+'''
 class object 
 instance object 
 and 
@@ -46,7 +54,7 @@ Mehtod object
 here Myclass is   the class object and the 
 obj_myclass is the instance of the myclass
 '''
-#Note: Classes perform to types of operation  1. attribute refrences   2. isinstansation 
+#Note: Classes perform to types of operation  1. attribute refrences   2. isinstansiating
  
 #Instansitaion process in python involves three key procees 
 # 1. Class Defination
@@ -54,7 +62,10 @@ obj_myclass is the instance of the myclass
 #3.  Intitalizing the new instance 
 
 
-#Class and Object Excercise and demostrations : 
+#--------------------------------------------------------------------------------------------------------------------#
+#                                  Class and Object Excercise and demostrations : 
+#--------------------------------------------------------------------------------------------------------------------#
+
 
 class A:
    def __init__(self, c):
@@ -82,3 +93,26 @@ class B:
    print(a)
 
 print("Instantiating B..")
+
+class MyClass:
+    def my_method(this,var):
+        print("Hello, this is MyClass!")
+        print(this)
+        this.var=var
+        print(var)
+        
+obj = MyClass()
+obj.my_method(9)
+
+class Example:
+    def __init__(self, value):
+        self.value = value  # self.value is an instance variable
+
+    def display_value(self):
+        print(self.value)  # Accessing the instance variable
+
+# Creating an instance
+obj = Example(42)
+obj.display_value()  # Output: 42
+
+#--------------------------------------------------------------------------------------------------------------------#
