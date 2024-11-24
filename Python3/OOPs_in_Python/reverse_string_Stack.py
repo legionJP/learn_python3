@@ -26,4 +26,4 @@ for char in string:
 while not stack.is_empty():
     reversed_string += stack.pop()
 
-print(reversed_string)      
+print(reversed_string)
