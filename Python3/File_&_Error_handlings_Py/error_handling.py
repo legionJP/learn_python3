@@ -121,6 +121,10 @@ except Exception as e:
 finally:
     print("resource was closed ")        # Finally will be executaed always 
 
+# Use the Value error as exception for value error 
+# Use the Exception as e for the Unknown error which is might occur like the entering the str instead of the int
+#     
+
 #-------------------------------------------------------------------------------------------------------#
 
 

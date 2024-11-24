@@ -1,5 +1,5 @@
 '''
-#file Writing operations
+# file Writing operations
 
 f = open('text2.txt','w')
 f.write("Some content insdie the file will appear here")
