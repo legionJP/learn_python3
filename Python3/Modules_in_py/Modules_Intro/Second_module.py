@@ -1,4 +1,4 @@
-import first_module__main__PY
+import Python3.Modules_in_py.Modules_Intro.first_module__main__PY as first_module__main__PY
 #py is importing the file and so module is the file name 
 #when we have if statement in the first_module file it is not printing the imported module name
 

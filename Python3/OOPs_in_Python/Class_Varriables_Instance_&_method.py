@@ -16,7 +16,8 @@ using the new methods , along with new arguments
 #from typing import Self
  
 class recpie():
-     def __new__(cls) -> Self:   #CLS is not a keyword but it is a convention act as a palceholder for passing the class as its first arguments 
+     def __new__(cls) -> Self: 
+ #CLS is not a keyword but it is a convention act as a palceholder for passing the class as its first arguments 
           pass
 
      def __init__(self) -> None:   # self keyword  is also the convetion that , it is instance we passing as argument
