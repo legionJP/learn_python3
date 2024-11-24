@@ -54,8 +54,9 @@ print(emp1.fullname)
 
 
 '''
-Note, normally Python doesn't allow you to have multiple methods with the same name and different number of
-parameters. However, in this case Python allows this because of the decorators used.
+Note, Normally Python doesn't allow you to have multiple methods with the same name
+and different number of parameters. However,
+ in this case Python allows this because of the decorators used.
 
 '''
 
