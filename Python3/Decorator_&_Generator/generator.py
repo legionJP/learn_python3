@@ -1,4 +1,14 @@
+#---------------------------------------------------------------------------------------------------------------#
+#                                        Generator
+#---------------------------------------------------------------------------------------------------------------#
+
+'''The generator will give you the iterator 
+Generators are lazy iterators created by generator functions (using yield) 
+or generator expressions (using (an_expression for x in an_iterator))
+'''
+#---------------------------------------------------------------------------------------------------------------#
 # Function for  square Number
+
 
 def square_number(num):
     result =[]
@@ -7,48 +17,81 @@ def square_number(num):
     return result 
 
 my_num = square_number([11,22,33,44,55,66,77,88,99]) 
-#my_num = [x*x for x in [1,2,3,4,5,6,7,8,9]] # list comprehension
+#my_num = [x*x for x in [1,2,3,4,5,6,7,8,9]] # list comprehension or generator expression
  
-#--------------------------------------------------------------------------------
-
-#my_num = (x*x for x in [1,2,3,4,5]) # generator expression
-#print(list(my_num)) #coverting into list item
+#---------------------------------------------------------------------------------------------------------------#
+'''
+Generator expressions are similar to list, dictionary and set comprehensions, 
+but are enclosed with parentheses.
+The parentheses do not have to be present when 
+they are used as the sole argument for a function call
+'''
+my_num = (x*x for x in [1,2,3,4,5]) # generator expression
+print(list(my_num)) #coverting into list item
 
 print(my_num)
 
-#----------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------#
+'''
+Generator functions are similar to regular functions, 
+except that they have one or more yield statements in their
+body. Such functions cannot return any values
+(however empty returns are allowed if you want to stop the
+generator early)'''
 
-# Converting into generator (getting square by the help of generator ) 
+# Converting into generator Function (getting square by the help of generator ) 
 
 def square_num(nums):
     for i in nums:
         yield i*i
 
 my_nums = square_num([11,22,33,44,55,66])
-print(my_nums)
+print(my_nums) # printing the generater object address bcz  it does not hold the value in memory
+#------------------------------------------------------------------------------------------------
 
-# printing the generater object address bcz  it does not hold the value in memory
+# 1. Printing the value by iteration using the next or __next__ by iterator
 # it yield the value one by one in every iteration
-'''
+
+
 print(next(my_nums))
 print(next(my_nums))
 print(next(my_nums))
 print(next(my_nums))
 print(next(my_nums))
-print(next(my_nums))
-print(next(my_nums))
-'''
-# using the loop
-for square in my_nums:
-    print(square)
+print(my_nums.__next__())
+#print(next(my_nums))  # It will give the stopiteration error 
 
 #------------------------------------------------------------------------------------------------
-    
-#Example of generator use
+# 2. using the loop   
+
+for square in my_nums:  # Run any 1 or 2, at a time
+    print("Uing the loop ",square)
+
+
+
+#------------------------------------------------------------------------------------------------    
+#                            Example of generator use
+#------------------------------------------------------------------------------------------------
+
+#1. Finding the top 10 squre 
+#------------------------------------------------------------------------------------------------
+
+def topten():
+    n=1 
+    while n<=10:
+        sq = n*n
+        yield sq
+        n+=1
+values = topten()
+for i in values:
+    print(i)        
 
 import mem_profile
 import random 
 import time 
+
+#------------------------------------------------------------------------------------------------
+# 2. 
 
 names = ['John', 'Carry', 'Adam', 'Gill' ,'Rohit', 'Ashwin']
 majors = ['math','WK' , 'CompSci', 'Batting', 'Pullshot', 'Carromball']
