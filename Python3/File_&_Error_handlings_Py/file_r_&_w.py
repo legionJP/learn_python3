@@ -1,19 +1,26 @@
+#---------------------------------------------------------------------------------------------##---------------------------------------------------------------------------------------------#
+#                         File Read, Write and close
+#---------------------------------------------------------------------------------------------#
+
 '''There are two functions for the file handling
     1). File Opening: Used for the reading , Writting , Creating 
     2). File Closing
+'''
 
-
-Open file accept two arguments:
-
-1). open(file_name file_location, mode)
+#  Open file accept two arguments:
+#---------------------------------------------------------------------------------------------#
+'''1). open(file_name file_location, mode)
 : 2n argument mode indicates what action is required reading , writting or creating
-: Output format : also specifies if you want a output in the form of the text or binary
+: Output format : also specifies if you want a output in the form of the text or binary'''
+#---------------------------------------------------------------------------------------------#
 
+#---------------------------------------------------------------------------------------------#
+#  Modes of File handling in the python
+#---------------------------------------------------------------------------------------------#
 
-Modes of File handling in the python
+# Modes Sets
 
-Modes Sets
-
+'''
 1). Mode = 'r'
 r: it is used to open and read a file in a text format 
 
@@ -52,18 +59,17 @@ print(file.mode)
 
 #------------------------------------------------------------------------------------
 
-#using of the with open 
+#using of the with open , #file is the variable name , this method auto close the file 
 
-with open('text1.txt',mode='r+') as file: #file is the variable name , this method auto close the file 
+with open('text1.txt',mode='r+') as file: 
     data= file.readline()
     print(data)
 #print(data,end='')
 print(file.closed) #returns true
 #----------------------------------------------------------------------------------
-'''
+
 for line in file:
     print(line,end='')
-
 
 #using the while loop
     
@@ -74,8 +80,7 @@ while  len(f_data)>20:
     print(f_data,end='')
     f_data=file.read(size_to_readd)
 
-'''
-#-------------------------------------------------
+#----------------------------------------------------------------------------------------------#
 #Writing the file
 with open('text2.txt','w') as f:
     #pass
@@ -83,7 +88,7 @@ with open('text2.txt','w') as f:
     f.seek(0) # It will overwrite the first operation 
     f.write('T')
 
-#------------------------------------------------------
+#----------------------------------------------------------------------------------------------#
     
 with open ('text1.txt','r') as read_file:
     with open('text_copy','w') as write_file:
@@ -101,9 +106,10 @@ with open ('image.png','rb') as rf:
          wf.write(rf_file_size)
          rf_file_size =rf.read(file_size)
 
+#----------------------------------------------------------------------------------------------#
+#  Opening th file from the given path 
+#----------------------------------------------------------------------------------------------#
 
-#---------------------------------------------------
-#Opening th file from the given path 
 
 from pathlib import Path
 file_path= Path(r"d:\\JP Data E\\Notes_BIA_Course\\note_Information_Tech.txt")
@@ -114,10 +120,10 @@ try:
 except Exception : NotADirectoryError 
 print("file not found")  # how to read and write the file from the other  dirctories 
 
-#---------------------------------------------------------
+#----------------------------------------------------------------------------------------------#
 
 #'w' 'r' , 'a' operation on the file
-
+#----------------------------------------------------------------------------------------------#
 
 with open('text1.text', mode= 'w') as write_file:
     write_file.write("Hello, This is Me ")
@@ -135,7 +141,9 @@ with open('text1.text',mode='r') as read_file:
 #---------------------------------------------------------------------------
 
 #without the with open file functions:
+#----------------------------------------------------------------------------------------------#
 file=open('text1.text',mode='r')
 data=file.readline
 print(data)
 file.close()
+#----------------------------------------------------------------------------------------------#
