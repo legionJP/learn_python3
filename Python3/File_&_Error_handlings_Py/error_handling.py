@@ -69,7 +69,7 @@ except Exception as e:
     #it is used for the all exceptions in the python.
     # you can give the e after the exceptions ,  
     #so E vaariable acts as a alias for the exceptions
-    #means e can print hte content of the error message
+    #means e can print the content of the error message
 
 # 3.
 
@@ -136,7 +136,7 @@ try:
 except Exception as e:
     print("Item does not exist in the list", e)
 
-####################################################
+#-------------------------------------------------------------------------------------------------------#
 
 try:
    f = open('file1.txt')
@@ -151,3 +151,4 @@ else:                    # it runs when there is no exception
     f.close()
 finally:
     print("Excecuting the finally to see the process")
+#-------------------------------------------------------------------------------------------------------#
