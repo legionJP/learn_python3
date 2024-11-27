@@ -13,6 +13,7 @@
 - [ OOPs in Python ](/Python3/OOPs_in_Python/)
 - [ Decorator and Generator ](/Python3/Decorator_&_Generator/)
 - [ Modules in Python ](/Python3/Modules_in_py/)
+  - [OS Modules in Python ](/Python3/Modules_in_py/os_Modules_in_py.py)
 - [ File and Error Handling ](/Python3/File_&_Error_handlings_Py/)
 - [ Pythonic or Duck Typing ](/Python3/Pythonic/)
 - [ Python Package Management pip and more](/Python3/Python_IDEs_Packaging/)
