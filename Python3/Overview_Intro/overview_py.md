@@ -21,7 +21,7 @@ convert the high to low or low to high language
 -to solve the problem of having the machine different cpu architecture , we uses the virtual machine , run the byte code and convert in the native code
 -: Here the virtual machine is meant by the PVM(Py virtual Machine) , like JVM in java.
 
-! In the python itself handle the comilation
+! In the python itself handle the compilation
 
 + cpython
 
