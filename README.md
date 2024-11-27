@@ -1,7 +1,7 @@
 ## learn_python Programming in structured way 
 
 ### Find Out the every topic of python3 below
-- [ Variable Declaration and more in Py](/python3/Variables_&_Types)
+- [ Variable Declaration and more in Py](/Python3/Variables_&_Types)
 - [ Python Data Types and  Data Structures ](/Python3/Py_Data_Types_Data_Structure)
 - [ Operators in Python3](/python3/Operators_in_py)
 - [ User Input and Math Module](/python3/Math_&_User_Input)
