@@ -1,5 +1,5 @@
 
-print("this method wil always run ") #bcz this is outside of the main() method 
+print("this method will always run ") #bcz this is outside of the main() method 
 #print("the first Module's Name is {}".format(__name__))
 
 #whenever python runs a file before  it sets a few special variable so __name__ is one of them

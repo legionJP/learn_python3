@@ -13,7 +13,17 @@
 - [ OOPs in Python ](/Python3/OOPs_in_Python/)
 - [ Decorator and Generator ](/Python3/Decorator_&_Generator/)
 - [ Modules in Python ](/Python3/Modules_in_py/)
-  - [OS Modules in Python ](/Python3/Modules_in_py/os_Modules_in_py.py)
+   - [ Modules Intro in Python ](/Python3/Modules_in_py/Modules_Intro/)
+   - [ OS Modules in Python ](/Python3/Modules_in_py/OS_Modules/)
+   - [ Itertools Modules in Python](/Python3/Modules_in_py/Itertools_module/)
+   - [ Multi-threading Module in Python ](/Python3/Modules_in_py/Multithreading_inPy.py)
+   - [ Regex Module in Python ](/Python3/Modules_in_py/Regex_Module)
+   - [ Date Time Module in Python](/Python3/Modules_in_py/Datetime_Module/)
+   - [ JSON Module in Python ](/Python3/Modules_in_py/JSON_Module_py/)
+   - [ CSV Module in Python ](/Python3/Modules_in_py/CSV_Module.py)
+   - [ Random Module in Python ](/Python3/Modules_in_py/Random_Module.py)
+
+
 - [ File and Error Handling ](/Python3/File_&_Error_handlings_Py/)
 - [ Pythonic or Duck Typing ](/Python3/Pythonic/)
 - [ Python Package Management pip and more](/Python3/Python_IDEs_Packaging/)
