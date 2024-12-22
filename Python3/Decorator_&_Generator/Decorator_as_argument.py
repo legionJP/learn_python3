@@ -16,7 +16,7 @@ def prefix_decorator(prefix):
 def display_fun(name,age):
    print('display info ran with ({}, {})'.format(name,age))
 
-display_fun('AJ', 24)
+display_fun('JP', 24)
 display_fun('vK', 23)
 
 

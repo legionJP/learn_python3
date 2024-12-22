@@ -18,10 +18,19 @@ def select_sort(nums):
         nums[i] = nums[minpos]
         nums[minpos]= temp
 
-        print(nums)
+        #print(nums)
 
 nums = [87,45,5,22,32,456,12,34]
 select_sort(nums)
 print(nums)
 #-------------------------------------------------------------------------------------------------------#
 
+# def selection_sort(nums):
+#     for i in range(len(nums)-1):
+#         minpos =i
+#         for j in range(i, len(nums)):
+#             if nums[j] < nums[minpos]:
+#                 minpos =j
+#             temp = nums[i]
+#             nums[i]= nums[minpos]
+#             nums[minpos] = temp
