@@ -221,11 +221,11 @@ else:
 #  Write a Program to Add two Fractions
 # Program in C	Program in C++	Program in JAVA	Program in Python
 def findGCD(n1, n2):
-gcd = 0
-for i in range(1, int(min(n1, n2)) + 1):
-if n1 % i == 0 and n2 % i == 0:
-gcd = i
-return gcd
+    gcd = 0
+    for i in range(1, int(min(n1, n2)) + 1):
+        if n1 % i == 0 and n2 % i == 0:
+            gcd = i
+        return gcd
 
 
 # input first fraction
@@ -248,10 +248,9 @@ print(num1, "/", den1, " + ", num2, "/", den2, " = ", num3, "/", lcm)
 # Write a Program to Find the Factorial of a Number using Recursion.
 # Program in C	Program in C++	Program in JAVA	Program in Python
 def factorial(n):
-if n == 0:
-return 1
-return n * factorial(n - 1)
-
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
 
 num = 5
 print("Factorial of", num, "is", factorial(num))
