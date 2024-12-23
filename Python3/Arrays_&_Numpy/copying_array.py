@@ -27,14 +27,14 @@ print(id(arr5),id(arr1))
  1. Shallow Copy : Copy the element but both the array are still dependent on each other 
  2.  Deep Copy :
 ''' 
-arr6 = arr.view() # create the array at the different address 
+arr6 = arr.view() # create the array at the different address ,  but elements points to the same object in memory 
 arr[1]= 7  # changes both array due to shallow copy
 
 print(arr6,arr, id(arr6), id(arr))
 #------------------------------------------------------------------------------------#
 # Deep Copy
 #------------------------------------------------------------------------------------#
-arr6 = arr.copy() # create the array at the different address 
+arr6 = arr.copy() # create the array at the different address
 arr[1]= 8  # changes only the arr array due to Deep copy
 
 print(arr6,arr, id(arr6), id(arr))

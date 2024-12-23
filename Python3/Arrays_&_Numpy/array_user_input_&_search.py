@@ -54,3 +54,18 @@ Assignment Question:
 
 2. Write a code to reverse an array without using in-built function.
 '''
+
+#------------------------
+# reverse the array 
+#--------------
+arr1 =[2,3,4,5,6,7]
+new_arr =array('i',[])
+for i in arr1:
+    new_arr = arr1[::-1]
+print(new_arr)    
+
+arr1 = [10,20,30,40.50]
+index_to_delete = 2
+for i in range(2,len(arr1)-1):
+    arr1[i]= arr[i+1]
+arr.pop()
