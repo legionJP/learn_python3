@@ -77,3 +77,19 @@ even , odd= count(lst)    # as func return the even and odd so we are using the 
 print(even)   
 print(odd) 
 print("even count is {} and odd is {} ".format(even,odd))
+
+#------------------------------------------------- Understand the map and Filter again -------------------------------------#
+# Function to check if a number is even
+def is_even(x):
+    return x % 2 == 0
+
+# List of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Use filter to apply the is_even function to each item in the list
+even_numbers = map(is_even, numbers)
+even_numbers = filter(is_even, numbers)
+
+
+# Convert the filter object to a list and print it
+print(list(even_numbers))  # Output: [2, 4]
