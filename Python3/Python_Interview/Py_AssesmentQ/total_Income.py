@@ -23,21 +23,21 @@ for tag, count in tag_counts.items():
 
 print(f"{total_income:.2f}")
 
-N = int(input("Enter the num of tags "))
-tags = list(map(int,input("Enter the tags ").split()))
+# N = int(input("Enter the num of tags "))
+# tags = list(map(int,input("Enter the tags ").split()))
 
-tag_count= {}
-for tag in tags:
-    tag_count[tag]= tag_count.get(tag,0)+1
+# tag_count= {}
+# for tag in tags:
+#     tag_count[tag]= tag_count.get(tag,0)+1
 
-total_income = 0
+# total_income = 0
 
-# coun the singles and pairs
-for tag , count in tag_count.items():
-    pairs = count//2
-    singles = count%2
+# # coun the singles and pairs
+# for tag , count in tag_count.items():
+#     pairs = count//2
+#     singles = count%2
 
-## calculate 
-    total_income += pairs*(tag+0.1*tag)
-    total_income += singles*(tag*0.5)
-print(f"{total_income:.2f}")
+# ## calculate 
+#     total_income += pairs*(tag+0.1*tag)
+#     total_income += singles*(tag*0.5)
+# print(f"{total_income:.2f}")
