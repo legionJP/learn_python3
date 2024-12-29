@@ -41,3 +41,16 @@ print(f"{total_income:.2f}")
 #     total_income += pairs*(tag+0.1*tag)
 #     total_income += singles*(tag*0.5)
 # print(f"{total_income:.2f}")
+
+def print_pattern(N):
+    total_row= (N*2)-1
+    middle_row = (total_row // 2) + 1
+    for i in range(1, total_row+1):
+        if i < middle_row:
+            print("* " + "  " *(i-2) + ("* " if i > 1 else " "))
+        elif i == middle_row:
+            print("* " *N)
+        else:
+            print("* " + "  "*(total_row-i-1) + ("* " if i < total_row else ""))
+N = int(input())
+print_pattern(N)
