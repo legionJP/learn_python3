@@ -1,24 +1,24 @@
 ## learn_python Programming in structured way ✨ 
 
 ### Python Topics 💡
-- [ Python Programming Intro ](/Python3/Overview_Intro/)
-- [ Variable Declaration and more in Py](/Python3/Variables_&_Types)
-- [ Python Data Types and  Data Structures ](/Python3/Py_Data_Types_Data_Structure)
-- [ Operators in Python3](/python3/Operators_in_py)
-- [ User Input and Math Module](/python3/Math_&_User_Input)
-- [ Flow Control and Function-Scope in Py ](/python3/Flow_control_&_Function_scope)
-- [ Array in Python](/Python3/Arrays_&_Numpy/)
-- [ Procedural Programming in Py ](/Python3/Procedural_programing/)
-- [ Functions and Functional Programming in Py](/Python3/Functional_Programming/)
-- [ OOPs in Python ](/Python3/OOPs_in_Python/)
-- [ Decorator and Generator ](/Python3/Decorator_&_Generator/)
-- [ Modules in Python ](/Python3/Modules_in_py/)
-   - [ Modules Intro in Python ](/Python3/Modules_in_py/Modules_Intro/)
-   - [ OS Modules in Python ](/Python3/Modules_in_py/OS_Modules/)
+- [ Python Programming Intro ](/Python3/Overview_Intro/) 🚀
+- [ Variable Declaration and more in Py](/Python3/Variables_&_Types) 👋
+- [ Python Data Types and  Data Structures ](/Python3/Py_Data_Types_Data_Structure) 👨‍💻
+- [ Operators in Python3](/python3/Operators_in_py) 🧠
+- [ User Input and Math Module](/python3/Math_&_User_Input) 💻
+- [ Flow Control and Function-Scope in Py ](/python3/Flow_control_&_Function_scope) 🌊
+- [ Array in Python](/Python3/Arrays_&_Numpy/) 📜
+- [ Procedural Programming in Py ](/Python3/Procedural_programing/) 📑
+- [ Functions and Functional Programming in Py](/Python3/Functional_Programming/) ⚙
+- [ OOPs in Python ](/Python3/OOPs_in_Python/) 🌲🍃🌿🍂
+- [ Decorator and Generator ](/Python3/Decorator_&_Generator/) 😊😎😂 , ⚡
+- [ Modules in Python ](/Python3/Modules_in_py/)   📦
+   - [ Modules Intro in Python ](/Python3/Modules_in_py/Modules_Intro/)  📚
+   - [ OS Modules in Python ](/Python3/Modules_in_py/OS_Modules/) ⚙️
    - [ Itertools Modules in Python](/Python3/Modules_in_py/Itertools_module/)
    - [ Multi-threading Module in Python ](/Python3/Modules_in_py/Multithreading_inPy.py)
-   - [ Regex Module in Python ](/Python3/Modules_in_py/Regex_Module)
-   - [ Date Time Module in Python](/Python3/Modules_in_py/Datetime_Module/)
+   - [ Regex Module in Python ](/Python3/Modules_in_py/Regex_Module) ^ .🌍 ⭐ ❓ (👥) $
+   - [ Date Time Module in Python](/Python3/Modules_in_py/Datetime_Module/)  📅
    - [ JSON Module in Python ](/Python3/Modules_in_py/JSON_Module_py/)
    - [ CSV Module in Python ](/Python3/Modules_in_py/CSV_Module.py)
    - [ Random Module in Python ](/Python3/Modules_in_py/Random_Module.py)
