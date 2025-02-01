@@ -50,20 +50,6 @@ for i in matches3:
 print(result_list)
 
 
-def simpleArraySum(ar):
-    # Write your code here
-    sum_arr = 0
-    for i in ar:
-        sum_arr +=i
-    return sum_arr
-ar1 = [2,3,4,1]
-print(simpleArraySum(ar1))
-
-# for s in input_list:
-#     if input_list.__contains__():
-#         result_list.append(sorted(input_list))
-# print(result_list)
-
 # Solution 2
 import re
 input_list = str(input())
