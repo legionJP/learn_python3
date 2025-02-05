@@ -37,7 +37,17 @@
 
 #
 # Broadcast Hash Join 
-
+    - decide the size of the broadcast data based on your  cluster size 
 ![alt text](image-70.png)
 
+![alt text](image-71.png)
+
+![alt text](image-72.png)
+
+
+# example 
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+# sort_merge_plan to see the physical plan 
 
