@@ -52,7 +52,7 @@ print(sentence)
 
 # by using the  String formatting
 
-sentence= "My name is  {0} and I am {1} years old '.format(person['name'],person['age'])"
+sentence= "My name is  {0} and I am {1} years old ".format(person['name'],person['age'])
 sentence2= 'My name is  {0[name]} and I am {1[age]} years old '.format(person,person)
 sentence3= 'My name is  {0[name]} and I am {0[age]} years old '.format(person) # in the case o fthe list we can also provide the index no like 0 , 1 in the place of the name , age
 

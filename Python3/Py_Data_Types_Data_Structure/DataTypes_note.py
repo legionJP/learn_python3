@@ -117,7 +117,7 @@ list1.append(6)  #second method of the inserting the number so The append functi
 
 list1.extend([7,8,9,10]) # another function for addding the multiples itemm
 #________________________________
-#Deleting the item from the lsit :
+#Deleting the item from the list :
 
 #list.pop(1)
 #del list(5)
@@ -246,7 +246,6 @@ Sequences allow indexing and slicing.
 Not all collections support indexing. For example, sets do not allow indexing.
 
 -- Mutability:
-
 Some sequences are mutable (like lists) and some are immutable (like tuples and strings).
 Collections also have both mutable (like lists and dictionaries) and immutable types (like frozensets).
 '''

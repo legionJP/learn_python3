@@ -90,6 +90,7 @@ print(my_dict)
 #Dictionary comprehension , name and dept are iterables
 
 my_dict1={name: Dept for name, Dept in zip(names,Department)}   
+my_dict2 = {name:Dept for name, Dept in zip(names,Department)}
 print(my_dict1)
 
 #=====================

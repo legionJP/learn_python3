@@ -47,7 +47,7 @@ b= 8  # Now b is refering to add of 8 , and no value is refering to 29,  so add.
 
 # Garabge Collection
 '''
-Here the value 29 is in memory and no one using it so thats when the refrence count of and var or obect drops to zero 
+Here the value 29 is in memory and no one using it so thats when the refrence count of and var or obejct drops to zero 
 means no var is referncing to it so the memory occupied by the object is immediately dropped and it is called the 
 concept of the grabage collection. 
 '''

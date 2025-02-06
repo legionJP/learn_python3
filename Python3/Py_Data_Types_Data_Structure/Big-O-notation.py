@@ -72,7 +72,8 @@ It is not big-O(n) because the number of guesses does not go up with the size n 
  So here, one says that the complexity is O(log(n)).'''
 
 
-'''look at a log table up to 100,000,000. This lens shows that O(log n) incurs only a minimal processing cost. Running a binary search on an array with any n values will,
+'''look at a log table up to 100,000,000. This lens shows that O(log n) incurs only a minimal processing cost.
+ Running a binary search on an array with any n values will,
 in a worst-case scenario, always make the 
 number of computations found in the log values column. '''
 
@@ -95,5 +96,7 @@ print(len(new_array)) # now the array is doubled size
 n=5
 print(n*n)
 
-
 #how many computations does my solution employ and is there a better way?"
+
+array = [i * j for i in array for j in array ]
+print(array)
