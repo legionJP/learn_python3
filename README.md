@@ -5,7 +5,7 @@
 - [ Variable Declaration and more in Py](Python3/Variables_&_Types/) 👋
 - [ Python Data Types and  Data Structures ](Python3/Py_Data_Types_Data_Structure/) 👨‍💻
 - [ Operators in Python3](Python3/Operators_in_py/operators.py) 🧠
-- [ User Input and Math Module](python3/Math_&_User_Input/) 💻
+- [ User Input and Math Module](Python3/Math_&_User_Input/) 💻
 - [ Flow Control and Function-Scope in Py ](python3/Flow_control_&_Function_scope/) 🌊
 - [ Array in Python](Python3/Arrays_&_Numpy/) 📜
 - [ Procedural Programming in Py ](Python3/Procedural_programing/) 📑
