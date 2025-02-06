@@ -27,7 +27,7 @@ people_string = '''
 data = json.loads(people_string)
 print(type(data))
 
-#Json Deoders in python 
+#Json Decoders in python 
 '''
 JSON         Python
 

@@ -35,7 +35,7 @@ def scope_fun():
     #globals()['a']= 11 # Here change the gloabl var without affecting the local variable
 
 scope_fun()
-print("outsider a ",a) # it will print the 10 not 15 bcz you can't access the inside var menas local var outside
+print("outsider a ",a) # it will print the 10 not 15 bcz you can't access the inside var means local var outside
 print("b as a outside ",b)
 print(id(a)) # the add is same for global a and x 
 

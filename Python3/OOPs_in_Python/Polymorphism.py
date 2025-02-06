@@ -82,6 +82,11 @@ class Laptop:
 lap1= Laptop() 
 ide1 = VimEdtior()
 lap1.code(ide1)
+
+lap2 = Laptop()
+ide2 = Vscode()
+lap2.code(ide2)
+
  # above is creating the instance of class ide1, means the ide1 is object and has the 
 # acess to the methods inside the class
 

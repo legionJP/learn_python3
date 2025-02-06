@@ -219,7 +219,7 @@ print("thanks")
 #              continue
 #------------------------------------------------------------------------
 #use of the continue is the similar to control the iteration of the loop 
-#,by using the continue it skip the that section of the loop and
+#,by using the continue it skip the that section of iteration in  the loop and
 #continue with the rest.
 
  #1.       

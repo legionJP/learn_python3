@@ -26,7 +26,7 @@ class recpie():
      
 #class recpie():
  #    def __new__(cls:type[SelfReg]) -> Self:
-  #       pass  
+#         pass  
         
 ''' 
 #Class setup for the recpie class  

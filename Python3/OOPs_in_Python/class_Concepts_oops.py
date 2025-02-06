@@ -293,7 +293,7 @@ lap1 =Students.Laptop()
 #                                       1. Inheritance : 
 #---------------------------------------------------------------------------------------------------------------#
 
-# It is a creating a new class which is the dreivative of the existing class
+# It is a creating a new class which is the derivative of the existing class
 # Means from parent classa to sub or child class.
  
 '''
@@ -439,7 +439,7 @@ class Alpha:
 
 # It hides the implementations details for the data security 
 # python does not support the abstraction directly and uses the inheritance to achive it .
-# it is used for hiding important get_schoolrmation as well as unnecessary get_schooliformation in a block of code. 
+# it is used for hiding important get_schoolinformation as well as unnecessary get_schooliformation in a block of code. 
 
 #the implementation of something called abstract classes and methods, 
 # which can be implemented by inheriting from something called the abc module. "abc" here stands for abstract base class.

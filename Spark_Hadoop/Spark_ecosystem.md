@@ -42,11 +42,11 @@
     - Note spark always run on JVM as built on scala 
  ## Container Working 
     - JVM as a application driver request for the container creation 
-    ![alt text](image-2.png)   
+![alt text](image-2.png)   
 
-    ![alt text](image-3.png)
+![alt text](image-3.png)
 
-    ![alt text](image-4.png)
+![alt text](image-4.png)
 
     # If in above architecuture there is any user defined function in pyspark then the jvm can't run so have to change the architehture
     - so there will be py worker in every container if there is UDF , 

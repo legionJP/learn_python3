@@ -44,6 +44,16 @@ def fact(x):
 result = fact(x)
 print(result)
 
+def fact1(n):
+    if n<=0:
+        return 0
+    else: 
+        f= 1
+        for i in range(1, n+1):
+            f = f*i
+        return f
+
+    
 #-----------------------------------------------------------------------------------------#
 #   Recursive solution to find the fact
 #-----------------------------------------------------------------------------------------#
@@ -54,5 +64,12 @@ def find_factorial_recursive(n):
         return 1
     else:
         return n*find_factorial_recursive(n-1) 
-# here retrun is keeping the reference of implemented value and calling again and again 
+# here return is keeping the reference of implemented value and calling again and again 
 print(find_factorial_recursive(n))  
+
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+

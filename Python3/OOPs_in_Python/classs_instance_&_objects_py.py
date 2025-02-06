@@ -73,7 +73,7 @@ print(obj_myclass.hello_method())
 print(obj_myclass.hello_method1(3))
 
 #--------------------------------------------------------------------------------------------------------------------#
-#                                  Class and Object Excercise and demostrations : 
+#                                  Class and Object Excercise and demonstrations : 
 #--------------------------------------------------------------------------------------------------------------------#
 
 

@@ -26,7 +26,7 @@ def update(lst):
     lst[1] =25
     print(id(lst))
     print("x ",lst)
-lst= [10,2,30,40]   # as lst is mmutable object so the address in the memory is same after modifyingit
+lst= [10,2,30,40]   # as lst is imutable object so the address in the memory is same after modifyingit
 print(id(lst))
 update(lst)
 print('lst: ',lst)

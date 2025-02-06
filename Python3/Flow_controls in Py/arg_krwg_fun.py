@@ -1,5 +1,5 @@
 #use of the args: 
-#1).with args you can pass any amount of the non-keyword varriablels, like tuples 
+#1).with args you can pass any amount of the non-keyword varriablels, like tuples  
 #2). With kwargs you can pass any amount of keyword(var in key.) arguments, like dictionary
 
 def sum_of1(a,b):

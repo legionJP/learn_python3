@@ -1,14 +1,14 @@
 '''
-Python allows for object orient , procedrual and function   programming  Models 
+Python allows for object orient , procedurual and function  programming  Models 
 that is called "Paradigms" 
 
-Proceedural Prrogramming : It is the step by step instructions , and first stepto oop
+Proceedural Prrogramming : It is the step by step instructions , and first step to oop
 
 procedural + object orient +functional it is easier to to follow the all approaches.
 
 Procedural programming  structures the code into the procedurres called the subtask. 
 
-   ''' 
+''' 
 
 '''
 Pricipal for the procedural programming is called the DRY :
@@ -53,14 +53,14 @@ It is the series of the task to solve a problem pr task of a given problem
 
 
 def ispalindrom(str):
- str= str.lower()
- startIndex = 0
- endindex = len(str)-1
- for i in str:
-  if str[startIndex] != str[endindex]:
-   return False
-  else:
-   return True
+   str= str.lower()
+   startIndex = 0
+   endindex = len(str)-1
+   for i in str:
+      if str[startIndex] != str[endindex]:
+         return False
+      else:
+         return True
 print(ispalindrom('Racecar'))  
 
  
