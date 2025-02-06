@@ -3,7 +3,6 @@ from array import array
 #------------------------------------------------------------------------------------#
 # Taking the User Input 
 #------------------------------------------------------------------------------------#
-
 # Enter the value
 arr = array('i',[])
 n = int(input("Enter the length of the array"))
@@ -66,6 +65,6 @@ print(new_arr)
 
 arr1 = [10,20,30,40.50]
 index_to_delete = 2
-for i in range(2,len(arr1)-1):
+for i in range(index_to_delete,len(arr1)-1):
     arr1[i]= arr[i+1]
 arr.pop()
