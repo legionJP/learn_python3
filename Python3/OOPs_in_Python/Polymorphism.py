@@ -235,7 +235,7 @@ a1=B()
 a1.show()    
 
 '''
-1. When we don't have the method show in the class B and class B is inheriting A than the 
+1.When we don't have the method show in the class B and class B is inheriting A than the 
 B is inheriting the A's show method ,
 2.But when the B has it's own show method than it overrides 
 the A's method 

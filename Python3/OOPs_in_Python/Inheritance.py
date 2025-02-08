@@ -41,7 +41,7 @@ class B(A):  # B is ineriting feature of A means B is sub class and A is super o
    def func4(self):
       print("func 4 is working")
 
-class C(B):  # C is ineriting feature of A, B so it is multilevel inherit.
+class C(B):  # C is inheriting feature of A, B so it is multilevel inherit.
    def func5(self):
       print("func 5 is working")
 
@@ -56,6 +56,8 @@ class E(B,D): # Have to create this class for multilevel to avoid the MRO confli
       # In the multilevel inherit the method is always preferd from the left to right like it will call from B first not D
    def feat(self):
       super.func1() # Method of super class
+      de = B()
+      
 
 
 a1 =A()
