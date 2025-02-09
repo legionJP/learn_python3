@@ -14,7 +14,7 @@
 '''
 Ability of a function to change it's behaviour when it's called by differnet objects 
 example : built in "+" operator perform the additon
- for the integer data tuple and concation for the string data type
+for the integer data tuple and concation for the string data type
 '''
 
 # Everything in Python is inherently an object, so when I talk about polymorphism, 

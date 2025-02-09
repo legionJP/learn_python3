@@ -434,7 +434,6 @@ class Alpha:
 #--------------------------------------------------------------------------------------------#
 #_____________________
 #                                    4. Abstraction : 
-#__________________________
 #--------------------------------------------------------------------------------------------#
 
 # It hides the implementations details for the data security 
@@ -442,8 +441,9 @@ class Alpha:
 # it is used for hiding important get_schoolinformation as well as unnecessary get_schooliformation in a block of code. 
 
 #the implementation of something called abstract classes and methods, 
-# which can be implemented by inheriting from something called the abc module. "abc" here stands for abstract base class.
-#It is first imported and then used as a parent class for some class that becomes an abstract class. 
+# which can be implemented by inheriting from something called the abc module.
+# "abc" here stands for abstract base class. 
+# It is first imported and then used as a parent class for some class that becomes an abstract class. 
 
 from abc import ABC   
 class ClassName(ABC):
