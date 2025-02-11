@@ -20,8 +20,8 @@ def nForest(n:int) ->None:
     # Write your solution here.
     for i in range(n):
         for j in range(i+1): # (j=0, j<=i, j++)
-        for j in range(i):
-            print("*", end=" ")
+            for j in range(i):
+             print("*", end=" ")
         print()
     
 # Pattern 3
@@ -88,3 +88,47 @@ def nStarTriangle(n: int) -> None:
             print(" ", end="")
         print()
 nStarTriangle(4)
+
+print("---------------------------------------")
+
+def nStarTriangle(n: int) -> None:
+    # Write your code here.
+    for i in range(n):
+        for k in range(i):
+            print(" ", end="")
+        for j in range(i+1,2*n-i):
+                print("*", end="")       
+        for l in range(i):
+            print(" ", end="")
+        print()
+nStarTriangle(4)
+
+'''
+* * * * 
+ * * *
+  * * 
+   *
+'''
+print("---------------------------------------")
+
+def nStarDiamond(n: int) -> None:
+    for i in range(n):
+        for j in range(n-i-1):
+            print(" ", end="")
+        for k in range(0,2*i+1):
+            print("*", end="")
+        for m in range(n-i-1):
+            print(" ",end="")
+        print()
+    for i2 in range(n):
+        for j2 in range(i2):
+            print(" ", end="")
+        for k2 in range(i2+1,2*n-i2):
+            print("*", end="")
+        for m2 in range(i2):
+            print(" ", end="")
+        print()
+nStarDiamond(4)
+
+
+print("---------------------------------------")
