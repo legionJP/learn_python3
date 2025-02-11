@@ -159,3 +159,28 @@ def nStarTriangle(n: int) -> None:
             print("*", end="")
         print()
 nStarTriangle(5)
+
+print("---------------------------------------")
+
+# nBinaryTriangle:
+'''
+n=4
+1
+0 1
+1 0 1
+0 1 0 1
+'''
+
+def nBinaryTriangle(n: int) -> None:
+    # Write your solution here.
+    for i in range(4):
+        if i%2 ==0:
+            start=1
+        else:
+            start=0
+        for j in range(i+1):
+            print(start,end="")
+            start = 1-start
+        print()
+
+nBinaryTriangle(4)
