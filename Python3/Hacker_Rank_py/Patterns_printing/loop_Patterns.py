@@ -174,7 +174,7 @@ n=4
 def nBinaryTriangle(n: int) -> None:
     # Write your solution here.
     for i in range(4):
-        if i%2 ==0:
+        if i%2 ==0: # if i=even start value is 1  else start =0
             start=1
         else:
             start=0
@@ -184,3 +184,25 @@ def nBinaryTriangle(n: int) -> None:
         print()
 
 nBinaryTriangle(4)
+
+print("---------------------------------------")
+# Middle spcae is 2*(n-1)
+
+
+def numberCrown(n: int) -> None:
+    space = 2*(n-1)
+    for i in range(n):
+        for j in range(i+1):
+            print(j+1, end=" ")
+
+        # space 
+        for l in range(space):
+            print(" ",end=" ")
+
+        for k in range(i+1,0,-1):
+            print(k, end=" " )
+        print()
+        space -=2
+        
+
+numberCrown(6)
