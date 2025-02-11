@@ -23,7 +23,8 @@ def nForest(n:int) ->None:
             for j in range(i):
              print("*", end=" ")
         print()
-    
+nForest(4) 
+
 # Pattern 3
 
 def nTriangle(n:int) ->None:
@@ -53,6 +54,7 @@ def seeding(n: int) -> None:
             print("* ", end="")
         print()
 
+seeding(4)
 
 # Pattern 6
 # Reverse the number 
@@ -132,3 +134,28 @@ nStarDiamond(4)
 
 
 print("---------------------------------------")
+# find the symmentry , for n =5 rows the pattern repeat itself 
+# so , rows = 2*n-1 = 9
+# i =1
+'''
+*
+**
+***
+****
+***** : 5 ==> num of star: i+1==> 4+1
+****  : 4 ==> 2*n-i ==> 2*5-6= 4
+***   : 3 ==> 2*n-i==> 3
+**    : 2 ==> 10-8 =2
+*     : 1
+'''
+def nStarTriangle(n: int) -> None:
+
+    # Write your code here.
+    for i in range(2*n-1+1):
+        stars=i
+        if i>=n:
+            stars=2*n-i
+        for j in range(stars):
+            print("*", end="")
+        print()
+nStarTriangle(5)
