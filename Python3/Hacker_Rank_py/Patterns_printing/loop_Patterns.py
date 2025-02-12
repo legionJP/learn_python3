@@ -341,9 +341,131 @@ Output:
 * * * * * * 
 * *     * * 
 *         * 
+---------------- # symmetry line 
 *         * 
 * *     * * 
 * * * * * * 
 
+# 1st part
+star space , star
+5     0      5
+4     2      4
+3     4      3
+2     6      2
+1     8      1
+n-i  , 2*i,  n-i
+
 '''
 
+def symmetry(n: int):
+    # Write your solution from here.
+    for i in range(n):
+        for j in range(n-i):
+            print("*", end="")
+        for s in range(2*i):
+            print(" ", end="")
+        for k in range(n-i):
+            print("*", end="")
+        print()
+    # second part 
+    for i2 in range(n):
+        for j2 in range(i2+1):
+            print("*", end="")
+        for s2 in range(2*(n-i2-1)):
+            print(" ", end="")
+        for k2 in range(i2+1):
+            print("*", end="")
+        print()
+
+symmetry(4)
+
+# problem 19
+def symmetry1(n: int):
+    # Write your solution here.\
+    space= 2*n-2
+    for i in range(1,(2*n)):
+        star = i
+        if i>n :
+            star= 2*n-i
+        for j in range(star):
+            print("*",end=" ")
+
+        for s in range(space):
+            print(" ", end="")
+
+        for k in range(star):
+            print("*", end=" ")
+        
+        if(i<n):
+            space -= 2
+        else:
+            space+=2
+        print()
+symmetry1(4)
+
+
+# 
+'''
+5
+
+Sample Output 2 :
+
+*****
+*   *
+*   *
+*   *
+*****
+
+when i=0, i= n-1
+, j =0 , j=n-1 
+fill the stars
+'''
+
+def getStarPattern(n: int) -> None:
+    # Write your solution here.
+    for i in range(n):
+        for j in range(n):
+            if i==0 or i==n-1 or j==0 or j==n-1:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+        
+getStarPattern(5)
+
+
+# pattern 22 
+
+'''
+Ninja has been given a task to print the required pattern and he asked for your help with the same.
+
+You must print a matrix corresponding to the given number pattern.
+Example:
+
+Input: ‘N’ = 4
+
+Output: 
+
+4444444
+4333334
+4322234
+4321234
+4322234
+4333334
+4444444
+
+
+
+'''
+
+def getNumberPattern(n: int) -> None:
+    # Write your solution here.
+    for i in range(2*n-1):
+        for j in range(2*n-1):
+            top_distance = i
+            left = j
+            right = (2*n-2)-j
+            down = (2*n-2)-i
+            print(n-min(min(top_distance,down),min(left,right)),end="")
+        print()
+getNumberPattern(4)
