@@ -320,4 +320,30 @@ alphaHill(3)
 # alphaHill(5)
 
 
-print('----------------------------------------------------------------------------------')
+# print('----------------------------------------------------------------------------------')
+def alphaTriangle(n: int):
+    # Write your solution here.
+    for i in range(n+1):
+        char = ord('A')+n-1
+        for j in range(char,char-i,-1):
+            print(chr(j), end=" ")
+        print()
+alphaTriangle(3)
+
+#
+'''
+For every value of ‘N’, return the symmetry as shown in the example.
+Example:
+
+Input: ‘N’ = 3
+
+Output: 
+* * * * * * 
+* *     * * 
+*         * 
+*         * 
+* *     * * 
+* * * * * * 
+
+'''
+
