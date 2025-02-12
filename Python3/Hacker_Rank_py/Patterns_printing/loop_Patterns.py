@@ -58,3 +58,4 @@ def nStarTriangle(n: int) -> None:
             print(" ", end="")
         print()
 nStarTriangle(4)
+
