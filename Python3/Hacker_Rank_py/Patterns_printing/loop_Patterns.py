@@ -267,19 +267,57 @@ print("---------------------------------------")
   A B A
 A B C B A
 
+PATTERN of the chars: after  (2*i+1)/2, it goes into breakpoint and reverse 
+ the char 
 '''
-
 
 def alphaHill(n: int):
     # Write your solution from here.
     for i in range(n):
-        for j in range(n-i):
-            print("", end=" ")
-        for p in range(ord('A'),ord('A')+i):
-            print(chr(p), end=" ")
-        for j in range(n-i):
-            print("",end=" ")
+        for j in range(n-i-1):
+            print(" ", end="")
+
+        # characters
+        breakpoint = (2*i+1)//2 
+        ch = ord('A')
+        for p in range(0,2*i+1):
+            print(chr(ch), end="")
+            if p < breakpoint:
+                ch+=1
+            else:
+                ch-=1
+        # for j in range(n-i-1):
+        #     print(" ", end="")
         print()
 
-alphaHill(5)    
+alphaHill(3)    
     
+# Approach 2    
+
+# def alphaHill(n: int):
+#     # Write your solution from here.
+#     for i in range(n):
+#         # Print leading spaces
+#         for j in range(n-i-1):
+#             print(" ", end="")
+
+#         # characters in increasing order
+#         ch = ord('A')
+#         for p in range(0, i+1):
+#             print(chr(ch), end=" ")
+#             ch += 1
+        
+#         # characters in decreasing order (reverse of increasing)
+#         ch -= 2  # Adjust after the last increment
+#         for p in range(i-1, -1, -1):
+#             print(chr(ch), end=" ")
+#             ch -= 1
+        
+#         # Move to the next line after each row
+#         print()
+
+# # Test the function
+# alphaHill(5)
+
+
+print('----------------------------------------------------------------------------------')
