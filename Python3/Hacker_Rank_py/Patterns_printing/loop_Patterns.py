@@ -8,7 +8,8 @@
 '''
 # Pattern:
 
-row = int(input())
+row=5
+# row = int(input())
 for i in range(row):
     for j in range(row):
          print("* ", end="")
@@ -91,8 +92,6 @@ def nStarTriangle(n: int) -> None:
         print()
 nStarTriangle(4)
 
-<<<<<<< HEAD
-=======
 print("---------------------------------------")
 
 def nStarTriangle(n: int) -> None:
@@ -208,4 +207,46 @@ def numberCrown(n: int) -> None:
         
 
 numberCrown(6)
->>>>>>> c72de51b42e73c73ffb05b601edf9d02e93da15b
+print("---------------------------------------")
+# Increasing Number 
+def nNumberTriangle(n: int) -> None:
+    num=1
+    # Write your solution here.
+    for i in range(n):
+        for j in range(i+1):
+            print(num, end=" ")
+            num= num+1
+        print()
+nNumberTriangle(5)
+
+print("---------------------------------------")
+
+def nLetterTriangle(n: int) -> None:
+    # Write your solution here.
+    # string="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    # for i in range(n):
+    #     for j in range(i+1):
+    #         print(string[j],end=" ")
+    #     print()
+
+    # using the ord and chr 
+    for i in range(n+1):
+        # char = [ch='A'+i for ch in char]    
+        for j in range(ord('A'),ord('A')+i):
+            print(chr(j), end=" ")
+        print()
+nLetterTriangle(5)
+
+
+print("---------------------------------------")
+# Reverse nLetterTriangle
+
+def nLetterTriangle(n: int):
+    # Write your solution here.
+    
+    for i in range(n):
+        for j in range(ord('A'),ord('A')+(n-i)):
+            print(chr(j), end=" ")
+        print()
+nLetterTriangle(3)
+    
