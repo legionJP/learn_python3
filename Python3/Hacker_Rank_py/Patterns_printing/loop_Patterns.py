@@ -248,5 +248,38 @@ def nLetterTriangle(n: int):
         for j in range(ord('A'),ord('A')+(n-i)):
             print(chr(j), end=" ")
         print()
-nLetterTriangle(3)
+nLetterTriangle(5)
+    
+print("---------------------------------------")
+
+
+def alphaRamp(n: int) -> None:
+    # Write your solution from here.
+    for i in range(n):
+        char = ord('A')+i
+        for j in range(i+1):
+            print(chr(char), end=" ")
+        print()
+   
+print("---------------------------------------")
+'''
+    A
+  A B A
+A B C B A
+
+'''
+
+
+def alphaHill(n: int):
+    # Write your solution from here.
+    for i in range(n):
+        for j in range(n-i):
+            print("", end=" ")
+        for p in range(ord('A'),ord('A')+i):
+            print(chr(p), end=" ")
+        for j in range(n-i):
+            print("",end=" ")
+        print()
+
+alphaHill(5)    
     
