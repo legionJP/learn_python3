@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------
-#String Operations
+# String Operations
 #---------------------------------------------------------------------------------------
 message ="Hello my World"
 print(message)
@@ -10,19 +10,20 @@ print(message.count('l'))
 print(message.count('World')) # counting the string chracter
 
 #---------------------------------------------------------------------------------------
-
 # Find the string character using the String find method
 #---------------------------------------------------------------------------------------
+
 print(message.find('Jp'))  #the ouput is 6 because the word is strating from the index 6
 print(message.find('y'))
 
-#Replacing  method for the String 
+#---------------------------------------------------------------------------------------
+# Replacing  method for the String 
 #---------------------------------------------------------------------------------------
 message=message.replace('Hello' , 'Welcome')
 print(message)
 
 #--------------------------------------------------------------------------------------
-#Cocatinatong the string
+# Cocatinatong the string
 #--------------------------------------------------------------------------------------
 
 greeting = "hello"
@@ -30,6 +31,15 @@ name = 'JP'
 message = greeting + ',' + name + ' welcome '
 print(message)
 
+#--------------------------------------------------------------------------------------
+# String .join method
+#--------------------------------------------------------------------------------------
+str_list = ["Hello", "world"]
+result = " ".join(str_list)
+print(result)
+
+
+#--------------------------------------------------------------------------------------
 # String formating 
 
 message= '{}, {} welcome'.format(greeting,name)
