@@ -21,3 +21,23 @@ endswith()        | Check if the string ends with a given string/character digit
 removeprefix()    | Removes a given prefix from the string                        | str2 = "Please, will you do this??"\nstr2_prefix = str2.removeprefix("Please, ") This will remove "Please" and space from the string.
 removesuffix()    | Removes a given suffix from the string                        | str2 = "Will you do this??"\nstr2_suffix = str2.removesuffix("?") This will remove one question mark.
 """
+
+#
+# Escape Characters & Python Strings
+
+
+| **Escape Sequence** | **Description**                                                            |
+|---------------------|----------------------------------------------------------------------------|
+| `\\`                | Backslash (escaped character representing a single backslash)              |
+| `\'`                | Single quote                                                               |
+| `\"`                | Double quote                                                               |
+| `\n`                | Newline (line break)                                                       |
+| `\t`                | Tab                                                                        |
+| `\b`                | Backspace                                                                  |
+| `\r`                | Carriage return (moves the cursor to the beginning of the line)            |
+| `\f`                | Form feed (moves the cursor to the next page or clears the screen)         |
+| `\v`                | Vertical tab                                                               |
+| `\a`                | Bell (produces a beep sound)                                               |
+| `\uXXXX`            | Unicode character (16-bit hexadecimal)                                     |
+| `\UXXXXXXXX`        | Unicode character (32-bit hexadecimal)                                     |
+| `\xXX`              | Hexadecimal value of a character (ASCII)                                   |

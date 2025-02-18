@@ -147,6 +147,99 @@ print(sentecne7)
 
 #---------------------------------------------------------------------------------------------
 
+# Python String Methods
+#---------------------------------------------------------------------------------------------
+
+string = "Hello, World!"
+
+# Length of a string
+length = len(string)
+print("Length of the string:", length)
+
+# Convert string to lowercase
+lowercase = string.lower()
+print("The string in lowercase:", lowercase)
+
+# Convert string to uppercase
+uppercase = string.upper()
+print("The string in uppercase:", uppercase)
+
+# Capitalize the string
+capitalized = string.capitalize()
+print("Capitalized string:", capitalized)
+
+# Convert the first character of each word to uppercase
+title_case = string.title()
+print("The string in title case:", title_case)
+
+# Count occurrences of a substring
+count = string.count("o")
+print("Count of 'o':", count)
+
+# Replace a substring
+replaced = string.replace("World", "Unstop")
+print("Replaced string:", replaced)
+
+# Split the string into a list
+split_list = string.split(",")
+print("Split string:", split_list)
+
+# Join elements of a list into a string
+joined = "-".join(split_list)
+print("Joined string:", joined)
+
+# Strip leading and trailing whitespace
+string2 = " Hello, World "
+stripped = string2.strip()
+print("Stripped string:", stripped)
+
+multiline_string = "Line 1\nLine 2\nLine 3"
+print(multiline_string)
+
+# Using the splitlines(), startswith(), and endswith() functions
+splitlines_list = multiline_string.splitlines()
+print("Splitlines list:", splitlines_list)
+print("Starts with 'Line':", multiline_string.startswith("Line"))
+print("Ends with '3':", multiline_string.endswith("3"))
+
+# Using the count() function
+text = "Hello, Hello, Hello"
+count = text.count("Hello")
+print("Count of 'Hello':", count)
+
+# using removeprefix() and removesuffix() functions
+prefixed_string = "Prefix Hello, World!"
+removed_prefix = prefixed_string.removeprefix("Prefix")
+print("Removed prefix:", removed_prefix)
+
+suffixed_string = "Hello, World! Suffix"
+removed_suffix = suffixed_string.removesuffix("Suffix")
+print("Removed suffix:", removed_suffix)
+
+#---------------------------------------------------------------------------------------------
+
+# Escape Characters & Python Strings : see ref String_Methods.md
+#---------------------------------------------------------------------------------------------
+
+# Newline 
+print("Hello,\nWorld!")
+
+# Tab 
+print("Python\tProgrammingLanguage")
+
+# Single and double quotes
+print('Single Quote: \', Double Quote: \" ')
+
+# Unicode characters
+print("Unicode: \u03A9") # Represents the Greek capital letter omega
+
+# Bell sound
+print("Beep!\a")
+
+# Hexadecimal value
+print("Hex: \x48\x65\x6C\x6C\x6F") # Represents the ASCII values for "Hello"
+
+#---------------------------------------------------------------------------------------------
 # Summary:
 
 """
