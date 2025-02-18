@@ -3,6 +3,8 @@
 #                    Variable Scope in python Functions
 #---------------------------------------------------------------------------------------------------#
 
+# Namespace: it is the container where the names are mapped to the objects
+
 # Ther is 4 Types of Scope 'LEGB' 1. Local 2. Enclosing Scope 3. Global 4. Built in 
 
 # 1. Built in Scope or def() : function defining 
@@ -13,8 +15,54 @@ def outer():
         #3. local Scope
         c=3           #Accessible in: only Local Scope 
 
-   #4. Global Scope: function declared outside of a function , can be accessed from anywherer  
-        
+   #4. Global Scope: var declared outside of a function , can be accessed from anywherer  
+'''
+# Local Scope or Local Namespace:
+
+The local namespace in Python refers to the scope that contains names (variables, functions, etc.)
+defined within a function. Every time a function is called,
+a new local namespace is created for that function's execution context.    
+
+# 2. Enclosing Namespace In Python
+
+When an inner function accesses a variable that is not defined locally but is in the scope of an outer function, 
+it accesses the enclosing/ immediate outer namespace.
+
+It is important to note that while the inner function can access the variables from its enclosing Python namespace, 
+it cannot modify the value without the use of the nonlocal keyword. 
+
+# 3. Global Namespace In Python
+Global (G) Scope: Variables defined at the top level of a module or declared as global 
+within a function are considered global. They are accessible throughout the module. 
+Global variables persist until the interpreter terminates or until they are explicitly deleted.
+
+# 4. Built-in Namespace In Python
+Built-in (B) Scope: Python's built-in namespace contains names like print(), len(), etc.
+ These names are always accessible from any scope without any import statements.
+'''
+
+
+# The globals() Function
+'''
+The built-in function globals() returns a dictionary representing the current global namespace.
+That is, when you call this function, it will return all entries in global namespace. 
+This includes, all variables and functions defined at the top level of a module or script, 
+even including variables from imported modules.
+'''
+# Global variable
+global_var = 'I am global'
+
+def my_function():
+  local_var = 'I am local'
+  print("Inside function - Global namespace:")
+  print(globals())
+
+# Call the function
+my_function()
+
+# Access global_var directly using globals()
+print("Global variable accessed directly:", globals()['global_var'])
+
 #---------------------------------------------------------------------------------------------------#
 #Examples:
 #1. 
