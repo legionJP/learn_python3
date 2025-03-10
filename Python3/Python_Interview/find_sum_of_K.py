@@ -1,11 +1,11 @@
 # add two element from the list to check if the sum equals to a variable k
 
-def find_pair_sum(nums, k):
+def find_pair_sum(nums, target):
 
     # # 1. Using the Hash Map 
     # seen= {}
     # for num in nums:
-    #     complement = k-num
+    #     complement = target-num
     #     if complement in seen:
     #         return complement , num
     #     else:
@@ -21,7 +21,8 @@ def find_pair_sum(nums, k):
     while l<r:
         current_sum = nums[l]+ nums[r]
         if current_sum == k:
-            return nums[l], nums[r]
+            return nums[l], nums[r], [l,r]
+        
         elif current_sum < k:
             l += 1
         else:
@@ -29,8 +30,8 @@ def find_pair_sum(nums, k):
     return None
         
 # Example usage
-nums = [10, 2, 3, 7, 8]
-k = 15
+nums = [3,2,4]
+k = 6
 result = find_pair_sum(nums, k)
 print(result)  # Output: (7, 8)
 
