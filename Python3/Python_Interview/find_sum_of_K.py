@@ -16,6 +16,7 @@ def find_pair_sum(nums, target):
 # dict of seen and searching if the complement c = num in the nums list , means the complement of new num is  found in seen then its result
 
 # 2. Using the Two Pointer
+#def find_pair_sum(nums, target):
     nums.sort()
     l , r = 0 ,len(nums)-1
     while l<r:

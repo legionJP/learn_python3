@@ -14,6 +14,7 @@ def twoSum(nums, target):
         return []
 
 from typing import List
+
 #2.  Hash Map 
 def twoSumHash(nums: List[int], target: int)-> List[int]:
         prevHash= {} # val: index
@@ -24,10 +25,9 @@ def twoSumHash(nums: List[int], target: int)-> List[int]:
                         return [prevHash[complement],i]
                 prevHash[n]=i
         return 
+#3. 
 
-
-
-
+# Solution Approach
 nums =[3,2,4]
 target =6
 print(twoSum(nums,target))
