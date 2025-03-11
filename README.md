@@ -3,8 +3,19 @@
 ### Python Topics 💡
 - [ Python Programming Intro ](Python3/Overview_Intro/Readme.md) 🚀
 - [ Variable Declaration and more in Py](Python3/Variables_&_Types/) 👋
-- [ Python Data Types and  Data Structures ](Python3/Py_Data_Types_Data_Structure/) 👨‍💻
 - [ Operators in Python3](Python3/Operators_in_py/operators.py) 🧠
+- [ Python Data Types and  Data Structures ](Python3/Py_Data_Types_Data_Structure/) 👨‍💻
+  -  [Data Types]()
+        - [Integers, Floats, airthmetic](Python3/Py_Data_Types_Data_Structure/Integers_Floats_Airthmetic_operations.py)
+        - [List, set , tuples, Dict](Python3/Py_Data_Types_Data_Structure/list-set-tuple-dict.py) , [Sets](Python3/Py_Data_Types_Data_Structure/Sets.py), [Named_tuples](Python3/Py_Data_Types_Data_Structure/Namedtuples.py)
+
+        - [List Comprehension ](Python3/Py_Data_Types_Data_Structure/List_comprehensions.py)
+        - [String](Python3/Py_Data_Types_Data_Structure/Strings_f-string.py) , [String Slicing](Python3/Py_Data_Types_Data_Structure/Slicing_lists_&_Strings.py)
+        
+        - [ All Python Stirng Methods](Python3/Py_Data_Types_Data_Structure/String_Methods.md)
+
+  -   [Data Structures](Python3/Py_Data_Types_Data_Structure/DSA_Python.py) , [Big-O](Python3/Py_Data_Types_Data_Structure/Big-O-notation.py)
+
 - [ User Input and Math Module](Python3/Math_&_User_Input/) 💻
 - [ Flow Control and Function-Scope in Py ](Python3/Flow_controls%20in%20Py/) 🌊
 - [ Array in Python](Python3/Arrays_&_Numpy/) 📜
