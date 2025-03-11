@@ -52,17 +52,17 @@ print(twoSumHash(nums,target))
         #     #     end-=1
         # # return None
 
-def isAnagram( s, t):
+def isAnagram(s, t):
         """
         :type s: str    
         :type t: str
         :rtype: bool
         """
-        if s[::-1].lower()==t.lower():
+        if sorted(s.lower())==sorted(t.lower()):
             return True
         else:
             return False
 
-s= "Tacecar"
-t="racecar"
+s= "racecar"
+t="arcecar"
 print(isAnagram(s,t))
