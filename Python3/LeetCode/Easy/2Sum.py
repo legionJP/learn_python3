@@ -27,11 +27,12 @@ def twoSumHash(nums: List[int], target: int)-> List[int]:
         return 
 #3. 
 
-# Solution Approach
+# Usages Example
 nums =[3,2,4]
 target =6
 print(twoSum(nums,target))
 print(twoSumHash(nums,target))
+
 
 
 
@@ -51,18 +52,3 @@ print(twoSumHash(nums,target))
         #     # else:
         #     #     end-=1
         # # return None
-
-def isAnagram(s, t):
-        """
-        :type s: str    
-        :type t: str
-        :rtype: bool
-        """
-        if sorted(s.lower())==sorted(t.lower()):
-            return True
-        else:
-            return False
-
-s= "racecar"
-t="arcecar"
-print(isAnagram(s,t))
