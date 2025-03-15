@@ -12,13 +12,13 @@ import requests
 
 #paasing the html file 
 
-with open ('example.html') as html_file:
-    soup = BeautifulSoup(html_file, 'lxml')
+# with open ('example.html') as html_file:
+#     soup = BeautifulSoup(html_file, 'lxml')
 
-#print(soup.prettify()) #Parsing the whole content 
+# #print(soup.prettify()) #Parsing the whole content 
 
-match1 = soup.title
-match2 = soup.title.text
+# match1 = soup.title
+# match2 = soup.title.text
 #match = soup.div #getting the first div 
 #using  the find method to search for the div with class footer 
 # print(match)
@@ -28,22 +28,22 @@ match2 = soup.title.text
 #-----------------------------------------------------------
 #Scraping  the headline and the summary from example.html 
 
-article= soup.find('div', class_ ='article') #class_ bcz , in py class is special keyword
-print(article)
-headline = article.h2.a.text
-summary = article.p.text
-print(summary)
-print()
-#or 
+# article= soup.find('div', class_ ='article') #class_ bcz , in py class is special keyword
+# print(article)
+# headline = article.h2.a.text
+# summary = article.p.text
+# print(summary)
+# print()
+# #or 
 
-for article in soup.find_all('div',class_ ='article'):
-    headline = article.h2.a.text
-    print(headline)
+# for article in soup.find_all('div',class_ ='article'):
+#     headline = article.h2.a.text
+#     print(headline)
     
-    summary = article.p.text
-    print(summary)
+#     summary = article.p.text
+#     print(summary)
     
-    print()
+#     print()
 
 
 #---------------------------------------------------------------------------------
@@ -55,15 +55,32 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-source = requests.get('https://www.patreon.com/coreyms').text
-soup = BeautifulSoup(source,'lxml')
+# source = requests.get('https://www.patreon.com/coreyms').text
+source = requests.get('https://www.ambitionbox.com/overview/tcs-overview').text
+
+soup = BeautifulSoup(source,'html.parser')
 
 print(soup.prettify())
 print()
 
-csv_file = open('cms_scrape.csv','w')
-csv_writer = csv.writer(csv_file)
-csv_writer.writerow([headline,summary])
+
+import requests
+
+url = "https://hicounselor.com/scan-resume"
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/111.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+
+# csv_file = open('cms_scrape.csv','w')
+# csv_writer = csv.writer(csv_file)
+# csv_writer.writerow([headline,summary])
 
 #---------------------------------------------------------------------------------------
 # scraping the youtube video and id
