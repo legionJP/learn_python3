@@ -12,7 +12,7 @@
         - [List Comprehension ](Python3/Py_Data_Types_Data_Structure/List_comprehensions.py)
         - [String](Python3/Py_Data_Types_Data_Structure/Strings_f-string.py) , [String Slicing](Python3/Py_Data_Types_Data_Structure/Slicing_lists_&_Strings.py)
         
-        - [ All Python Stirng Methods](Python3/Py_Data_Types_Data_Structure/String_Methods.md)
+        - [ Python Stirng Methods and Escape Characters](Python3/Py_Data_Types_Data_Structure/String_Methods.md)
 
   -   [Data Structures](Python3/Py_Data_Types_Data_Structure/DSA_Python.py) , [Big-O](Python3/Py_Data_Types_Data_Structure/Big-O-notation.py)
 
