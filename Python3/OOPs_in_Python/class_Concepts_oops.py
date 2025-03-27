@@ -79,10 +79,10 @@ comp1.config()  # using the object itself to call the method/func. ,config take 
 #--------------------------------------------------------------------------------------------------------------#
 class Computer1:
    def __init__(self,cpu,ram):   # use the init to initialize the variables but  this also called constructor
-      #pass
       self.cpu =cpu               # self.var =parameter
       self.ram = ram
       print("init")               # for every object it the init  get called one time 
+   
 
    def config1(self):                     # here self is object itself, cpu and ram parameter is passed    
     print("config is ", self.cpu,self.ram)   # Here One Method have it's own varibale 
